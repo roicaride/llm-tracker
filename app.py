@@ -4,6 +4,7 @@ import datetime
 import json
 import os
 from license_map import classify_model, get_license_info, CREATOR_LICENSE
+from params_lookup import extract_params, format_params
 
 st.set_page_config(
     page_title="Open LLM Tracker",
@@ -294,10 +295,13 @@ def fetch_models() -> tuple[pd.DataFrame, str]:
             v = ev.get(key)
             return None if (v is None or v == 0) else v
 
+        p_total, p_active = extract_params(name)
         rows.append({
             "name":          name,
             "creator":       creator,
             "logo_url":      CREATOR_LOGOS.get(creator),
+            "params_b":      p_total,
+            "params_str":    format_params(p_total, p_active),
             "release_date":  m.get("release_date", ""),
             "ow_status":     classify_model(name, creator),
             "license":       get_license_info(creator).get("license", "—"),
@@ -367,7 +371,8 @@ def model_detail_panel(row: pd.Series):
         unsafe_allow_html=True,
     )
     metrics = [
-        ("AA Index",  row.get("aa_index"),      "{:.1f}",   "Nota general de inteligencia (0-100)"),
+        ("Params",    row.get("params_str"),     "{}",       "Parámetros totales (MoE = activos entre paréntesis)"),
+        ("AA Index",  row.get("aa_index"),       "{:.1f}",   "Nota general de inteligencia (0-100)"),
         ("IFBench",   row.get("ifbench"),        "{:.0%}",   "Sigue instrucciones de formato"),
         ("GPQA◆",     row.get("gpqa"),           "{:.0%}",   "Ciencia nivel doctorado"),
         ("HLE",       row.get("hle"),            "{:.1%}",   "El examen más difícil"),
@@ -505,7 +510,7 @@ with tab_leader:
 
     st.markdown("#### Todos los modelos — haz clic en una fila para ver el detalle completo")
 
-    lead_src_cols = ["logo_url","name","creator","ow_status","aa_index","ifbench","gpqa","hle","lcr","price_blend","speed_tps"]
+    lead_src_cols = ["logo_url","name","creator","ow_status","params_str","aa_index","ifbench","gpqa","hle","lcr","price_blend","speed_tps"]
     disp_lead = scale_pct(df_lead[lead_src_cols].copy())
     disp_lead["ow_status"] = disp_lead["ow_status"].map(LIC_LABEL).fillna("—")
     disp_lead.insert(0, "#", range(1, len(disp_lead)+1))
@@ -525,6 +530,7 @@ with tab_leader:
             "hle":         pct_col("HLE", max_v=45.0, help="El examen más difícil del mundo. Top modelos ≈ 20-35%."),
             "lcr":         pct_col("LCR", help="Razonamiento sobre documentos largos (10k-100k tokens)."),
             "price_blend": st.column_config.NumberColumn("$/1M", format="$%.3f", help="Precio blend por millón de tokens."),
+            "params_str":  st.column_config.TextColumn("Params", help="Parámetros totales del modelo. MoE muestra (activos)."),
             "speed_tps":   st.column_config.NumberColumn("Tok/s", format="%.0f", help="Velocidad de generación."),
         },
         use_container_width=True, hide_index=True,
@@ -624,7 +630,7 @@ with tab_rank:
     st.markdown(f"#### Top {len(df_rank)}  —  haz clic en una fila para ver el detalle")
 
     top_metric_keys = [k for k,v in sorted(weights.items(), key=lambda x:-x[1]) if v>0 and k not in ("price","speed")][:4]
-    rank_cols = ["logo_url","name","creator","ow_status","score"] + [k for k in top_metric_keys if k in df_rank.columns] + ["price_blend","speed_tps"]
+    rank_cols = ["logo_url","name","creator","ow_status","params_str","score"] + [k for k in top_metric_keys if k in df_rank.columns] + ["price_blend","speed_tps"]
     disp_rank = scale_pct(df_rank[rank_cols].copy(), [k for k in top_metric_keys if k in PCT_BENCH])
     disp_rank["ow_status"] = disp_rank["ow_status"].map(LIC_LABEL).fillna("—")
     disp_rank.insert(0, "#", range(1, len(disp_rank)+1))
@@ -637,6 +643,7 @@ with tab_rank:
         "ow_status":   st.column_config.TextColumn("Licencia"),
         "score":       st.column_config.ProgressColumn("Score", min_value=0, max_value=100, format="%.1f",
                        help="Nota ponderada según el perfil seleccionado (0-100)."),
+        "params_str":  st.column_config.TextColumn("Params", help="Parámetros totales. MoE muestra (activos)."),
         "price_blend": st.column_config.NumberColumn("$/1M", format="$%.3f"),
         "speed_tps":   st.column_config.NumberColumn("Tok/s", format="%.0f"),
     }
@@ -678,7 +685,7 @@ with tab_table:
         df_tbl = df_tbl[df_tbl["creator"].isin(cr_filt)]
     df_tbl = df_tbl.sort_values("score", ascending=False, na_position="last")
 
-    tbl_cols = ["logo_url","name","creator","ow_status","score","aa_index",
+    tbl_cols = ["logo_url","name","creator","ow_status","params_str","score","aa_index",
                 "ifbench","gpqa","hle","lcr","tau2","livecodebench","scicode",
                 "price_blend","speed_tps","release_date"]
     disp_tbl = scale_pct(df_tbl[tbl_cols].copy())
@@ -703,6 +710,7 @@ with tab_table:
             "livecodebench":pct_col("LiveCode",   help="Código real de competición."),
             "scicode":      pct_col("SciCode",    help="Código científico en 16 disciplinas."),
             "price_blend":  st.column_config.NumberColumn("$/1M", format="$%.3f"),
+            "params_str":   st.column_config.TextColumn("Params", help="Parámetros totales del modelo. MoE muestra (activos)."),
             "speed_tps":    st.column_config.NumberColumn("Tok/s", format="%.0f"),
             "release_date": st.column_config.TextColumn("Lanzamiento"),
         },
