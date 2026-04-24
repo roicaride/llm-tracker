@@ -1,47 +1,28 @@
-# AA Open Source LLM Tracker
+# 🏆 Open LLM Tracker
 
-Streamlit app que consume la API gratuita de Artificial Analysis para mostrar
-un ranking de modelos open source/open weight para generación de golden datasets RAGAS.
+Visualización interactiva de modelos de lenguaje open weight y open source, con datos actualizados diariamente de [Artificial Analysis](https://artificialanalysis.ai).
 
-## Stack
-- **Streamlit** — UI
-- **Streamlit Community Cloud** — hosting gratuito
-- **AA API** — datos (1000 req/día gratis, caché 24h)
+**→ [Ver la app](https://llm-tracker.streamlit.app)**
 
-## Despliegue en Streamlit Community Cloud (100% gratis)
+## Qué muestra
 
-### 1. Sube el repo a GitHub
-```bash
-git init
-git add .
-git commit -m "init"
-git remote add origin https://github.com/TU_USUARIO/aa-llm-tracker.git
-git push -u origin main
-```
+- **Leaderboard general** — ranking por AA Intelligence Index
+- **Ranking por objetivo** — scoring personalizado según tu caso de uso (RAG, agentes, coding, razonamiento, low-cost)
+- **Tabla completa** — todos los modelos con filtros por licencia y precio
+- **Guía de benchmarks** — qué significa cada métrica en lenguaje llano
 
-### 2. Despliega en Streamlit Cloud
-1. Ve a https://share.streamlit.io
-2. Haz login con tu cuenta de GitHub
-3. Click "New app"
-4. Selecciona tu repo → rama `main` → archivo `app.py`
-5. En "Advanced settings" → Secrets, añade:
-   ```toml
-   AA_API_KEY = "aa_QhLJsejooeSnQwSdQMzdoyKFCCvJfOVC"
-   ```
-6. Click "Deploy" → URL pública en ~2 minutos
+## Métricas principales
 
-### 3. (Opcional) Usar el secret en vez del input manual
-Si usas Streamlit secrets, sustituye en app.py:
-```python
-api_key = st.secrets.get("AA_API_KEY", "")
-```
+| Métrica | Qué mide |
+|---------|----------|
+| AA Index | Nota global de inteligencia (0-100) |
+| IFBench | Seguimiento de instrucciones de formato |
+| GPQA◆ | Ciencia de nivel doctorado |
+| HLE | El examen más difícil del mundo |
+| LCR | Razonamiento sobre documentos largos |
+| LiveCodeBench | Código real de competición |
+| τ²-Bench | Capacidad como agente autónomo |
 
-## Recarga de datos
-`@st.cache_data(ttl=86400)` recarga automáticamente cada 24h.
-No necesitas cron jobs ni scripts externos — Streamlit lo gestiona.
+## Licencias
 
-## Archivos
-- `app.py` — aplicación principal
-- `license_map.py` — clasificación de licencias por creator (editable)
-- `requirements.txt` — dependencias
-- `.streamlit/config.toml` — tema y config
+🟢 Open source · ✅ Open weight · 🟡 Mixed · 🔴 Cerrado
