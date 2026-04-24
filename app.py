@@ -420,6 +420,8 @@ with st.sidebar:
                               help="Filtra por número de parámetros. 'Sin dato' = modelos sin tamaño confirmado públicamente.")
     st.markdown("**Precio máximo** ($/1M tokens blend)")
     max_price = st.slider("price", 0.0, 15.0, 15.0, 0.5, label_visibility="collapsed")
+    only_ollama = st.checkbox("Solo modelos disponibles en Ollama",
+                              help="Muestra únicamente modelos que se pueden ejecutar localmente con `ollama pull`.")
     st.markdown("**Modelos a mostrar en rankings**")
     top_n = st.slider("topn", 5, 50, 25, 5, label_visibility="collapsed")
     st.divider()
@@ -459,6 +461,8 @@ allowed = [LIC_MAP[l] for l in lic_sel] if lic_sel else list(LIC_MAP.values())
 df_base = df_all[df_all["ow_status"].isin(allowed)].copy()
 df_base = df_base[df_base["price_blend"].isna() | (df_base["price_blend"] <= max_price)]
 df_base = df_base[df_base["params_b"].apply(lambda p: _size_ok(p, size_sel))]
+if only_ollama:
+    df_base = df_base[df_base["ollama"] == True]
 
 # ─────────────────────────────────────────────
 # CABECERA
