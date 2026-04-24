@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add data/models.json data/ollama_models.json data/hf_params.json
           git diff --staged --quiet || git commit -m "data: actualización diaria $(date -u +%Y-%m-%d)"
-          git pull --rebase
           git push
