@@ -5,6 +5,7 @@ import json
 import os
 from license_map import classify_model, get_license_info, CREATOR_LICENSE
 from params_lookup import extract_params, format_params
+from ollama_compat import check_ollama, load_ollama_set
 
 st.set_page_config(
     page_title="Open LLM Tracker",
@@ -276,6 +277,10 @@ def safe_fmt(val, fmt_str):
 # ─────────────────────────────────────────────
 # CARGA Y PROCESADO DE DATOS
 # ─────────────────────────────────────────────
+@st.cache_data(ttl=CACHE_TTL)
+def _ollama_set() -> set[str]:
+    return load_ollama_set()
+
 @st.cache_data(ttl=CACHE_TTL, show_spinner="Cargando datos…")
 def fetch_models() -> tuple[pd.DataFrame, str]:
     if not os.path.exists(DATA_PATH):
@@ -302,6 +307,7 @@ def fetch_models() -> tuple[pd.DataFrame, str]:
             "logo_url":      CREATOR_LOGOS.get(creator),
             "params_b":      p_total,
             "params_str":    format_params(p_total, p_active),
+            "ollama":        None,  # se rellena después con _ollama_set()
             "release_date":  m.get("release_date", ""),
             "ow_status":     classify_model(name, creator),
             "license":       get_license_info(creator).get("license", "—"),
@@ -389,10 +395,12 @@ def model_detail_panel(row: pd.Series):
     cols = st.columns(7)
     for i, (lbl, val, fmt, hint) in enumerate(metrics):
         cols[i % 7].metric(lbl, safe_fmt(val, fmt), help=hint)
+    ollama_txt = "✅ Disponible en Ollama (`ollama pull " + row['name'].lower().split()[0] + "`)" if row.get("ollama") else "—  No disponible en Ollama"
     st.caption(
         f"Licencia: **{row['license']}** · "
         f"Lanzado: {row['release_date'] or 'N/A'} · "
-        f"Precio: {fmt_price(row.get('price_input'))} entrada / {fmt_price(row.get('price_output'))} salida por 1M"
+        f"Precio: {fmt_price(row.get('price_input'))} entrada / {fmt_price(row.get('price_output'))} salida por 1M · "
+        f"{ollama_txt}"
     )
 
 
@@ -421,6 +429,9 @@ with st.sidebar:
 # CARGA
 # ─────────────────────────────────────────────
 df_all, fetched_at = fetch_models()
+_ollama = _ollama_set()
+if _ollama:
+    df_all["ollama"] = df_all["name"].apply(lambda n: check_ollama(n, _ollama))
 
 with st.sidebar:
     st.metric("Total modelos en BD", len(df_all))
@@ -527,7 +538,7 @@ with tab_leader:
 
     st.markdown("#### Todos los modelos — haz clic en una fila para ver el detalle completo")
 
-    lead_src_cols = ["logo_url","name","creator","ow_status","params_str","aa_index","ifbench","gpqa","hle","lcr","price_blend","speed_tps"]
+    lead_src_cols = ["logo_url","name","creator","ow_status","params_str","ollama","aa_index","ifbench","gpqa","hle","lcr","price_blend","speed_tps"]
     disp_lead = scale_pct(df_lead[lead_src_cols].copy())
     disp_lead["ow_status"] = disp_lead["ow_status"].map(LIC_LABEL).fillna("—")
     disp_lead.insert(0, "#", range(1, len(disp_lead)+1))
@@ -548,6 +559,7 @@ with tab_leader:
             "lcr":         pct_col("LCR", help="Razonamiento sobre documentos largos (10k-100k tokens)."),
             "price_blend": st.column_config.NumberColumn("$/1M", format="$%.3f", help="Precio blend por millón de tokens."),
             "params_str":  st.column_config.TextColumn("Params", help="Parámetros totales del modelo. MoE muestra (activos)."),
+            "ollama":      st.column_config.CheckboxColumn("Ollama", help="Disponible para descargar y ejecutar localmente con Ollama."),
             "speed_tps":   st.column_config.NumberColumn("Tok/s", format="%.0f", help="Velocidad de generación."),
         },
         use_container_width=True, hide_index=True,
@@ -647,7 +659,7 @@ with tab_rank:
     st.markdown(f"#### Top {len(df_rank)}  —  haz clic en una fila para ver el detalle")
 
     top_metric_keys = [k for k,v in sorted(weights.items(), key=lambda x:-x[1]) if v>0 and k not in ("price","speed")][:4]
-    rank_cols = ["logo_url","name","creator","ow_status","params_str","score"] + [k for k in top_metric_keys if k in df_rank.columns] + ["price_blend","speed_tps"]
+    rank_cols = ["logo_url","name","creator","ow_status","params_str","ollama","score"] + [k for k in top_metric_keys if k in df_rank.columns] + ["price_blend","speed_tps"]
     disp_rank = scale_pct(df_rank[rank_cols].copy(), [k for k in top_metric_keys if k in PCT_BENCH])
     disp_rank["ow_status"] = disp_rank["ow_status"].map(LIC_LABEL).fillna("—")
     disp_rank.insert(0, "#", range(1, len(disp_rank)+1))
@@ -661,6 +673,7 @@ with tab_rank:
         "score":       st.column_config.ProgressColumn("Score", min_value=0, max_value=100, format="%.1f",
                        help="Nota ponderada según el perfil seleccionado (0-100)."),
         "params_str":  st.column_config.TextColumn("Params", help="Parámetros totales. MoE muestra (activos)."),
+        "ollama":      st.column_config.CheckboxColumn("Ollama", help="Disponible para ejecutar localmente con Ollama."),
         "price_blend": st.column_config.NumberColumn("$/1M", format="$%.3f"),
         "speed_tps":   st.column_config.NumberColumn("Tok/s", format="%.0f"),
     }
@@ -702,7 +715,7 @@ with tab_table:
         df_tbl = df_tbl[df_tbl["creator"].isin(cr_filt)]
     df_tbl = df_tbl.sort_values("score", ascending=False, na_position="last")
 
-    tbl_cols = ["logo_url","name","creator","ow_status","params_str","score","aa_index",
+    tbl_cols = ["logo_url","name","creator","ow_status","params_str","ollama","score","aa_index",
                 "ifbench","gpqa","hle","lcr","tau2","livecodebench","scicode",
                 "price_blend","speed_tps","release_date"]
     disp_tbl = scale_pct(df_tbl[tbl_cols].copy())
@@ -728,6 +741,7 @@ with tab_table:
             "scicode":      pct_col("SciCode",    help="Código científico en 16 disciplinas."),
             "price_blend":  st.column_config.NumberColumn("$/1M", format="$%.3f"),
             "params_str":   st.column_config.TextColumn("Params", help="Parámetros totales del modelo. MoE muestra (activos)."),
+            "ollama":       st.column_config.CheckboxColumn("Ollama", help="Disponible para descargar y ejecutar localmente con Ollama."),
             "speed_tps":    st.column_config.NumberColumn("Tok/s", format="%.0f"),
             "release_date": st.column_config.TextColumn("Lanzamiento"),
         },
