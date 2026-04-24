@@ -146,6 +146,39 @@ def pct_col(label: str, max_v: float = 100.0, help: str = "") -> st.column_confi
 
 
 # ─────────────────────────────────────────────
+# PAGINACIÓN
+# ─────────────────────────────────────────────
+def paginator(key: str, total: int, page_size: int = 25, reset_on: tuple = ()) -> int:
+    """Botones ← / → . Resetea a pág. 1 cuando cambia reset_on. Devuelve página actual (1-based)."""
+    sig = str(reset_on)
+    if st.session_state.get(f"_sig_{key}") != sig:
+        st.session_state[f"_sig_{key}"] = sig
+        st.session_state[key] = 1
+    n_pages = max(1, (total + page_size - 1) // page_size)
+    page    = max(1, min(st.session_state.get(key, 1), n_pages))
+    if n_pages > 1:
+        cp, ci, cn = st.columns([1, 5, 1])
+        with cp:
+            if st.button("← Ant.", key=f"{key}_prev", disabled=page == 1, use_container_width=True):
+                st.session_state[key] = page - 1
+                st.rerun()
+        with ci:
+            st.markdown(
+                f"<div style='text-align:center;padding:5px 0;color:#555;font-size:0.9rem'>"
+                f"Página <b>{page}</b> de {n_pages}&nbsp;&nbsp;·&nbsp;&nbsp;{total} modelos"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+        with cn:
+            if st.button("Sig. →", key=f"{key}_next", disabled=page == n_pages, use_container_width=True):
+                st.session_state[key] = page + 1
+                st.rerun()
+    else:
+        st.caption(f"{total} modelos")
+    return page
+
+
+# ─────────────────────────────────────────────
 # GUÍA DE BENCHMARKS
 # ─────────────────────────────────────────────
 BENCH_GUIDE = [
@@ -563,19 +596,8 @@ with tab_leader:
     if total_lead == 0:
         st.warning("Ningún modelo coincide con la búsqueda.")
     else:
-        n_pages = max(1, (total_lead + PAGE - 1) // PAGE)
-        if n_pages > 1:
-            pa1, pa2, pa3 = st.columns([1, 2, 1])
-            with pa2:
-                lead_page = st.number_input("Página", 1, n_pages, 1, key="lead_page",
-                                            label_visibility="collapsed")
-            st.caption(f"Página **{lead_page}** de {n_pages} · {total_lead} modelos")
-        else:
-            lead_page = 1
-            if filtering:
-                st.caption(f"{total_lead} modelos")
-
-        df_page = df_lead.iloc[(lead_page-1)*PAGE : lead_page*PAGE].copy()
+        lead_page = paginator("lead_page", total_lead, PAGE, reset_on=(lead_search, tuple(lead_cr)))
+        df_page   = df_lead.iloc[(lead_page-1)*PAGE : lead_page*PAGE].copy()
 
         lead_src_cols = ["#","logo_url","name","creator","ow_status","params_str","ollama","aa_index","ifbench","gpqa","hle","lcr","price_blend","speed_tps"]
         disp_lead = scale_pct(df_page[lead_src_cols].copy())
@@ -725,19 +747,7 @@ with tab_rank:
     if total_rank == 0:
         st.warning("Ningún modelo coincide con la búsqueda.")
     else:
-        PAGE = 25
-        n_pages = max(1, (total_rank + PAGE - 1) // PAGE)
-        if n_pages > 1:
-            pb1, pb2, pb3 = st.columns([1, 2, 1])
-            with pb2:
-                rank_page = st.number_input("Página", 1, n_pages, 1, key="rank_page",
-                                            label_visibility="collapsed")
-            st.caption(f"Página **{rank_page}** de {n_pages} · {total_rank} modelos")
-        else:
-            rank_page = 1
-            if rank_search or rank_cr:
-                st.caption(f"{total_rank} modelos")
-
+        rank_page    = paginator("rank_page", total_rank, PAGE, reset_on=(rank_search, tuple(rank_cr), profile_name))
         df_rank_page = df_rank.iloc[(rank_page-1)*PAGE : rank_page*PAGE].copy()
 
         top_metric_keys = [k for k,v in sorted(weights.items(), key=lambda x:-x[1]) if v>0 and k not in ("price","speed")][:4]
