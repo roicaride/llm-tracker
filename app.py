@@ -503,6 +503,7 @@ with tab_leader:
         .head(top_n)
         .reset_index(drop=True)
     )
+    df_lead["#"] = range(1, len(df_lead) + 1)  # posición original antes de filtrar
     if df_lead.empty:
         st.warning("Sin modelos con suficientes datos para los filtros seleccionados.")
         st.stop()
@@ -552,10 +553,9 @@ with tab_leader:
     if lead_cr:
         df_lead = df_lead[df_lead["creator"].isin(lead_cr)]
 
-    lead_src_cols = ["logo_url","name","creator","ow_status","params_str","ollama","aa_index","ifbench","gpqa","hle","lcr","price_blend","speed_tps"]
+    lead_src_cols = ["#","logo_url","name","creator","ow_status","params_str","ollama","aa_index","ifbench","gpqa","hle","lcr","price_blend","speed_tps"]
     disp_lead = scale_pct(df_lead[lead_src_cols].copy())
     disp_lead["ow_status"] = disp_lead["ow_status"].map(LIC_LABEL).fillna("—")
-    disp_lead.insert(0, "#", range(1, len(disp_lead)+1))
 
     sel_lead = st.dataframe(
         disp_lead,
@@ -643,6 +643,7 @@ with tab_rank:
         if req in df_rank.columns:
             df_rank = df_rank[df_rank[req].notna()]
     df_rank = df_rank[df_rank["score"].notna()].sort_values("score", ascending=False).head(top_n).reset_index(drop=True)
+    df_rank["#"] = range(1, len(df_rank) + 1)  # posición original antes de filtrar
 
     if df_rank.empty:
         st.warning("Ningún modelo tiene datos suficientes para este perfil con los filtros actuales."); st.stop()
@@ -690,10 +691,9 @@ with tab_rank:
     st.markdown(f"#### Top {len(df_rank)}  —  haz clic en una fila para ver el detalle")
 
     top_metric_keys = [k for k,v in sorted(weights.items(), key=lambda x:-x[1]) if v>0 and k not in ("price","speed")][:4]
-    rank_cols = ["logo_url","name","creator","ow_status","params_str","ollama","score"] + [k for k in top_metric_keys if k in df_rank.columns] + ["price_blend","speed_tps"]
+    rank_cols = ["#","logo_url","name","creator","ow_status","params_str","ollama","score"] + [k for k in top_metric_keys if k in df_rank.columns] + ["price_blend","speed_tps"]
     disp_rank = scale_pct(df_rank[rank_cols].copy(), [k for k in top_metric_keys if k in PCT_BENCH])
     disp_rank["ow_status"] = disp_rank["ow_status"].map(LIC_LABEL).fillna("—")
-    disp_rank.insert(0, "#", range(1, len(disp_rank)+1))
 
     col_cfg = {
         "#":           st.column_config.NumberColumn("#", width="small"),
