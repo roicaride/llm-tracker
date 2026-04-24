@@ -486,10 +486,9 @@ st.divider()
 # ─────────────────────────────────────────────
 # TABS
 # ─────────────────────────────────────────────
-tab_leader, tab_rank, tab_table, tab_guide, tab_lic = st.tabs([
+tab_leader, tab_rank, tab_guide, tab_lic = st.tabs([
     "🏆 Leaderboard",
     "🎯 Ranking por objetivo",
-    "📊 Tabla completa",
     "📖 Qué significa cada dato",
     "📋 Licencias",
 ])
@@ -542,6 +541,17 @@ with tab_leader:
 
     st.markdown("#### Todos los modelos — haz clic en una fila para ver el detalle completo")
 
+    ls1, ls2 = st.columns([2, 3])
+    with ls1:
+        lead_search = st.text_input("🔍 Buscar modelo", "", key="lead_search")
+    with ls2:
+        lead_cr = st.multiselect("Filtrar por empresa / lab", sorted(df_lead["creator"].unique()), key="lead_cr")
+
+    if lead_search:
+        df_lead = df_lead[df_lead["name"].str.contains(lead_search, case=False, na=False)]
+    if lead_cr:
+        df_lead = df_lead[df_lead["creator"].isin(lead_cr)]
+
     lead_src_cols = ["logo_url","name","creator","ow_status","params_str","ollama","aa_index","ifbench","gpqa","hle","lcr","price_blend","speed_tps"]
     disp_lead = scale_pct(df_lead[lead_src_cols].copy())
     disp_lead["ow_status"] = disp_lead["ow_status"].map(LIC_LABEL).fillna("—")
@@ -573,6 +583,11 @@ with tab_leader:
     if sel_lead.selection.rows:
         st.divider()
         model_detail_panel(df_lead.iloc[sel_lead.selection.rows[0]])
+
+    st.divider()
+    csv = df_lead.to_csv(index=False).encode("utf-8")
+    st.download_button("⬇️ Descargar CSV", csv,
+                       file_name=f"llm_tracker_{datetime.date.today()}.csv", mime="text/csv")
 
 
 # ══════════════════════════════════════════════
@@ -633,6 +648,18 @@ with tab_rank:
         st.warning("Ningún modelo tiene datos suficientes para este perfil con los filtros actuales."); st.stop()
 
     st.divider()
+
+    rs1, rs2 = st.columns([2, 3])
+    with rs1:
+        rank_search = st.text_input("🔍 Buscar modelo", "", key="rank_search")
+    with rs2:
+        rank_cr = st.multiselect("Filtrar por empresa / lab", sorted(df_rank["creator"].unique()), key="rank_cr")
+
+    if rank_search:
+        df_rank = df_rank[df_rank["name"].str.contains(rank_search, case=False, na=False)]
+    if rank_cr:
+        df_rank = df_rank[df_rank["creator"].isin(rank_cr)]
+
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Modelos rankeados", len(df_rank))
     c2.metric("Score máximo", df_rank["score"].max())
@@ -699,67 +726,9 @@ with tab_rank:
 
 
 # ══════════════════════════════════════════════
-# TAB 3 — TABLA COMPLETA
+# TAB 3 — GUÍA DE BENCHMARKS
 # ══════════════════════════════════════════════
-with tab_table:
-    fc1, fc2 = st.columns([2, 3])
-    with fc1:
-        search = st.text_input("🔍 Buscar modelo o empresa", "")
-    with fc2:
-        cr_filt = st.multiselect("Filtrar por empresa / lab", sorted(df_base["creator"].unique()))
-
-    df_tbl = df_base.copy()
-    df_tbl["score"] = df_tbl.apply(lambda r: compute_score(r, weights), axis=1)
-    if search:
-        df_tbl = df_tbl[
-            df_tbl["name"].str.contains(search, case=False, na=False) |
-            df_tbl["creator"].str.contains(search, case=False, na=False)
-        ]
-    if cr_filt:
-        df_tbl = df_tbl[df_tbl["creator"].isin(cr_filt)]
-    df_tbl = df_tbl.sort_values("score", ascending=False, na_position="last")
-
-    tbl_cols = ["logo_url","name","creator","ow_status","params_str","ollama","score","aa_index",
-                "ifbench","gpqa","hle","lcr","tau2","livecodebench","scicode",
-                "price_blend","speed_tps","release_date"]
-    disp_tbl = scale_pct(df_tbl[tbl_cols].copy())
-    disp_tbl["ow_status"] = disp_tbl["ow_status"].map(LIC_LABEL).fillna("—")
-
-    st.dataframe(
-        disp_tbl,
-        column_config={
-            "logo_url":     st.column_config.ImageColumn("", width="small"),
-            "name":         st.column_config.TextColumn("Modelo"),
-            "creator":      st.column_config.TextColumn("Empresa / Lab"),
-            "ow_status":    st.column_config.TextColumn("Licencia"),
-            "score":        st.column_config.ProgressColumn("Score", min_value=0, max_value=100, format="%.1f",
-                            help="Nota según el perfil activo en 'Ranking por objetivo'."),
-            "aa_index":     st.column_config.ProgressColumn("AA Index", min_value=0, max_value=100, format="%.1f",
-                            help="Nota general de Artificial Analysis (0-100)."),
-            "ifbench":      pct_col("IFBench",   help="Sigue instrucciones de formato exactas."),
-            "gpqa":         pct_col("GPQA◆",     help="Ciencia nivel doctorado."),
-            "hle":          pct_col("HLE", max_v=45.0, help="El examen más difícil del mundo."),
-            "lcr":          pct_col("LCR",        help="Razonamiento en contexto largo."),
-            "tau2":         pct_col("τ²-Bench",   help="Agente autónomo resolviendo tickets."),
-            "livecodebench":pct_col("LiveCode",   help="Código real de competición."),
-            "scicode":      pct_col("SciCode",    help="Código científico en 16 disciplinas."),
-            "price_blend":  st.column_config.NumberColumn("$/1M", format="$%.3f"),
-            "params_str":   st.column_config.TextColumn("Params", help="Parámetros totales del modelo. MoE muestra (activos)."),
-            "ollama":       st.column_config.CheckboxColumn("Ollama", help="Disponible para descargar y ejecutar localmente con Ollama."),
-            "speed_tps":    st.column_config.NumberColumn("Tok/s", format="%.0f"),
-            "release_date": st.column_config.TextColumn("Lanzamiento"),
-        },
-        use_container_width=True, hide_index=True, height=560,
-    )
-    st.caption(f"{len(disp_tbl)} modelos · Score con perfil: **{profile_name}** · Barras vacías = sin datos (N/A)")
-    csv = df_tbl.to_csv(index=False).encode("utf-8")
-    st.download_button("⬇️ Descargar CSV", csv, file_name=f"llm_tracker_{datetime.date.today()}.csv", mime="text/csv")
-
-
-# ══════════════════════════════════════════════
-# TAB 4 — GUÍA DE BENCHMARKS
-# ══════════════════════════════════════════════
-with tab_guide:
+with tab_guide:  # noqa — tab_guide es ahora el 3º tab
     st.markdown("### ¿Qué significa cada número?")
     st.markdown("Explicación en castellano llano de qué mide cada benchmark y cómo interpretarlo. Sin jerga. Haz clic para expandir.")
     st.divider()
@@ -782,7 +751,7 @@ El **Score** es una nota de 0 a 100 que resume qué tan bueno es un modelo para 
 
 
 # ══════════════════════════════════════════════
-# TAB 5 — LICENCIAS
+# TAB 4 — LICENCIAS
 # ══════════════════════════════════════════════
 with tab_lic:
     st.markdown("### ¿Puedo usar estos modelos libremente?")
