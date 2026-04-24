@@ -405,6 +405,11 @@ with st.sidebar:
     lic_sel = st.multiselect("lic", options=LIC_OPTIONS, default=["Open weight","Open source"],
                              label_visibility="collapsed",
                              help="Open weight = pesos descargables. Open source = además código y datos.")
+    st.markdown("**Tamaño del modelo**")
+    SIZE_OPTS = ["< 3B", "3–14B", "14–70B", "70–200B", "> 200B", "Sin dato"]
+    size_sel = st.multiselect("size", options=SIZE_OPTS, default=SIZE_OPTS,
+                              label_visibility="collapsed",
+                              help="Filtra por número de parámetros. 'Sin dato' = modelos sin tamaño confirmado públicamente.")
     st.markdown("**Precio máximo** ($/1M tokens blend)")
     max_price = st.slider("price", 0.0, 15.0, 15.0, 0.5, label_visibility="collapsed")
     st.markdown("**Modelos a mostrar en rankings**")
@@ -428,9 +433,21 @@ with st.sidebar:
 # ─────────────────────────────────────────────
 # FILTRADO
 # ─────────────────────────────────────────────
+def _size_ok(p_b, cats):
+    if not cats:
+        return True
+    if p_b is None:
+        return "Sin dato" in cats
+    if p_b < 3:    return "< 3B" in cats
+    if p_b < 14:   return "3–14B" in cats
+    if p_b < 70:   return "14–70B" in cats
+    if p_b < 200:  return "70–200B" in cats
+    return "> 200B" in cats
+
 allowed = [LIC_MAP[l] for l in lic_sel] if lic_sel else list(LIC_MAP.values())
 df_base = df_all[df_all["ow_status"].isin(allowed)].copy()
 df_base = df_base[df_base["price_blend"].isna() | (df_base["price_blend"] <= max_price)]
+df_base = df_base[df_base["params_b"].apply(lambda p: _size_ok(p, size_sel))]
 
 # ─────────────────────────────────────────────
 # CABECERA
