@@ -12,6 +12,23 @@ Cualquier valor dudoso → None (muestra "—" en la app).
 """
 
 import re
+import json
+import os
+
+# ─────────────────────────────────────────────────────────────
+# DATOS DE HUGGINGFACE (generados por fetch_hf_params.py)
+# ─────────────────────────────────────────────────────────────
+def _load_hf_params() -> dict:
+    path = "data/hf_params.json"
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f).get("params", {})
+    except Exception:
+        return {}
+
+HF_PARAMS: dict = _load_hf_params()
 
 # ─────────────────────────────────────────────────────────────
 # LOOKUP EXACTO
@@ -174,6 +191,11 @@ def extract_params(name: str) -> tuple[float | None, float | None]:
     active_b solo si MoE con dato confirmado.
     (None, None) cuando no hay información confirmada públicamente.
     """
+
+    # 0 ── Datos de HuggingFace (mayor precisión, cargados de data/hf_params.json)
+    if name in HF_PARAMS:
+        d = HF_PARAMS[name]
+        return d["total_b"], d.get("active_b")
 
     # 1 ── Arquitectura NxNB (ej. "8x7B") ────────────────────
     m = re.search(r'(\d+)x(\d+(?:\.\d+)?)B', name, re.IGNORECASE)
