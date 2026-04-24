@@ -497,97 +497,121 @@ tab_leader, tab_rank, tab_guide, tab_lic = st.tabs([
 # TAB 1 — LEADERBOARD
 # ══════════════════════════════════════════════
 with tab_leader:
-    df_lead = (
+    PAGE = 25
+
+    # Ranking global completo (todos los modelos con AA Index)
+    df_all_lead = (
         df_base[df_base["aa_index"].notna()]
         .sort_values("aa_index", ascending=False)
-        .head(top_n)
         .reset_index(drop=True)
     )
-    df_lead["#"] = range(1, len(df_lead) + 1)  # posición original antes de filtrar
-    if df_lead.empty:
+    df_all_lead["#"] = range(1, len(df_all_lead) + 1)
+
+    if df_all_lead.empty:
         st.warning("Sin modelos con suficientes datos para los filtros seleccionados.")
         st.stop()
 
     c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Modelos en ranking", len(df_lead))
-    c2.metric("Mejor AA Index", f"{df_lead['aa_index'].max():.1f}")
-    c3.metric("AA Index medio", f"{df_lead['aa_index'].mean():.1f}")
-    c4.metric("Empresas / labs", df_lead["creator"].nunique())
+    c1.metric("Total modelos", len(df_all_lead))
+    c2.metric("Mejor AA Index", f"{df_all_lead['aa_index'].max():.1f}")
+    c3.metric("AA Index medio", f"{df_all_lead['aa_index'].mean():.1f}")
+    c4.metric("Empresas / labs", df_all_lead["creator"].nunique())
     st.caption("Ordenado por **AA Index**. Barras vacías = sin datos para ese benchmark (N/A).")
     st.divider()
 
-    # ── Top 3 medal cards ───────────────────────
-    if len(df_lead) >= 3:
-        mc1, mc2, mc3 = st.columns(3)
-        for col, idx, medal, css in [(mc1,0,"🥇","gold"),(mc2,1,"🥈","silver"),(mc3,2,"🥉","bronze")]:
-            r    = df_lead.iloc[idx]
-            logo = creator_img(r["creator"], 52)
-            pill = lic_pill(r["ow_status"])
-            price_line = (
-                f"<div style='margin-top:10px;font-size:0.8rem;color:#666;border-top:1px solid #eee;padding-top:8px'>"
-                f"💰 {fmt_price(r.get('price_blend'))}/1M &nbsp;·&nbsp; ⚡ {fmt_num(r.get('speed_tps'))} tok/s"
-                f"</div>"
-            ) if not na(r.get("speed_tps")) else ""
-            col.markdown(
-                f'<div class="top-card {css}">'
-                f'<div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px">'
-                f'<span style="font-size:1.8rem">{medal}</span>{logo}</div>'
-                f'<div style="font-weight:700;font-size:1.05rem;margin:4px 0 2px">{r["name"]}</div>'
-                f'<div style="color:#777;font-size:0.8rem;margin-bottom:8px">{r["creator"]}</div>'
-                f'<div style="font-size:2.6rem;font-weight:800;line-height:1;color:#222">{r["aa_index"]:.1f}</div>'
-                f'<div style="color:#aaa;font-size:0.68rem;margin-top:2px;margin-bottom:8px">AA Intelligence Index</div>'
-                f'{pill}{price_line}</div>',
-                unsafe_allow_html=True,
-            )
+    # ── Top 3 medal cards (siempre el top global) ────────────
+    mc1, mc2, mc3 = st.columns(3)
+    for col, idx, medal, css in [(mc1,0,"🥇","gold"),(mc2,1,"🥈","silver"),(mc3,2,"🥉","bronze")]:
+        r    = df_all_lead.iloc[idx]
+        logo = creator_img(r["creator"], 52)
+        pill = lic_pill(r["ow_status"])
+        price_line = (
+            f"<div style='margin-top:10px;font-size:0.8rem;color:#666;border-top:1px solid #eee;padding-top:8px'>"
+            f"💰 {fmt_price(r.get('price_blend'))}/1M &nbsp;·&nbsp; ⚡ {fmt_num(r.get('speed_tps'))} tok/s"
+            f"</div>"
+        ) if not na(r.get("speed_tps")) else ""
+        col.markdown(
+            f'<div class="top-card {css}">'
+            f'<div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px">'
+            f'<span style="font-size:1.8rem">{medal}</span>{logo}</div>'
+            f'<div style="font-weight:700;font-size:1.05rem;margin:4px 0 2px">{r["name"]}</div>'
+            f'<div style="color:#777;font-size:0.8rem;margin-bottom:8px">{r["creator"]}</div>'
+            f'<div style="font-size:2.6rem;font-weight:800;line-height:1;color:#222">{r["aa_index"]:.1f}</div>'
+            f'<div style="color:#aaa;font-size:0.68rem;margin-top:2px;margin-bottom:8px">AA Intelligence Index</div>'
+            f'{pill}{price_line}</div>',
+            unsafe_allow_html=True,
+        )
 
-    st.markdown("#### Todos los modelos — haz clic en una fila para ver el detalle completo")
+    st.markdown("#### Ranking — haz clic en una fila para ver el detalle completo")
 
     ls1, ls2 = st.columns([2, 3])
     with ls1:
         lead_search = st.text_input("🔍 Buscar modelo", "", key="lead_search")
     with ls2:
-        lead_cr = st.multiselect("Filtrar por empresa / lab", sorted(df_lead["creator"].unique()), key="lead_cr")
+        lead_cr = st.multiselect("Filtrar por empresa / lab", sorted(df_all_lead["creator"].unique()), key="lead_cr")
 
+    # Filtrar sobre el ranking global completo
+    df_lead = df_all_lead.copy()
     if lead_search:
         df_lead = df_lead[df_lead["name"].str.contains(lead_search, case=False, na=False)]
     if lead_cr:
         df_lead = df_lead[df_lead["creator"].isin(lead_cr)]
 
-    lead_src_cols = ["#","logo_url","name","creator","ow_status","params_str","ollama","aa_index","ifbench","gpqa","hle","lcr","price_blend","speed_tps"]
-    disp_lead = scale_pct(df_lead[lead_src_cols].copy())
-    disp_lead["ow_status"] = disp_lead["ow_status"].map(LIC_LABEL).fillna("—")
+    filtering = bool(lead_search or lead_cr)
+    total_lead = len(df_lead)
 
-    sel_lead = st.dataframe(
-        disp_lead,
-        column_config={
-            "#":           st.column_config.NumberColumn("#", width="small"),
-            "logo_url":    st.column_config.ImageColumn("", width="small"),
-            "name":        st.column_config.TextColumn("Modelo"),
-            "creator":     st.column_config.TextColumn("Empresa / Lab"),
-            "ow_status":   st.column_config.TextColumn("Licencia", help="Open source · Open weight · Mixed · Cerrado"),
-            "aa_index":    st.column_config.ProgressColumn("AA Index", min_value=0, max_value=100, format="%.1f",
-                           help="Nota global 0-100. Combina múltiples benchmarks."),
-            "ifbench":     pct_col("IFBench", help="¿Sigue instrucciones de formato? Crítico para outputs parseables."),
-            "gpqa":        pct_col("GPQA◆", help="Ciencia de nivel doctorado. Experto humano ≈ 65%."),
-            "hle":         pct_col("HLE", max_v=45.0, help="El examen más difícil del mundo. Top modelos ≈ 20-35%."),
-            "lcr":         pct_col("LCR", help="Razonamiento sobre documentos largos (10k-100k tokens)."),
-            "price_blend": st.column_config.NumberColumn("$/1M", format="$%.3f", help="Precio blend por millón de tokens."),
-            "params_str":  st.column_config.TextColumn("Params", help="Parámetros totales del modelo. MoE muestra (activos)."),
-            "ollama":      st.column_config.CheckboxColumn("Ollama", help="Disponible para descargar y ejecutar localmente con Ollama."),
-            "speed_tps":   st.column_config.NumberColumn("Tok/s", format="%.0f", help="Velocidad de generación."),
-        },
-        use_container_width=True, hide_index=True,
-        selection_mode="single-row", on_select="rerun",
-        height=min(38*len(disp_lead)+38, 620),
-    )
-    if sel_lead.selection.rows:
+    if total_lead == 0:
+        st.warning("Ningún modelo coincide con la búsqueda.")
+    else:
+        n_pages = max(1, (total_lead + PAGE - 1) // PAGE)
+        if n_pages > 1:
+            pa1, pa2, pa3 = st.columns([1, 2, 1])
+            with pa2:
+                lead_page = st.number_input("Página", 1, n_pages, 1, key="lead_page",
+                                            label_visibility="collapsed")
+            st.caption(f"Página **{lead_page}** de {n_pages} · {total_lead} modelos")
+        else:
+            lead_page = 1
+            if filtering:
+                st.caption(f"{total_lead} modelos")
+
+        df_page = df_lead.iloc[(lead_page-1)*PAGE : lead_page*PAGE].copy()
+
+        lead_src_cols = ["#","logo_url","name","creator","ow_status","params_str","ollama","aa_index","ifbench","gpqa","hle","lcr","price_blend","speed_tps"]
+        disp_lead = scale_pct(df_page[lead_src_cols].copy())
+        disp_lead["ow_status"] = disp_lead["ow_status"].map(LIC_LABEL).fillna("—")
+
+        sel_lead = st.dataframe(
+            disp_lead,
+            column_config={
+                "#":           st.column_config.NumberColumn("#", width="small"),
+                "logo_url":    st.column_config.ImageColumn("", width="small"),
+                "name":        st.column_config.TextColumn("Modelo"),
+                "creator":     st.column_config.TextColumn("Empresa / Lab"),
+                "ow_status":   st.column_config.TextColumn("Licencia", help="Open source · Open weight · Mixed · Cerrado"),
+                "aa_index":    st.column_config.ProgressColumn("AA Index", min_value=0, max_value=100, format="%.1f",
+                               help="Nota global 0-100. Combina múltiples benchmarks."),
+                "ifbench":     pct_col("IFBench", help="¿Sigue instrucciones de formato? Crítico para outputs parseables."),
+                "gpqa":        pct_col("GPQA◆", help="Ciencia de nivel doctorado. Experto humano ≈ 65%."),
+                "hle":         pct_col("HLE", max_v=45.0, help="El examen más difícil del mundo. Top modelos ≈ 20-35%."),
+                "lcr":         pct_col("LCR", help="Razonamiento sobre documentos largos (10k-100k tokens)."),
+                "price_blend": st.column_config.NumberColumn("$/1M", format="$%.3f", help="Precio blend por millón de tokens."),
+                "params_str":  st.column_config.TextColumn("Params", help="Parámetros totales del modelo. MoE muestra (activos)."),
+                "ollama":      st.column_config.CheckboxColumn("Ollama", help="Disponible para descargar y ejecutar localmente con Ollama."),
+                "speed_tps":   st.column_config.NumberColumn("Tok/s", format="%.0f", help="Velocidad de generación."),
+            },
+            use_container_width=True, hide_index=True,
+            selection_mode="single-row", on_select="rerun",
+            height=min(38*len(disp_lead)+38, 620),
+        )
+        if sel_lead.selection.rows:
+            st.divider()
+            model_detail_panel(df_page.iloc[sel_lead.selection.rows[0]])
+
         st.divider()
-        model_detail_panel(df_lead.iloc[sel_lead.selection.rows[0]])
-
-    st.divider()
-    csv = df_lead.to_csv(index=False).encode("utf-8")
-    st.download_button("⬇️ Descargar CSV", csv,
-                       file_name=f"llm_tracker_{datetime.date.today()}.csv", mime="text/csv")
+        csv = df_lead.to_csv(index=False).encode("utf-8")
+        st.download_button("⬇️ Descargar CSV", csv,
+                           file_name=f"llm_tracker_{datetime.date.today()}.csv", mime="text/csv")
 
 
 # ══════════════════════════════════════════════
@@ -637,92 +661,118 @@ with tab_rank:
             ])
             st.dataframe(w_df, hide_index=True, use_container_width=True, height=min(len(w_df)*35+38, 260))
 
-    df_rank = df_base.copy()
-    df_rank["score"] = df_rank.apply(lambda r: compute_score(r, weights), axis=1)
+    # Ranking global completo por score (todos los modelos válidos para este perfil)
+    df_all_rank = df_base.copy()
+    df_all_rank["score"] = df_all_rank.apply(lambda r: compute_score(r, weights), axis=1)
     for req in require:
-        if req in df_rank.columns:
-            df_rank = df_rank[df_rank[req].notna()]
-    df_rank = df_rank[df_rank["score"].notna()].sort_values("score", ascending=False).head(top_n).reset_index(drop=True)
-    df_rank["#"] = range(1, len(df_rank) + 1)  # posición original antes de filtrar
+        if req in df_all_rank.columns:
+            df_all_rank = df_all_rank[df_all_rank[req].notna()]
+    df_all_rank = (
+        df_all_rank[df_all_rank["score"].notna()]
+        .sort_values("score", ascending=False)
+        .reset_index(drop=True)
+    )
+    df_all_rank["#"] = range(1, len(df_all_rank) + 1)
 
-    if df_rank.empty:
+    if df_all_rank.empty:
         st.warning("Ningún modelo tiene datos suficientes para este perfil con los filtros actuales."); st.stop()
 
     st.divider()
+
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Total modelos", len(df_all_rank))
+    c2.metric("Score máximo", df_all_rank["score"].max())
+    c3.metric("Score medio", round(df_all_rank["score"].mean(), 1))
+    c4.metric("Empresas / labs", df_all_rank["creator"].nunique())
+    st.caption("El **Score** (0-100) usa los pesos del perfil. Si falta un benchmark, ese peso se redistribuye.")
+
+    # Top 3 compacto con logo (siempre el top global del perfil)
+    tm1, tm2, tm3 = st.columns(3)
+    for col, idx, medal in [(tm1,0,"🥇"),(tm2,1,"🥈"),(tm3,2,"🥉")]:
+        r    = df_all_rank.iloc[idx]
+        logo = creator_img(r["creator"], 28)
+        pill = lic_pill(r["ow_status"])
+        col.markdown(
+            f'<div style="border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px">'
+            f'<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">'
+            f'<span style="font-size:1.4rem">{medal}</span>{logo}'
+            f'<span style="font-weight:700;font-size:0.95rem">{r["name"]}</span></div>'
+            f'<div style="color:#555;font-size:0.8rem;margin-bottom:4px">{r["creator"]}</div>'
+            f'<div style="display:flex;align-items:center;gap:8px">'
+            f'<span style="font-size:1.3rem;font-weight:700">{r["score"]}</span>'
+            f'<span style="color:#888;font-size:0.75rem">Score</span>'
+            f'&nbsp;{pill}</div></div>',
+            unsafe_allow_html=True,
+        )
+
+    st.markdown("#### Ranking — haz clic en una fila para ver el detalle")
 
     rs1, rs2 = st.columns([2, 3])
     with rs1:
         rank_search = st.text_input("🔍 Buscar modelo", "", key="rank_search")
     with rs2:
-        rank_cr = st.multiselect("Filtrar por empresa / lab", sorted(df_rank["creator"].unique()), key="rank_cr")
+        rank_cr = st.multiselect("Filtrar por empresa / lab", sorted(df_all_rank["creator"].unique()), key="rank_cr")
 
+    # Filtrar sobre el ranking global completo
+    df_rank = df_all_rank.copy()
     if rank_search:
         df_rank = df_rank[df_rank["name"].str.contains(rank_search, case=False, na=False)]
     if rank_cr:
         df_rank = df_rank[df_rank["creator"].isin(rank_cr)]
 
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Modelos rankeados", len(df_rank))
-    c2.metric("Score máximo", df_rank["score"].max())
-    c3.metric("Score medio", round(df_rank["score"].mean(), 1))
-    c4.metric("Empresas / labs", df_rank["creator"].nunique())
-    st.caption("El **Score** (0-100) usa los pesos del perfil. Si falta un benchmark, ese peso se redistribuye. Sin datos suficientes el modelo no aparece.")
+    total_rank = len(df_rank)
 
-    # Top 3 compacto con logo
-    if len(df_rank) >= 3:
-        tm1, tm2, tm3 = st.columns(3)
-        for col, idx, medal in [(tm1,0,"🥇"),(tm2,1,"🥈"),(tm3,2,"🥉")]:
-            r    = df_rank.iloc[idx]
-            logo = creator_img(r["creator"], 28)
-            pill = lic_pill(r["ow_status"])
-            col.markdown(
-                f'<div style="border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px">'
-                f'<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">'
-                f'<span style="font-size:1.4rem">{medal}</span>{logo}'
-                f'<span style="font-weight:700;font-size:0.95rem">{r["name"]}</span></div>'
-                f'<div style="color:#555;font-size:0.8rem;margin-bottom:4px">{r["creator"]}</div>'
-                f'<div style="display:flex;align-items:center;gap:8px">'
-                f'<span style="font-size:1.3rem;font-weight:700">{r["score"]}</span>'
-                f'<span style="color:#888;font-size:0.75rem">Score</span>'
-                f'&nbsp;{pill}</div></div>',
-                unsafe_allow_html=True,
-            )
+    if total_rank == 0:
+        st.warning("Ningún modelo coincide con la búsqueda.")
+    else:
+        PAGE = 25
+        n_pages = max(1, (total_rank + PAGE - 1) // PAGE)
+        if n_pages > 1:
+            pb1, pb2, pb3 = st.columns([1, 2, 1])
+            with pb2:
+                rank_page = st.number_input("Página", 1, n_pages, 1, key="rank_page",
+                                            label_visibility="collapsed")
+            st.caption(f"Página **{rank_page}** de {n_pages} · {total_rank} modelos")
+        else:
+            rank_page = 1
+            if rank_search or rank_cr:
+                st.caption(f"{total_rank} modelos")
 
-    st.markdown(f"#### Top {len(df_rank)}  —  haz clic en una fila para ver el detalle")
+        df_rank_page = df_rank.iloc[(rank_page-1)*PAGE : rank_page*PAGE].copy()
 
-    top_metric_keys = [k for k,v in sorted(weights.items(), key=lambda x:-x[1]) if v>0 and k not in ("price","speed")][:4]
-    rank_cols = ["#","logo_url","name","creator","ow_status","params_str","ollama","score"] + [k for k in top_metric_keys if k in df_rank.columns] + ["price_blend","speed_tps"]
-    disp_rank = scale_pct(df_rank[rank_cols].copy(), [k for k in top_metric_keys if k in PCT_BENCH])
-    disp_rank["ow_status"] = disp_rank["ow_status"].map(LIC_LABEL).fillna("—")
+        top_metric_keys = [k for k,v in sorted(weights.items(), key=lambda x:-x[1]) if v>0 and k not in ("price","speed")][:4]
+        rank_cols = ["#","logo_url","name","creator","ow_status","params_str","ollama","score"] + [k for k in top_metric_keys if k in df_rank_page.columns] + ["price_blend","speed_tps"]
+        disp_rank = scale_pct(df_rank_page[rank_cols].copy(), [k for k in top_metric_keys if k in PCT_BENCH])
+        disp_rank["ow_status"] = disp_rank["ow_status"].map(LIC_LABEL).fillna("—")
 
-    col_cfg = {
-        "#":           st.column_config.NumberColumn("#", width="small"),
-        "logo_url":    st.column_config.ImageColumn("", width="small"),
-        "name":        st.column_config.TextColumn("Modelo"),
-        "creator":     st.column_config.TextColumn("Empresa / Lab"),
-        "ow_status":   st.column_config.TextColumn("Licencia"),
-        "score":       st.column_config.ProgressColumn("Score", min_value=0, max_value=100, format="%.1f",
-                       help="Nota ponderada según el perfil seleccionado (0-100)."),
-        "params_str":  st.column_config.TextColumn("Params", help="Parámetros totales. MoE muestra (activos)."),
-        "ollama":      st.column_config.CheckboxColumn("Ollama", help="Disponible para ejecutar localmente con Ollama."),
-        "price_blend": st.column_config.NumberColumn("$/1M", format="$%.3f"),
-        "speed_tps":   st.column_config.NumberColumn("Tok/s", format="%.0f"),
-    }
-    for k in top_metric_keys:
-        if k in disp_rank.columns:
-            lbl_m, desc = METRICS_INFO.get(k, (k,""))
-            max_v = 45.0 if k == "hle" else 100.0
-            col_cfg[k] = pct_col(lbl_m, max_v=max_v, help=desc)
+        col_cfg = {
+            "#":           st.column_config.NumberColumn("#", width="small"),
+            "logo_url":    st.column_config.ImageColumn("", width="small"),
+            "name":        st.column_config.TextColumn("Modelo"),
+            "creator":     st.column_config.TextColumn("Empresa / Lab"),
+            "ow_status":   st.column_config.TextColumn("Licencia"),
+            "score":       st.column_config.ProgressColumn("Score", min_value=0, max_value=100, format="%.1f",
+                           help="Nota ponderada según el perfil seleccionado (0-100)."),
+            "params_str":  st.column_config.TextColumn("Params", help="Parámetros totales. MoE muestra (activos)."),
+            "ollama":      st.column_config.CheckboxColumn("Ollama", help="Disponible para ejecutar localmente con Ollama."),
+            "price_blend": st.column_config.NumberColumn("$/1M", format="$%.3f"),
+            "speed_tps":   st.column_config.NumberColumn("Tok/s", format="%.0f"),
+        }
+        for k in top_metric_keys:
+            if k in disp_rank.columns:
+                lbl_m, desc = METRICS_INFO.get(k, (k,""))
+                max_v = 45.0 if k == "hle" else 100.0
+                col_cfg[k] = pct_col(lbl_m, max_v=max_v, help=desc)
 
-    sel_rank = st.dataframe(
-        disp_rank, column_config=col_cfg,
-        use_container_width=True, hide_index=True,
-        selection_mode="single-row", on_select="rerun",
-        height=min(38*len(disp_rank)+38, 620),
-    )
-    if sel_rank.selection.rows:
-        st.divider()
-        model_detail_panel(df_rank.iloc[sel_rank.selection.rows[0]])
+        sel_rank = st.dataframe(
+            disp_rank, column_config=col_cfg,
+            use_container_width=True, hide_index=True,
+            selection_mode="single-row", on_select="rerun",
+            height=min(38*len(disp_rank)+38, 620),
+        )
+        if sel_rank.selection.rows:
+            st.divider()
+            model_detail_panel(df_rank_page.iloc[sel_rank.selection.rows[0]])
 
 
 # ══════════════════════════════════════════════
