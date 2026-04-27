@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-04-26T08:57:31.848327+00:00",
+  "_fetched_at": "2026-04-27T10:12:29.392478+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -35,6 +35,7 @@
     "deepseek-v3.1",
     "deepseek-v3.2",
     "deepseek-v4-flash",
+    "deepseek-v4-pro",
     "devstral",
     "devstral-2",
     "devstral-small-2",
@@ -43,7 +44,6 @@
     "dolphin-mixtral",
     "dolphin-phi",
     "dolphin3",
-    "dolphincoder",
     "embeddinggemma",
     "everythinglm",
     "exaone-deep",
