@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-04-28T10:11:15.819628+00:00",
+  "_fetched_at": "2026-04-29T10:03:20.848230+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -67,6 +67,7 @@
     "glm-ocr",
     "gpt-oss",
     "gpt-oss-safeguard",
+    "granite-code",
     "granite3-dense",
     "granite3-guardian",
     "granite3.1-dense",
@@ -80,6 +81,7 @@
     "kimi-k2-thinking",
     "kimi-k2.5",
     "kimi-k2.6",
+    "laguna-xs.2",
     "lfm2",
     "lfm2.5-thinking",
     "llama-guard3",
@@ -124,6 +126,7 @@
     "nemotron-3-super",
     "nemotron-cascade-2",
     "nemotron-mini",
+    "nemotron3",
     "neural-chat",
     "nexusraven",
     "nomic-embed-text",
