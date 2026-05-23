@@ -1,10 +1,25 @@
 {
-  "_fetched_at": "2026-05-22T10:47:34.468385+00:00",
+  "_fetched_at": "2026-05-23T09:49:27.073761+00:00",
   "params": {
+    "Arctic Instruct": {
+      "total_b": 478.585,
+      "active_b": 17.0,
+      "hf_id": "Snowflake/snowflake-arctic-instruct"
+    },
     "Command A": {
       "total_b": 111.058,
       "active_b": null,
       "hf_id": "CohereForAI/c4ai-command-a-03-2025"
+    },
+    "Command-R (Mar '24)": {
+      "total_b": 34.981,
+      "active_b": null,
+      "hf_id": "CohereForAI/c4ai-command-r-v01"
+    },
+    "Command-R+ (Apr '24)": {
+      "total_b": 103.811,
+      "active_b": null,
+      "hf_id": "CohereForAI/c4ai-command-r-plus"
     },
     "Tiny Aya Global": {
       "total_b": 8.028,
