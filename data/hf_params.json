@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-05-25T11:51:22.776655+00:00",
+  "_fetched_at": "2026-05-27T11:36:04.212046+00:00",
   "params": {
     "Arctic Instruct": {
       "total_b": 478.585,
@@ -76,15 +76,55 @@
       "active_b": 17.0,
       "hf_id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct"
     },
+    "Llama 4 Scout": {
+      "total_b": 108.642,
+      "active_b": 17.0,
+      "hf_id": "meta-llama/Llama-4-Scout-17B-16E-Instruct"
+    },
+    "Phi-4": {
+      "total_b": 14.66,
+      "active_b": null,
+      "hf_id": "microsoft/phi-4"
+    },
+    "Phi-4 Mini Instruct": {
+      "total_b": 3.836,
+      "active_b": null,
+      "hf_id": "microsoft/Phi-4-mini-instruct"
+    },
     "Phi-4 Multimodal Instruct": {
       "total_b": 5.574,
       "active_b": null,
       "hf_id": "microsoft/Phi-4-multimodal-instruct"
     },
+    "Mistral Large 2 (Jul '24)": {
+      "total_b": 122.61,
+      "active_b": null,
+      "hf_id": "mistralai/Mistral-Large-Instruct-2407"
+    },
+    "Mistral Large 2 (Nov '24)": {
+      "total_b": 122.61,
+      "active_b": null,
+      "hf_id": "mistralai/Mistral-Large-Instruct-2411"
+    },
     "Mistral Small (Feb '24)": {
       "total_b": 7.242,
       "active_b": null,
       "hf_id": "mistralai/Mistral-7B-Instruct-v0.2"
+    },
+    "Mistral Small (Sep '24)": {
+      "total_b": 22.247,
+      "active_b": null,
+      "hf_id": "mistralai/Mistral-Small-Instruct-2409"
+    },
+    "Mistral Small 3": {
+      "total_b": 24.011,
+      "active_b": null,
+      "hf_id": "mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+    },
+    "Mistral Small 3.1": {
+      "total_b": 24.011,
+      "active_b": null,
+      "hf_id": "mistralai/Mistral-Small-3.1-24B-Instruct-2503"
     },
     "Devstral Small (May '25)": {
       "total_b": 23.572,
