@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-05-31T10:12:21.603326+00:00",
+  "_fetched_at": "2026-06-01T13:33:47.145628+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -108,6 +108,7 @@
     "minimax-m2.1",
     "minimax-m2.5",
     "minimax-m2.7",
+    "minimax-m3",
     "ministral-3",
     "mistral",
     "mistral-large",
@@ -118,7 +119,6 @@
     "mistral-small3.1",
     "mistral-small3.2",
     "mixtral",
-    "moondream",
     "mxbai-embed-large",
     "nemotron",
     "nemotron-3-nano",
