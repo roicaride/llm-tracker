@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-06-02T12:02:09.567370+00:00",
+  "_fetched_at": "2026-06-03T12:39:37.183926+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -82,6 +82,7 @@
     "kimi-k2.6",
     "laguna-xs.2",
     "lfm2",
+    "lfm2.5",
     "lfm2.5-thinking",
     "llama-guard3",
     "llama-pro",
@@ -99,7 +100,6 @@
     "llama4",
     "llava",
     "llava-llama3",
-    "llava-phi3",
     "magistral",
     "medgemma",
     "medgemma1.5",
