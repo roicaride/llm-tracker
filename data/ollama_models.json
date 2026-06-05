@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-06-04T10:58:53.123001+00:00",
+  "_fetched_at": "2026-06-05T11:24:57.390635+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -123,6 +123,7 @@
     "nemotron",
     "nemotron-3-nano",
     "nemotron-3-super",
+    "nemotron-3-ultra",
     "nemotron-cascade-2",
     "nemotron-mini",
     "nemotron3",
