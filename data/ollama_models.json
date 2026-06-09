@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-06-08T12:25:51.775443+00:00",
+  "_fetched_at": "2026-06-09T10:57:47.226984+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -104,6 +104,8 @@
     "medgemma",
     "medgemma1.5",
     "minicpm-v",
+    "minicpm-v4.5",
+    "minicpm-v4.6",
     "minimax-m2",
     "minimax-m2.1",
     "minimax-m2.5",
@@ -111,12 +113,10 @@
     "minimax-m3",
     "ministral-3",
     "mistral",
-    "mistral-large",
     "mistral-large-3",
     "mistral-medium-3.5",
     "mistral-nemo",
     "mistral-small",
-    "mistral-small3.1",
     "mistral-small3.2",
     "mixtral",
     "mxbai-embed-large",
