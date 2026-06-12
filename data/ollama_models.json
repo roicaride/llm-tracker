@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-06-11T12:07:44.941132+00:00",
+  "_fetched_at": "2026-06-12T11:41:40.280922+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -74,6 +74,7 @@
     "granite3.3",
     "granite4",
     "granite4.1",
+    "granite4.1-guardian",
     "hermes3",
     "internlm2",
     "kimi-k2",
