@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-06-12T11:41:40.280922+00:00",
+  "_fetched_at": "2026-06-13T10:25:48.077961+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -81,6 +81,7 @@
     "kimi-k2-thinking",
     "kimi-k2.5",
     "kimi-k2.6",
+    "kimi-k2.7-code",
     "laguna-xs.2",
     "lfm2",
     "lfm2.5",
