@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-06-17T12:14:01.936933+00:00",
+  "_fetched_at": "2026-06-18T11:48:35.197192+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -131,6 +131,7 @@
     "nexusraven",
     "nomic-embed-text",
     "nomic-embed-text-v2-moe",
+    "north-mini-code-1.0",
     "notus",
     "notux",
     "nous-hermes",
