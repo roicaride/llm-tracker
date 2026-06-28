@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-06-27T10:03:57.860357+00:00",
+  "_fetched_at": "2026-06-28T10:24:48.620886+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -148,6 +148,7 @@
     "openthinker",
     "orca-mini",
     "orca2",
+    "ornith",
     "paraphrase-multilingual",
     "phi",
     "phi3",
