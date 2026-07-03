@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-07-02T10:34:35.285255+00:00",
+  "_fetched_at": "2026-07-03T10:32:11.731191+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -80,6 +80,7 @@
     "kimi-k2.5",
     "kimi-k2.6",
     "kimi-k2.7-code",
+    "laguna-xs-2.1",
     "laguna-xs.2",
     "lfm2",
     "lfm2.5",
@@ -87,7 +88,6 @@
     "llama-guard3",
     "llama-pro",
     "llama2",
-    "llama2-chinese",
     "llama2-uncensored",
     "llama3",
     "llama3-chatqa",
