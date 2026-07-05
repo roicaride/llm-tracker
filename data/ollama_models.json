@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-07-04T10:05:56.878501+00:00",
+  "_fetched_at": "2026-07-05T10:09:06.534092+00:00",
   "models": [
     "alfred",
     "all-minilm",
@@ -67,8 +67,6 @@
     "glm-ocr",
     "gpt-oss",
     "gpt-oss-safeguard",
-    "granite3-dense",
-    "granite3.1-dense",
     "granite3.1-moe",
     "granite3.2-vision",
     "granite3.3",
