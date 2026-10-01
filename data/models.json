@@ -40,9 +40,9 @@
         "price_1m_input_tokens": 4,
         "price_1m_output_tokens": 20
       },
-      "median_output_tokens_per_second": 95.831,
-      "median_time_to_first_token_seconds": 479.922,
-      "median_time_to_first_answer_token": 479.922
+      "median_output_tokens_per_second": 95.995,
+      "median_time_to_first_token_seconds": 481.193,
+      "median_time_to_first_answer_token": 481.193
     },
     {
       "id": "df5bf99d-d228-4715-b41b-19ca86118777",
@@ -79,9 +79,9 @@
         "price_1m_input_tokens": 4,
         "price_1m_output_tokens": 20
       },
-      "median_output_tokens_per_second": 80.803,
-      "median_time_to_first_token_seconds": 53.971,
-      "median_time_to_first_answer_token": 53.971
+      "median_output_tokens_per_second": 80.078,
+      "median_time_to_first_token_seconds": 41.938,
+      "median_time_to_first_answer_token": 41.938
     },
     {
       "id": "b171d979-5ec1-45de-b8b9-db1ee65e77ec",
@@ -118,9 +118,9 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 145.279,
-      "median_time_to_first_token_seconds": 308.288,
-      "median_time_to_first_answer_token": 308.288
+      "median_output_tokens_per_second": 145.16,
+      "median_time_to_first_token_seconds": 265.2,
+      "median_time_to_first_answer_token": 265.2
     },
     {
       "id": "f314eade-2232-44bf-a3ab-9b326bc67de6",
@@ -157,9 +157,9 @@
         "price_1m_input_tokens": 4,
         "price_1m_output_tokens": 20
       },
-      "median_output_tokens_per_second": 73.482,
-      "median_time_to_first_token_seconds": 17.342,
-      "median_time_to_first_answer_token": 17.342
+      "median_output_tokens_per_second": 78.925,
+      "median_time_to_first_token_seconds": 16.404,
+      "median_time_to_first_answer_token": 16.404
     },
     {
       "id": "3e87c73e-a257-495e-9730-367a66229811",
@@ -196,9 +196,9 @@
         "price_1m_input_tokens": 10,
         "price_1m_output_tokens": 50
       },
-      "median_output_tokens_per_second": 69.184,
-      "median_time_to_first_token_seconds": 115.077,
-      "median_time_to_first_answer_token": 115.077
+      "median_output_tokens_per_second": 69.669,
+      "median_time_to_first_token_seconds": 118.169,
+      "median_time_to_first_answer_token": 118.169
     },
     {
       "id": "9b166bf3-42db-4f63-8338-1c4a1244ffe8",
@@ -235,13 +235,13 @@
         "price_1m_input_tokens": 10,
         "price_1m_output_tokens": 50
       },
-      "median_output_tokens_per_second": 57.223,
-      "median_time_to_first_token_seconds": 36.22,
-      "median_time_to_first_answer_token": 36.22
+      "median_output_tokens_per_second": 62.658,
+      "median_time_to_first_token_seconds": 37.608,
+      "median_time_to_first_answer_token": 37.608
     },
     {
       "id": "2f339a97-9a0d-499a-9cb5-e0db665bfa25",
-      "name": "GPT-6 Astra (max)",
+      "name": "GPT-6 Astra (Max)",
       "slug": "gpt-6-astra",
       "release_date": "2026-09-03",
       "model_creator": {
@@ -274,13 +274,52 @@
         "price_1m_input_tokens": 10,
         "price_1m_output_tokens": 50
       },
-      "median_output_tokens_per_second": 54.549,
-      "median_time_to_first_token_seconds": 192.987,
-      "median_time_to_first_answer_token": 192.987
+      "median_output_tokens_per_second": 52.341,
+      "median_time_to_first_token_seconds": 192.954,
+      "median_time_to_first_answer_token": 192.954
+    },
+    {
+      "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+      "name": "Gemini 4 Argon (High)",
+      "slug": "gemini-4-argon",
+      "release_date": "2026-09-30",
+      "model_creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "slug": "google"
+      },
+      "evaluations": {
+        "artificial_analysis_intelligence_index": 52.6,
+        "artificial_analysis_coding_index": null,
+        "artificial_analysis_math_index": null,
+        "mmlu_pro": null,
+        "gpqa": null,
+        "hle": 0.571,
+        "livecodebench": null,
+        "scicode": 0.618,
+        "math_500": null,
+        "aime": null,
+        "aime_25": null,
+        "ifbench": null,
+        "lcr": 0.796666666666667,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "terminalbench_v4_0": 0.570707070707071,
+        "tau2": null,
+        "tau_banking": null
+      },
+      "pricing": {
+        "price_1m_blended_3_to_1": 4,
+        "price_1m_input_tokens": 2,
+        "price_1m_output_tokens": 10
+      },
+      "median_output_tokens_per_second": 0,
+      "median_time_to_first_token_seconds": 0,
+      "median_time_to_first_answer_token": 0
     },
     {
       "id": "1f541ef3-913f-4eb2-9d07-0e93c7a9a5e3",
-      "name": "GPT-6 Astra (xhigh)",
+      "name": "GPT-6 Astra (Xhigh)",
       "slug": "gpt-6-astra-xhigh",
       "release_date": "2026-09-03",
       "model_creator": {
@@ -313,9 +352,9 @@
         "price_1m_input_tokens": 10,
         "price_1m_output_tokens": 50
       },
-      "median_output_tokens_per_second": 52.725,
-      "median_time_to_first_token_seconds": 79.195,
-      "median_time_to_first_answer_token": 79.195
+      "median_output_tokens_per_second": 51.622,
+      "median_time_to_first_token_seconds": 75.384,
+      "median_time_to_first_answer_token": 75.384
     },
     {
       "id": "975aeaef-50bd-4a65-9c73-f1015adcd4d4",
@@ -352,13 +391,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 109.174,
-      "median_time_to_first_token_seconds": 15.6,
-      "median_time_to_first_answer_token": 15.6
+      "median_output_tokens_per_second": 112.626,
+      "median_time_to_first_token_seconds": 14.801,
+      "median_time_to_first_answer_token": 14.801
     },
     {
       "id": "b25ac058-1e33-4c31-bbc9-a20c3ad0717a",
-      "name": "GPT-6.1 Sol (max)",
+      "name": "GPT-6.1 Sol (Max)",
       "slug": "gpt-6-1-sol",
       "release_date": "2026-09-29",
       "model_creator": {
@@ -391,7 +430,7 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 86.643,
+      "median_output_tokens_per_second": 73.384,
       "median_time_to_first_token_seconds": 129.809,
       "median_time_to_first_answer_token": 129.809
     },
@@ -430,9 +469,9 @@
         "price_1m_input_tokens": 4,
         "price_1m_output_tokens": 20
       },
-      "median_output_tokens_per_second": 73.504,
-      "median_time_to_first_token_seconds": 12.608,
-      "median_time_to_first_answer_token": 12.608
+      "median_output_tokens_per_second": 74.631,
+      "median_time_to_first_token_seconds": 13.143,
+      "median_time_to_first_answer_token": 13.143
     },
     {
       "id": "9d7d72cd-d95d-45a0-b109-4ad292c9aabd",
@@ -469,13 +508,13 @@
         "price_1m_input_tokens": 10,
         "price_1m_output_tokens": 50
       },
-      "median_output_tokens_per_second": 50.841,
-      "median_time_to_first_token_seconds": 6.231,
-      "median_time_to_first_answer_token": 6.231
+      "median_output_tokens_per_second": 53.522,
+      "median_time_to_first_token_seconds": 6.8,
+      "median_time_to_first_answer_token": 6.8
     },
     {
       "id": "092a3b0e-c5c8-45dc-bf1b-53673c8ff352",
-      "name": "GPT-6.1 Sol (xhigh)",
+      "name": "GPT-6.1 Sol (Xhigh)",
       "slug": "gpt-6-1-sol-xhigh",
       "release_date": "2026-09-29",
       "model_creator": {
@@ -508,13 +547,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 78.067,
-      "median_time_to_first_token_seconds": 42.846,
-      "median_time_to_first_answer_token": 42.846
+      "median_output_tokens_per_second": 62.138,
+      "median_time_to_first_token_seconds": 50.489,
+      "median_time_to_first_answer_token": 50.489
     },
     {
       "id": "e05a4828-0536-4876-870d-a235023f992b",
-      "name": "GPT-6 Astra (high)",
+      "name": "GPT-6 Astra (High)",
       "slug": "gpt-6-astra-high",
       "release_date": "2026-09-03",
       "model_creator": {
@@ -547,9 +586,9 @@
         "price_1m_input_tokens": 10,
         "price_1m_output_tokens": 50
       },
-      "median_output_tokens_per_second": 49.969,
-      "median_time_to_first_token_seconds": 34.812,
-      "median_time_to_first_answer_token": 34.812
+      "median_output_tokens_per_second": 49.272,
+      "median_time_to_first_token_seconds": 29.184,
+      "median_time_to_first_answer_token": 29.184
     },
     {
       "id": "b8fc61f7-5e9a-49e6-8547-6ac56db24627",
@@ -592,7 +631,7 @@
     },
     {
       "id": "3b84fee3-b70a-41bc-819e-5fbdef9a0042",
-      "name": "GPT-6.1 Sol (high)",
+      "name": "GPT-6.1 Sol (High)",
       "slug": "gpt-6-1-sol-high",
       "release_date": "2026-09-29",
       "model_creator": {
@@ -625,9 +664,9 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 68.954,
-      "median_time_to_first_token_seconds": 25.801,
-      "median_time_to_first_answer_token": 25.801
+      "median_output_tokens_per_second": 59.313,
+      "median_time_to_first_token_seconds": 19.878,
+      "median_time_to_first_answer_token": 19.878
     },
     {
       "id": "1305c921-7aaa-4d6d-99b5-99b3acf15e19",
@@ -709,7 +748,7 @@
     },
     {
       "id": "e97a4ef5-e817-480e-9595-12f81dc4974f",
-      "name": "GPT-6 Astra (medium)",
+      "name": "GPT-6 Astra (Medium)",
       "slug": "gpt-6-astra-medium",
       "release_date": "2026-09-03",
       "model_creator": {
@@ -742,9 +781,9 @@
         "price_1m_input_tokens": 10,
         "price_1m_output_tokens": 50
       },
-      "median_output_tokens_per_second": 49.184,
-      "median_time_to_first_token_seconds": 3.793,
-      "median_time_to_first_answer_token": 3.793
+      "median_output_tokens_per_second": 50.692,
+      "median_time_to_first_token_seconds": 4.544,
+      "median_time_to_first_answer_token": 4.544
     },
     {
       "id": "3b7de71c-e034-4591-8ca6-6b6be2fa471f",
@@ -781,9 +820,9 @@
         "price_1m_input_tokens": 10,
         "price_1m_output_tokens": 50
       },
-      "median_output_tokens_per_second": 49.475,
-      "median_time_to_first_token_seconds": 5.161,
-      "median_time_to_first_answer_token": 5.161
+      "median_output_tokens_per_second": 48.817,
+      "median_time_to_first_token_seconds": 5.42,
+      "median_time_to_first_answer_token": 5.42
     },
     {
       "id": "712be54a-77ae-41b2-9a58-21181479d6ee",
@@ -826,7 +865,7 @@
     },
     {
       "id": "9999672c-b687-4026-9c15-5cef02ff53bb",
-      "name": "Muse Spark 1.3 (max)",
+      "name": "Muse Spark 1.3 (Max)",
       "slug": "muse-spark-1-3",
       "release_date": "2026-09-02",
       "model_creator": {
@@ -859,13 +898,13 @@
         "price_1m_input_tokens": 1.25,
         "price_1m_output_tokens": 4.25
       },
-      "median_output_tokens_per_second": 189.456,
-      "median_time_to_first_token_seconds": 20.92,
-      "median_time_to_first_answer_token": 31.476
+      "median_output_tokens_per_second": 172.206,
+      "median_time_to_first_token_seconds": 35.106,
+      "median_time_to_first_answer_token": 46.72
     },
     {
       "id": "a2e51d62-ea4e-4f15-8be0-be9dc1fb489d",
-      "name": "GPT-6.1 Sol (medium)",
+      "name": "GPT-6.1 Sol (Medium)",
       "slug": "gpt-6-1-sol-medium",
       "release_date": "2026-09-29",
       "model_creator": {
@@ -898,13 +937,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 71.963,
-      "median_time_to_first_token_seconds": 4.692,
-      "median_time_to_first_answer_token": 4.692
+      "median_output_tokens_per_second": 64.947,
+      "median_time_to_first_token_seconds": 3.69,
+      "median_time_to_first_answer_token": 3.69
     },
     {
       "id": "c50ea08c-88c0-4eb7-85b8-27f2bbf6d527",
-      "name": "GPT-6 Sol (max)",
+      "name": "GPT-6 Sol (Max)",
       "slug": "gpt-6-sol",
       "release_date": "2026-09-22",
       "model_creator": {
@@ -913,7 +952,7 @@
         "slug": "openai"
       },
       "evaluations": {
-        "artificial_analysis_intelligence_index": 47.5,
+        "artificial_analysis_intelligence_index": 47.6,
         "artificial_analysis_coding_index": null,
         "artificial_analysis_math_index": null,
         "mmlu_pro": null,
@@ -937,13 +976,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 79.832,
-      "median_time_to_first_token_seconds": 116.988,
-      "median_time_to_first_answer_token": 116.988
+      "median_output_tokens_per_second": 83.804,
+      "median_time_to_first_token_seconds": 113.231,
+      "median_time_to_first_answer_token": 113.231
     },
     {
       "id": "d93edfe8-bf35-49ad-b56e-b18116142a1c",
-      "name": "GPT-5.6 Sol (max)",
+      "name": "GPT-5.6 Sol (Max)",
       "slug": "gpt-5-6-sol",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -1015,7 +1054,7 @@
         "price_1m_input_tokens": 10,
         "price_1m_output_tokens": 50
       },
-      "median_output_tokens_per_second": 50.672,
+      "median_output_tokens_per_second": 52.334,
       "median_time_to_first_token_seconds": 2.951,
       "median_time_to_first_answer_token": 2.951
     },
@@ -1054,13 +1093,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 104.803,
+      "median_output_tokens_per_second": 106.449,
       "median_time_to_first_token_seconds": 7.293,
       "median_time_to_first_answer_token": 7.293
     },
     {
       "id": "59627802-1546-422c-9a65-65b61c022d36",
-      "name": "Grok 4.7 (xhigh)",
+      "name": "Grok 4.7 (Xhigh)",
       "slug": "grok-4-7",
       "release_date": "2026-09-21",
       "model_creator": {
@@ -1093,13 +1132,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 6
       },
-      "median_output_tokens_per_second": 82.607,
-      "median_time_to_first_token_seconds": 19.282,
-      "median_time_to_first_answer_token": 19.282
+      "median_output_tokens_per_second": 83.076,
+      "median_time_to_first_token_seconds": 19.787,
+      "median_time_to_first_answer_token": 19.787
     },
     {
       "id": "272f5f03-aea9-4675-a244-2b753b618cdf",
-      "name": "Grok 4.7 (high)",
+      "name": "Grok 4.7 (High)",
       "slug": "grok-4-7-high",
       "release_date": "2026-09-21",
       "model_creator": {
@@ -1132,9 +1171,9 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 6
       },
-      "median_output_tokens_per_second": 74.109,
-      "median_time_to_first_token_seconds": 14.352,
-      "median_time_to_first_answer_token": 14.352
+      "median_output_tokens_per_second": 83.388,
+      "median_time_to_first_token_seconds": 13.682,
+      "median_time_to_first_answer_token": 13.682
     },
     {
       "id": "24d8fdfe-6241-424e-b7b7-1b6efb06e4fb",
@@ -1171,13 +1210,13 @@
         "price_1m_input_tokens": 0.435,
         "price_1m_output_tokens": 0.87
       },
-      "median_output_tokens_per_second": 44.303,
-      "median_time_to_first_token_seconds": 3.294,
-      "median_time_to_first_answer_token": 48.438
+      "median_output_tokens_per_second": 49.19,
+      "median_time_to_first_token_seconds": 3.417,
+      "median_time_to_first_answer_token": 44.076
     },
     {
       "id": "a3f8100d-e38f-408b-b0fa-0085dae18dc1",
-      "name": "GPT-6 Astra (low)",
+      "name": "GPT-6 Astra (Low)",
       "slug": "gpt-6-astra-low",
       "release_date": "2026-09-03",
       "model_creator": {
@@ -1210,9 +1249,9 @@
         "price_1m_input_tokens": 10,
         "price_1m_output_tokens": 50
       },
-      "median_output_tokens_per_second": 47.823,
-      "median_time_to_first_token_seconds": 2.098,
-      "median_time_to_first_answer_token": 2.098
+      "median_output_tokens_per_second": 45.873,
+      "median_time_to_first_token_seconds": 1.897,
+      "median_time_to_first_answer_token": 1.897
     },
     {
       "id": "b112af07-3bd5-4647-b09f-b23204361bb2",
@@ -1250,12 +1289,12 @@
         "price_1m_output_tokens": 6
       },
       "median_output_tokens_per_second": 39.279,
-      "median_time_to_first_token_seconds": 1.827,
-      "median_time_to_first_answer_token": 52.745
+      "median_time_to_first_token_seconds": 1.772,
+      "median_time_to_first_answer_token": 52.691
     },
     {
       "id": "d5170215-69be-4129-849b-26d8d8825bfc",
-      "name": "Muse Spark 1.3 (xhigh)",
+      "name": "Muse Spark 1.3 (Xhigh)",
       "slug": "muse-spark-1-3-xhigh",
       "release_date": "2026-09-02",
       "model_creator": {
@@ -1288,9 +1327,9 @@
         "price_1m_input_tokens": 1.25,
         "price_1m_output_tokens": 4.25
       },
-      "median_output_tokens_per_second": 153.49,
-      "median_time_to_first_token_seconds": 33.399,
-      "median_time_to_first_answer_token": 46.43
+      "median_output_tokens_per_second": 216.642,
+      "median_time_to_first_token_seconds": 30.774,
+      "median_time_to_first_answer_token": 40.006
     },
     {
       "id": "ff51be8f-e362-4a7e-9043-687ba15de207",
@@ -1333,7 +1372,7 @@
     },
     {
       "id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
-      "name": "GLM-5.3 (max)",
+      "name": "GLM-5.3 (Max)",
       "slug": "glm-5-3",
       "release_date": "2026-08-18",
       "model_creator": {
@@ -1366,13 +1405,13 @@
         "price_1m_input_tokens": 1.4,
         "price_1m_output_tokens": 4.4
       },
-      "median_output_tokens_per_second": 70.087,
-      "median_time_to_first_token_seconds": 2.794,
-      "median_time_to_first_answer_token": 31.33
+      "median_output_tokens_per_second": 69.965,
+      "median_time_to_first_token_seconds": 2.829,
+      "median_time_to_first_answer_token": 31.415
     },
     {
       "id": "c8adc5cf-fd5a-407b-af51-dc3bede3e49c",
-      "name": "Grok 4.6 (high)",
+      "name": "Grok 4.6 (High)",
       "slug": "grok-4-6",
       "release_date": "2026-08-12",
       "model_creator": {
@@ -1405,13 +1444,52 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 6
       },
-      "median_output_tokens_per_second": 60.703,
-      "median_time_to_first_token_seconds": 26.701,
-      "median_time_to_first_answer_token": 26.701
+      "median_output_tokens_per_second": 59.141,
+      "median_time_to_first_token_seconds": 30.733,
+      "median_time_to_first_answer_token": 30.733
+    },
+    {
+      "id": "da2642fe-9f73-4788-b5af-24edcd55b37e",
+      "name": "GPT-6 Sol (Xhigh)",
+      "slug": "gpt-6-sol-xhigh",
+      "release_date": "2026-09-22",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "slug": "openai"
+      },
+      "evaluations": {
+        "artificial_analysis_intelligence_index": 44.2,
+        "artificial_analysis_coding_index": null,
+        "artificial_analysis_math_index": null,
+        "mmlu_pro": null,
+        "gpqa": null,
+        "hle": 0.463,
+        "livecodebench": null,
+        "scicode": 0.551,
+        "math_500": null,
+        "aime": null,
+        "aime_25": null,
+        "ifbench": null,
+        "lcr": 0.813333333333333,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "terminalbench_v4_0": 0.303030303030303,
+        "tau2": null,
+        "tau_banking": null
+      },
+      "pricing": {
+        "price_1m_blended_3_to_1": 4,
+        "price_1m_input_tokens": 2,
+        "price_1m_output_tokens": 10
+      },
+      "median_output_tokens_per_second": 73.18,
+      "median_time_to_first_token_seconds": 37.396,
+      "median_time_to_first_answer_token": 37.396
     },
     {
       "id": "d6f43d0a-e8c4-447c-9ff7-5cf0a9d59aa3",
-      "name": "Grok 4.6 (xhigh)",
+      "name": "Grok 4.6 (Xhigh)",
       "slug": "grok-4-6-xhigh",
       "release_date": "2026-08-12",
       "model_creator": {
@@ -1444,52 +1522,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 6
       },
-      "median_output_tokens_per_second": 60.294,
-      "median_time_to_first_token_seconds": 24.836,
-      "median_time_to_first_answer_token": 24.836
-    },
-    {
-      "id": "da2642fe-9f73-4788-b5af-24edcd55b37e",
-      "name": "GPT-6 Sol (xhigh)",
-      "slug": "gpt-6-sol-xhigh",
-      "release_date": "2026-09-22",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "slug": "openai"
-      },
-      "evaluations": {
-        "artificial_analysis_intelligence_index": 44.1,
-        "artificial_analysis_coding_index": null,
-        "artificial_analysis_math_index": null,
-        "mmlu_pro": null,
-        "gpqa": null,
-        "hle": 0.463,
-        "livecodebench": null,
-        "scicode": 0.551,
-        "math_500": null,
-        "aime": null,
-        "aime_25": null,
-        "ifbench": null,
-        "lcr": 0.813333333333333,
-        "terminalbench_hard": null,
-        "terminalbench_v2_1": null,
-        "terminalbench_v4_0": 0.303030303030303,
-        "tau2": null,
-        "tau_banking": null
-      },
-      "pricing": {
-        "price_1m_blended_3_to_1": 4,
-        "price_1m_input_tokens": 2,
-        "price_1m_output_tokens": 10
-      },
-      "median_output_tokens_per_second": 73.18,
-      "median_time_to_first_token_seconds": 39.205,
-      "median_time_to_first_answer_token": 39.205
+      "median_output_tokens_per_second": 64.52,
+      "median_time_to_first_token_seconds": 34.532,
+      "median_time_to_first_answer_token": 34.532
     },
     {
       "id": "d998db47-9b67-4727-a2bb-2e1261020ac0",
-      "name": "GPT-5.6 Sol (xhigh)",
+      "name": "GPT-5.6 Sol (Xhigh)",
       "slug": "gpt-5-6-sol-xhigh",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -1561,13 +1600,13 @@
         "price_1m_input_tokens": 1,
         "price_1m_output_tokens": 2.7
       },
-      "median_output_tokens_per_second": 86.247,
-      "median_time_to_first_token_seconds": 1.999,
-      "median_time_to_first_answer_token": 25.188
+      "median_output_tokens_per_second": 87.402,
+      "median_time_to_first_token_seconds": 2.218,
+      "median_time_to_first_answer_token": 25.1
     },
     {
       "id": "f7d2fc3e-1f7b-405f-818c-07952a4af78f",
-      "name": "Kimi K3 (max)",
+      "name": "Kimi K3 (Max)",
       "slug": "kimi-k3",
       "release_date": "2026-07-16",
       "model_creator": {
@@ -1606,7 +1645,7 @@
     },
     {
       "id": "26614164-6840-4e17-a65a-2deb2fe7e87b",
-      "name": "Grok 4.6 (medium)",
+      "name": "Grok 4.6 (Medium)",
       "slug": "grok-4-6-medium",
       "release_date": "2026-08-12",
       "model_creator": {
@@ -1639,13 +1678,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 6
       },
-      "median_output_tokens_per_second": 61.376,
-      "median_time_to_first_token_seconds": 21.126,
-      "median_time_to_first_answer_token": 21.126
+      "median_output_tokens_per_second": 62.37,
+      "median_time_to_first_token_seconds": 20.724,
+      "median_time_to_first_answer_token": 20.724
     },
     {
       "id": "52eebe3e-6ede-4e46-92db-c5dea49fc410",
-      "name": "GPT-6 Sol (high)",
+      "name": "GPT-6 Sol (High)",
       "slug": "gpt-6-sol-high",
       "release_date": "2026-09-22",
       "model_creator": {
@@ -1654,7 +1693,7 @@
         "slug": "openai"
       },
       "evaluations": {
-        "artificial_analysis_intelligence_index": 42.8,
+        "artificial_analysis_intelligence_index": 42.4,
         "artificial_analysis_coding_index": null,
         "artificial_analysis_math_index": null,
         "mmlu_pro": null,
@@ -1678,13 +1717,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 70.636,
-      "median_time_to_first_token_seconds": 16.519,
-      "median_time_to_first_answer_token": 16.519
+      "median_output_tokens_per_second": 72.224,
+      "median_time_to_first_token_seconds": 15.287,
+      "median_time_to_first_answer_token": 15.287
     },
     {
       "id": "8afc250d-b538-45a2-812a-4605f4ffd87e",
-      "name": "GPT-5.6 Sol (high)",
+      "name": "GPT-5.6 Sol (High)",
       "slug": "gpt-5-6-sol-high",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -1756,13 +1795,13 @@
         "price_1m_input_tokens": 4,
         "price_1m_output_tokens": 20
       },
-      "median_output_tokens_per_second": 73.853,
-      "median_time_to_first_token_seconds": 5.344,
-      "median_time_to_first_answer_token": 5.344
+      "median_output_tokens_per_second": 76.126,
+      "median_time_to_first_token_seconds": 6.286,
+      "median_time_to_first_answer_token": 6.286
     },
     {
       "id": "e76e0fe5-93ca-4272-9359-2eb1740467d1",
-      "name": "GPT-6.1 Sol (low)",
+      "name": "GPT-6.1 Sol (Low)",
       "slug": "gpt-6-1-sol-low",
       "release_date": "2026-09-29",
       "model_creator": {
@@ -1795,13 +1834,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 72.941,
-      "median_time_to_first_token_seconds": 1.397,
-      "median_time_to_first_answer_token": 1.397
+      "median_output_tokens_per_second": 55.576,
+      "median_time_to_first_token_seconds": 1.996,
+      "median_time_to_first_answer_token": 1.996
     },
     {
       "id": "bcf8db0a-3bb6-4d82-9516-0f57370c85a6",
-      "name": "GPT-5.6 Terra (max)",
+      "name": "GPT-5.6 Terra (Max)",
       "slug": "gpt-5-6-terra",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -1835,8 +1874,8 @@
         "price_1m_output_tokens": 12
       },
       "median_output_tokens_per_second": 107.685,
-      "median_time_to_first_token_seconds": 115.52,
-      "median_time_to_first_answer_token": 115.52
+      "median_time_to_first_token_seconds": 101.636,
+      "median_time_to_first_answer_token": 101.636
     },
     {
       "id": "19496b81-9f41-4214-a77a-1df803b3c5ae",
@@ -1873,9 +1912,9 @@
         "price_1m_input_tokens": 0.15,
         "price_1m_output_tokens": 0.5
       },
-      "median_output_tokens_per_second": 46.936,
-      "median_time_to_first_token_seconds": 3.195,
-      "median_time_to_first_answer_token": 45.806
+      "median_output_tokens_per_second": 48.181,
+      "median_time_to_first_token_seconds": 3.256,
+      "median_time_to_first_answer_token": 44.766
     },
     {
       "id": "992b7b84-5069-4c6a-9295-834252553d50",
@@ -1918,7 +1957,7 @@
     },
     {
       "id": "8a999846-4c1d-4ce7-a8b7-1310a7166fd7",
-      "name": "Gemini 3.8 Flash (high)",
+      "name": "Gemini 3.8 Flash (High)",
       "slug": "gemini-3-8-flash",
       "release_date": "2026-09-02",
       "model_creator": {
@@ -1951,9 +1990,9 @@
         "price_1m_input_tokens": 0.75,
         "price_1m_output_tokens": 3.75
       },
-      "median_output_tokens_per_second": 222.13,
-      "median_time_to_first_token_seconds": 12.574,
-      "median_time_to_first_answer_token": 12.574
+      "median_output_tokens_per_second": 237.734,
+      "median_time_to_first_token_seconds": 13.377,
+      "median_time_to_first_answer_token": 13.377
     },
     {
       "id": "042e8a37-fcd0-40f4-8f41-99215fb68eda",
@@ -1990,9 +2029,9 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 91.377,
-      "median_time_to_first_token_seconds": 0.78,
-      "median_time_to_first_answer_token": 0.78
+      "median_output_tokens_per_second": 105.481,
+      "median_time_to_first_token_seconds": 0.924,
+      "median_time_to_first_answer_token": 0.924
     },
     {
       "id": "e9a09db3-8fd6-41dd-ba2f-20e0a2bff7f2",
@@ -2107,9 +2146,9 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 6
       },
-      "median_output_tokens_per_second": 39.474,
-      "median_time_to_first_token_seconds": 2.035,
-      "median_time_to_first_answer_token": 52.701
+      "median_output_tokens_per_second": 39.994,
+      "median_time_to_first_token_seconds": 1.887,
+      "median_time_to_first_answer_token": 51.894
     },
     {
       "id": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
@@ -2146,13 +2185,13 @@
         "price_1m_input_tokens": 0.15,
         "price_1m_output_tokens": 0.47
       },
-      "median_output_tokens_per_second": 52.938,
-      "median_time_to_first_token_seconds": 1.502,
-      "median_time_to_first_answer_token": 39.282
+      "median_output_tokens_per_second": 52.897,
+      "median_time_to_first_token_seconds": 1.45,
+      "median_time_to_first_answer_token": 39.26
     },
     {
       "id": "780a4a85-17ff-4175-a8dd-ebca4823e61b",
-      "name": "GPT-6 Sol (medium)",
+      "name": "GPT-6 Sol (Medium)",
       "slug": "gpt-6-sol-medium",
       "release_date": "2026-09-22",
       "model_creator": {
@@ -2191,7 +2230,7 @@
     },
     {
       "id": "744fa3c1-42a7-4995-b138-fb6be11f463c",
-      "name": "Gemini 3.8 Flash (medium)",
+      "name": "Gemini 3.8 Flash (Medium)",
       "slug": "gemini-3-8-flash-medium",
       "release_date": "2026-09-02",
       "model_creator": {
@@ -2230,7 +2269,7 @@
     },
     {
       "id": "eb0d4272-7204-42b9-b875-8866fed58548",
-      "name": "Gemini 3.7 Flash (medium)",
+      "name": "Gemini 3.7 Flash (Medium)",
       "slug": "gemini-3-7-flash-medium",
       "release_date": "2026-08-13",
       "model_creator": {
@@ -2269,7 +2308,7 @@
     },
     {
       "id": "04ee6719-0327-463b-a1a1-70a6a78254f9",
-      "name": "Muse Spark 1.2 (xhigh)",
+      "name": "Muse Spark 1.2 (Xhigh)",
       "slug": "muse-spark-1-2",
       "release_date": "2026-08-05",
       "model_creator": {
@@ -2308,7 +2347,7 @@
     },
     {
       "id": "dbe7c625-3100-4463-b479-a228c41f75dd",
-      "name": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
+      "name": "DeepSeek V4.1 Flash (Max)",
       "slug": "deepseek-v4-1-flash",
       "release_date": "2026-09-10",
       "model_creator": {
@@ -2341,9 +2380,9 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 1.2
       },
-      "median_output_tokens_per_second": 218.778,
-      "median_time_to_first_token_seconds": 0.821,
-      "median_time_to_first_answer_token": 9.962
+      "median_output_tokens_per_second": 226.71,
+      "median_time_to_first_token_seconds": 0.836,
+      "median_time_to_first_answer_token": 9.658
     },
     {
       "id": "20928ba9-3a3f-415f-9519-b84ff64ecf34",
@@ -2386,7 +2425,7 @@
     },
     {
       "id": "6f174934-5b7d-4333-86cb-f5ebf4a862e3",
-      "name": "GPT-5.6 Sol (medium)",
+      "name": "GPT-5.6 Sol (Medium)",
       "slug": "gpt-5-6-sol-medium",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -2425,7 +2464,7 @@
     },
     {
       "id": "b2331108-72ed-415a-82d1-188633875bbc",
-      "name": "Gemini 3.7 Flash (high)",
+      "name": "Gemini 3.7 Flash (High)",
       "slug": "gemini-3-7-flash",
       "release_date": "2026-08-13",
       "model_creator": {
@@ -2464,7 +2503,7 @@
     },
     {
       "id": "a89c4b28-2d8c-456e-88ea-255fb51fd2b6",
-      "name": "GPT-5.4 (xhigh)",
+      "name": "GPT-5.4 (Xhigh)",
       "slug": "gpt-5-4",
       "release_date": "2026-03-05",
       "model_creator": {
@@ -2503,7 +2542,7 @@
     },
     {
       "id": "794f69b5-cede-482b-b1cc-d769478497cd",
-      "name": "Grok 4.5 (high)",
+      "name": "Grok 4.5 (High)",
       "slug": "grok-4-5",
       "release_date": "2026-07-08",
       "model_creator": {
@@ -2542,7 +2581,7 @@
     },
     {
       "id": "1f054429-397e-4fdb-9e71-67bc92c1735e",
-      "name": "GPT-5.5 (xhigh)",
+      "name": "GPT-5.5 (Xhigh)",
       "slug": "gpt-5-5",
       "release_date": "2026-04-23",
       "model_creator": {
@@ -2614,13 +2653,52 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 87.35,
+      "median_output_tokens_per_second": 93.163,
       "median_time_to_first_token_seconds": 123.366,
       "median_time_to_first_answer_token": 123.366
     },
     {
+      "id": "6fb13851-40ce-4bda-ad3f-6b38e0c5daa7",
+      "name": "GPT-6 Luna (Max)",
+      "slug": "gpt-6-luna",
+      "release_date": "2026-09-22",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "slug": "openai"
+      },
+      "evaluations": {
+        "artificial_analysis_intelligence_index": 38.1,
+        "artificial_analysis_coding_index": null,
+        "artificial_analysis_math_index": null,
+        "mmlu_pro": null,
+        "gpqa": null,
+        "hle": 0.385,
+        "livecodebench": null,
+        "scicode": 0.546,
+        "math_500": null,
+        "aime": null,
+        "aime_25": null,
+        "ifbench": null,
+        "lcr": 0.833333333333333,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "terminalbench_v4_0": 0.126262626262626,
+        "tau2": null,
+        "tau_banking": null
+      },
+      "pricing": {
+        "price_1m_blended_3_to_1": 0.2,
+        "price_1m_input_tokens": 0.1,
+        "price_1m_output_tokens": 0.5
+      },
+      "median_output_tokens_per_second": 133.241,
+      "median_time_to_first_token_seconds": 83.735,
+      "median_time_to_first_answer_token": 83.735
+    },
+    {
       "id": "9e30696f-16fa-4b4f-ba53-161895a85fed",
-      "name": "GPT-5.6 Terra (xhigh)",
+      "name": "GPT-5.6 Terra (Xhigh)",
       "slug": "gpt-5-6-terra-xhigh",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -2654,8 +2732,8 @@
         "price_1m_output_tokens": 12
       },
       "median_output_tokens_per_second": 88.268,
-      "median_time_to_first_token_seconds": 13.732,
-      "median_time_to_first_answer_token": 13.732
+      "median_time_to_first_token_seconds": 9.848,
+      "median_time_to_first_answer_token": 9.848
     },
     {
       "id": "127de816-57d3-4037-8484-480a613cd413",
@@ -2692,13 +2770,13 @@
         "price_1m_input_tokens": 0.14,
         "price_1m_output_tokens": 0.28
       },
-      "median_output_tokens_per_second": 50.422,
-      "median_time_to_first_token_seconds": 3.73,
-      "median_time_to_first_answer_token": 43.396
+      "median_output_tokens_per_second": 53.198,
+      "median_time_to_first_token_seconds": 3.38,
+      "median_time_to_first_answer_token": 40.976
     },
     {
       "id": "426d24c8-49ae-482a-b4a8-20f1c53f21c1",
-      "name": "GPT-5.6 Luna (max)",
+      "name": "GPT-5.6 Luna (Max)",
       "slug": "gpt-5-6-luna",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -2736,47 +2814,8 @@
       "median_time_to_first_answer_token": 0
     },
     {
-      "id": "6fb13851-40ce-4bda-ad3f-6b38e0c5daa7",
-      "name": "GPT-6 Luna (max)",
-      "slug": "gpt-6-luna",
-      "release_date": "2026-09-22",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "slug": "openai"
-      },
-      "evaluations": {
-        "artificial_analysis_intelligence_index": 37.3,
-        "artificial_analysis_coding_index": null,
-        "artificial_analysis_math_index": null,
-        "mmlu_pro": null,
-        "gpqa": null,
-        "hle": 0.385,
-        "livecodebench": null,
-        "scicode": 0.546,
-        "math_500": null,
-        "aime": null,
-        "aime_25": null,
-        "ifbench": null,
-        "lcr": 0.833333333333333,
-        "terminalbench_hard": null,
-        "terminalbench_v2_1": null,
-        "terminalbench_v4_0": 0.126262626262626,
-        "tau2": null,
-        "tau_banking": null
-      },
-      "pricing": {
-        "price_1m_blended_3_to_1": 0.2,
-        "price_1m_input_tokens": 0.1,
-        "price_1m_output_tokens": 0.5
-      },
-      "median_output_tokens_per_second": 134.492,
-      "median_time_to_first_token_seconds": 83.473,
-      "median_time_to_first_answer_token": 83.473
-    },
-    {
       "id": "b13c1257-d746-4027-8fc8-4892dc14701c",
-      "name": "GPT-5.5 (high)",
+      "name": "GPT-5.5 (High)",
       "slug": "gpt-5-5-high",
       "release_date": "2026-04-23",
       "model_creator": {
@@ -2815,7 +2854,7 @@
     },
     {
       "id": "ddfdaf64-3f8e-40a6-a492-608ee83a1351",
-      "name": "Gemini 3.7 Flash (low)",
+      "name": "Gemini 3.7 Flash (Low)",
       "slug": "gemini-3-7-flash-low",
       "release_date": "2026-08-13",
       "model_creator": {
@@ -2854,7 +2893,7 @@
     },
     {
       "id": "83173329-c09a-41f1-a028-a282a5f908d7",
-      "name": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
+      "name": "DeepSeek V4 Pro 0813 (Max)",
       "slug": "deepseek-v4-pro",
       "release_date": "2026-08-13",
       "model_creator": {
@@ -2887,13 +2926,13 @@
         "price_1m_input_tokens": 1.32,
         "price_1m_output_tokens": 3.96
       },
-      "median_output_tokens_per_second": 80.035,
-      "median_time_to_first_token_seconds": 1.124,
-      "median_time_to_first_answer_token": 26.113
+      "median_output_tokens_per_second": 87.145,
+      "median_time_to_first_token_seconds": 1.156,
+      "median_time_to_first_answer_token": 24.107
     },
     {
       "id": "c07e65e6-32fc-451e-938d-7477a1c3ffcc",
-      "name": "Grok 4.6 (low)",
+      "name": "Grok 4.6 (Low)",
       "slug": "grok-4-6-low",
       "release_date": "2026-08-12",
       "model_creator": {
@@ -2927,12 +2966,12 @@
         "price_1m_output_tokens": 6
       },
       "median_output_tokens_per_second": 61.391,
-      "median_time_to_first_token_seconds": 2.613,
-      "median_time_to_first_answer_token": 2.613
+      "median_time_to_first_token_seconds": 2.055,
+      "median_time_to_first_answer_token": 2.055
     },
     {
       "id": "7707a46f-895f-4247-b7a8-ddab87c9a11d",
-      "name": "DeepSeek V4 Flash Vision (Reasoning, Max Effort)",
+      "name": "DeepSeek V4 Flash Vision (Max)",
       "slug": "deepseek-v4-flash-vision",
       "release_date": "2026-08-21",
       "model_creator": {
@@ -2965,13 +3004,52 @@
         "price_1m_input_tokens": 0.44,
         "price_1m_output_tokens": 1.32
       },
-      "median_output_tokens_per_second": 217.986,
-      "median_time_to_first_token_seconds": 0.702,
-      "median_time_to_first_answer_token": 9.877
+      "median_output_tokens_per_second": 227.466,
+      "median_time_to_first_token_seconds": 0.853,
+      "median_time_to_first_answer_token": 9.645
+    },
+    {
+      "id": "19813eb2-460a-475c-af65-810bb8660fec",
+      "name": "GPT-6 Luna (Xhigh)",
+      "slug": "gpt-6-luna-xhigh",
+      "release_date": "2026-09-22",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "slug": "openai"
+      },
+      "evaluations": {
+        "artificial_analysis_intelligence_index": 34.6,
+        "artificial_analysis_coding_index": null,
+        "artificial_analysis_math_index": null,
+        "mmlu_pro": null,
+        "gpqa": null,
+        "hle": 0.343,
+        "livecodebench": null,
+        "scicode": 0.517,
+        "math_500": null,
+        "aime": null,
+        "aime_25": null,
+        "ifbench": null,
+        "lcr": 0.8,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "terminalbench_v4_0": 0.0808080808080808,
+        "tau2": null,
+        "tau_banking": null
+      },
+      "pricing": {
+        "price_1m_blended_3_to_1": 0.2,
+        "price_1m_input_tokens": 0.1,
+        "price_1m_output_tokens": 0.5
+      },
+      "median_output_tokens_per_second": 125.21,
+      "median_time_to_first_token_seconds": 20.021,
+      "median_time_to_first_answer_token": 20.021
     },
     {
       "id": "87110ff0-1f79-41b4-9976-eda250597317",
-      "name": "GPT-5.6 Luna (xhigh)",
+      "name": "GPT-5.6 Luna (Xhigh)",
       "slug": "gpt-5-6-luna-xhigh",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -3043,13 +3121,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 73.187,
+      "median_output_tokens_per_second": 76.441,
       "median_time_to_first_token_seconds": 17.961,
       "median_time_to_first_answer_token": 17.961
     },
     {
       "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
-      "name": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
+      "name": "DeepSeek V4 Flash 0731 (Max)",
       "slug": "deepseek-v4-flash",
       "release_date": "2026-07-31",
       "model_creator": {
@@ -3088,7 +3166,7 @@
     },
     {
       "id": "cc1e488b-8ba4-464d-875d-690166b15ad3",
-      "name": "GLM-5.3 (low)",
+      "name": "GLM-5.3 (Low)",
       "slug": "glm-5-3-low",
       "release_date": "2026-08-18",
       "model_creator": {
@@ -3121,13 +3199,13 @@
         "price_1m_input_tokens": 1.4,
         "price_1m_output_tokens": 4.4
       },
-      "median_output_tokens_per_second": 74.73,
-      "median_time_to_first_token_seconds": 3.217,
-      "median_time_to_first_answer_token": 29.98
+      "median_output_tokens_per_second": 71.972,
+      "median_time_to_first_token_seconds": 3.261,
+      "median_time_to_first_answer_token": 31.05
     },
     {
       "id": "81972fba-1219-477e-bbfb-18c656a63ff7",
-      "name": "GPT-5.6 Terra (high)",
+      "name": "GPT-5.6 Terra (High)",
       "slug": "gpt-5-6-terra-high",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -3160,13 +3238,52 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 12
       },
-      "median_output_tokens_per_second": 88.367,
-      "median_time_to_first_token_seconds": 3.213,
-      "median_time_to_first_answer_token": 3.213
+      "median_output_tokens_per_second": 85.905,
+      "median_time_to_first_token_seconds": 2.334,
+      "median_time_to_first_answer_token": 2.334
+    },
+    {
+      "id": "01459872-433a-4ab2-8e99-7083162172eb",
+      "name": "GPT-6 Sol (Low)",
+      "slug": "gpt-6-sol-low",
+      "release_date": "2026-09-22",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "slug": "openai"
+      },
+      "evaluations": {
+        "artificial_analysis_intelligence_index": 34.2,
+        "artificial_analysis_coding_index": null,
+        "artificial_analysis_math_index": null,
+        "mmlu_pro": null,
+        "gpqa": null,
+        "hle": 0.349,
+        "livecodebench": null,
+        "scicode": 0.502,
+        "math_500": null,
+        "aime": null,
+        "aime_25": null,
+        "ifbench": null,
+        "lcr": 0.793333333333333,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "terminalbench_v4_0": 0.0909090909090909,
+        "tau2": null,
+        "tau_banking": null
+      },
+      "pricing": {
+        "price_1m_blended_3_to_1": 4,
+        "price_1m_input_tokens": 2,
+        "price_1m_output_tokens": 10
+      },
+      "median_output_tokens_per_second": 69.594,
+      "median_time_to_first_token_seconds": 1.81,
+      "median_time_to_first_answer_token": 1.81
     },
     {
       "id": "78332c88-fe60-42c8-af9d-3617e44cf1f5",
-      "name": "Gemini 3.6 Flash (high)",
+      "name": "Gemini 3.6 Flash (High)",
       "slug": "gemini-3-6-flash",
       "release_date": "2026-07-21",
       "model_creator": {
@@ -3205,7 +3322,7 @@
     },
     {
       "id": "46f11cdf-1725-4abb-b39b-bd6bd948149c",
-      "name": "JT-4.1 Flash 236B A21B",
+      "name": "JT-4.1 Flash 236B A21B (Reasoning)",
       "slug": "jt236b",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -3243,86 +3360,8 @@
       "median_time_to_first_answer_token": 0
     },
     {
-      "id": "01459872-433a-4ab2-8e99-7083162172eb",
-      "name": "GPT-6 Sol (low)",
-      "slug": "gpt-6-sol-low",
-      "release_date": "2026-09-22",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "slug": "openai"
-      },
-      "evaluations": {
-        "artificial_analysis_intelligence_index": 33.9,
-        "artificial_analysis_coding_index": null,
-        "artificial_analysis_math_index": null,
-        "mmlu_pro": null,
-        "gpqa": null,
-        "hle": 0.349,
-        "livecodebench": null,
-        "scicode": 0.502,
-        "math_500": null,
-        "aime": null,
-        "aime_25": null,
-        "ifbench": null,
-        "lcr": 0.793333333333333,
-        "terminalbench_hard": null,
-        "terminalbench_v2_1": null,
-        "terminalbench_v4_0": 0.0909090909090909,
-        "tau2": null,
-        "tau_banking": null
-      },
-      "pricing": {
-        "price_1m_blended_3_to_1": 4,
-        "price_1m_input_tokens": 2,
-        "price_1m_output_tokens": 10
-      },
-      "median_output_tokens_per_second": 67.577,
-      "median_time_to_first_token_seconds": 1.874,
-      "median_time_to_first_answer_token": 1.874
-    },
-    {
-      "id": "19813eb2-460a-475c-af65-810bb8660fec",
-      "name": "GPT-6 Luna (xhigh)",
-      "slug": "gpt-6-luna-xhigh",
-      "release_date": "2026-09-22",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "slug": "openai"
-      },
-      "evaluations": {
-        "artificial_analysis_intelligence_index": 33.9,
-        "artificial_analysis_coding_index": null,
-        "artificial_analysis_math_index": null,
-        "mmlu_pro": null,
-        "gpqa": null,
-        "hle": 0.343,
-        "livecodebench": null,
-        "scicode": 0.517,
-        "math_500": null,
-        "aime": null,
-        "aime_25": null,
-        "ifbench": null,
-        "lcr": 0.8,
-        "terminalbench_hard": null,
-        "terminalbench_v2_1": null,
-        "terminalbench_v4_0": 0.0808080808080808,
-        "tau2": null,
-        "tau_banking": null
-      },
-      "pricing": {
-        "price_1m_blended_3_to_1": 0.2,
-        "price_1m_input_tokens": 0.1,
-        "price_1m_output_tokens": 0.5
-      },
-      "median_output_tokens_per_second": 136.891,
-      "median_time_to_first_token_seconds": 17.214,
-      "median_time_to_first_answer_token": 17.214
-    },
-    {
       "id": "6b79f899-e3c0-45f6-923c-243faccdb2fc",
-      "name": "GPT-5.5 (medium)",
+      "name": "GPT-5.5 (Medium)",
       "slug": "gpt-5-5-medium",
       "release_date": "2026-04-23",
       "model_creator": {
@@ -3361,7 +3400,7 @@
     },
     {
       "id": "d61493e2-43ff-460c-9054-eaf6ba317360",
-      "name": "Muse Spark 1.1 (xhigh)",
+      "name": "Muse Spark 1.1 (Xhigh)",
       "slug": "muse-spark-1-1",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -3400,7 +3439,7 @@
     },
     {
       "id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
-      "name": "GLM-5.2 (max)",
+      "name": "GLM-5.2 (Max)",
       "slug": "glm-5-2",
       "release_date": "2026-06-16",
       "model_creator": {
@@ -3439,7 +3478,7 @@
     },
     {
       "id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
-      "name": "Qwen3.8 27B (xhigh)",
+      "name": "Qwen3.8 27B (Xhigh)",
       "slug": "qwen3-8-27b",
       "release_date": "2026-08-14",
       "model_creator": {
@@ -3472,13 +3511,13 @@
         "price_1m_input_tokens": 0.5,
         "price_1m_output_tokens": 3
       },
-      "median_output_tokens_per_second": 45.386,
+      "median_output_tokens_per_second": 44.979,
       "median_time_to_first_token_seconds": 1.238,
-      "median_time_to_first_answer_token": 45.304
+      "median_time_to_first_answer_token": 45.703
     },
     {
       "id": "5016ea75-7b0e-4737-a7e6-1062c6d90fd4",
-      "name": "Gemini 3.5 Flash (medium)",
+      "name": "Gemini 3.5 Flash (Medium)",
       "slug": "gemini-3-5-flash-medium",
       "release_date": "2026-05-19",
       "model_creator": {
@@ -3556,7 +3595,7 @@
     },
     {
       "id": "0904b596-8932-43bd-9b21-324f128e1723",
-      "name": "GPT-5.6 Sol (low)",
+      "name": "GPT-5.6 Sol (Low)",
       "slug": "gpt-5-6-sol-low",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -3595,7 +3634,7 @@
     },
     {
       "id": "f6db039b-0f3b-485c-9d7f-982988e44f26",
-      "name": "Gemini 3.8 Flash (low)",
+      "name": "Gemini 3.8 Flash (Low)",
       "slug": "gemini-3-8-flash-low",
       "release_date": "2026-09-02",
       "model_creator": {
@@ -3633,8 +3672,47 @@
       "median_time_to_first_answer_token": 0
     },
     {
+      "id": "7d1229bc-deea-4717-ba5b-f59a35d991e3",
+      "name": "GPT-6 Luna (High)",
+      "slug": "gpt-6-luna-high",
+      "release_date": "2026-09-22",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "slug": "openai"
+      },
+      "evaluations": {
+        "artificial_analysis_intelligence_index": 32.9,
+        "artificial_analysis_coding_index": null,
+        "artificial_analysis_math_index": null,
+        "mmlu_pro": null,
+        "gpqa": null,
+        "hle": 0.329,
+        "livecodebench": null,
+        "scicode": 0.503,
+        "math_500": null,
+        "aime": null,
+        "aime_25": null,
+        "ifbench": null,
+        "lcr": 0.793333333333333,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "terminalbench_v4_0": 0.0454545454545455,
+        "tau2": null,
+        "tau_banking": null
+      },
+      "pricing": {
+        "price_1m_blended_3_to_1": 0.2,
+        "price_1m_input_tokens": 0.1,
+        "price_1m_output_tokens": 0.5
+      },
+      "median_output_tokens_per_second": 131.134,
+      "median_time_to_first_token_seconds": 7.109,
+      "median_time_to_first_answer_token": 7.109
+    },
+    {
       "id": "0097ebf5-124f-42f6-9463-33b00e711f03",
-      "name": "Gemini 3.5 Flash (high)",
+      "name": "Gemini 3.5 Flash (High)",
       "slug": "gemini-3-5-flash",
       "release_date": "2026-05-19",
       "model_creator": {
@@ -3673,7 +3751,7 @@
     },
     {
       "id": "59b5b14b-5365-4ee7-824a-18a8e6309644",
-      "name": "GPT-5.3 Codex (xhigh)",
+      "name": "GPT-5.3 Codex (Xhigh)",
       "slug": "gpt-5-3-codex",
       "release_date": "2026-02-05",
       "model_creator": {
@@ -3706,9 +3784,9 @@
         "price_1m_input_tokens": 1.75,
         "price_1m_output_tokens": 14
       },
-      "median_output_tokens_per_second": 97.734,
-      "median_time_to_first_token_seconds": 39.96,
-      "median_time_to_first_answer_token": 39.96
+      "median_output_tokens_per_second": 96.414,
+      "median_time_to_first_token_seconds": 46.568,
+      "median_time_to_first_answer_token": 46.568
     },
     {
       "id": "a3043d4f-9b92-4261-8ea2-a2d391b09cf4",
@@ -3750,47 +3828,8 @@
       "median_time_to_first_answer_token": 0
     },
     {
-      "id": "7d1229bc-deea-4717-ba5b-f59a35d991e3",
-      "name": "GPT-6 Luna (high)",
-      "slug": "gpt-6-luna-high",
-      "release_date": "2026-09-22",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "slug": "openai"
-      },
-      "evaluations": {
-        "artificial_analysis_intelligence_index": 32.1,
-        "artificial_analysis_coding_index": null,
-        "artificial_analysis_math_index": null,
-        "mmlu_pro": null,
-        "gpqa": null,
-        "hle": 0.329,
-        "livecodebench": null,
-        "scicode": 0.503,
-        "math_500": null,
-        "aime": null,
-        "aime_25": null,
-        "ifbench": null,
-        "lcr": 0.793333333333333,
-        "terminalbench_hard": null,
-        "terminalbench_v2_1": null,
-        "terminalbench_v4_0": 0.0454545454545455,
-        "tau2": null,
-        "tau_banking": null
-      },
-      "pricing": {
-        "price_1m_blended_3_to_1": 0.2,
-        "price_1m_input_tokens": 0.1,
-        "price_1m_output_tokens": 0.5
-      },
-      "median_output_tokens_per_second": 138.238,
-      "median_time_to_first_token_seconds": 8.169,
-      "median_time_to_first_answer_token": 8.169
-    },
-    {
       "id": "aa55297e-8fbf-4372-b4ab-9b068dc6396c",
-      "name": "GPT-5.6 Luna (high)",
+      "name": "GPT-5.6 Luna (High)",
       "slug": "gpt-5-6-luna-high",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -3901,7 +3940,7 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 61.465,
+      "median_output_tokens_per_second": 61.462,
       "median_time_to_first_token_seconds": 3.812,
       "median_time_to_first_answer_token": 3.812
     },
@@ -3985,7 +4024,7 @@
     },
     {
       "id": "c77cfe51-f4a0-4692-9dee-5061ef667f23",
-      "name": "GPT-5.5 (low)",
+      "name": "GPT-5.5 (Low)",
       "slug": "gpt-5-5-low",
       "release_date": "2026-04-23",
       "model_creator": {
@@ -4063,7 +4102,7 @@
     },
     {
       "id": "bf220674-68bd-43cc-a1b8-ce5ed4d2f18d",
-      "name": "DeepSeek V4 Pro 0424 (Reasoning, Max Effort)",
+      "name": "DeepSeek V4 Pro 0424 (Max)",
       "slug": "deepseek-v4-pro-0424",
       "release_date": "2026-04-24",
       "model_creator": {
@@ -4102,7 +4141,7 @@
     },
     {
       "id": "498862c3-f9ac-49d2-852f-16a02bb0c38f",
-      "name": "GPT-5.2 (xhigh)",
+      "name": "GPT-5.2 (Xhigh)",
       "slug": "gpt-5-2",
       "release_date": "2025-12-11",
       "model_creator": {
@@ -4141,7 +4180,7 @@
     },
     {
       "id": "5da3c0e2-65d2-4bff-a410-cb2132ddafb6",
-      "name": "DeepSeek V4 Pro 0424 (Reasoning, High Effort)",
+      "name": "DeepSeek V4 Pro 0424 (High)",
       "slug": "deepseek-v4-pro-0424-high",
       "release_date": "2026-04-24",
       "model_creator": {
@@ -4180,7 +4219,7 @@
     },
     {
       "id": "26e0f83a-ca98-4f34-94ac-7c5e251ee410",
-      "name": "GPT-5.6 Terra (medium)",
+      "name": "GPT-5.6 Terra (Medium)",
       "slug": "gpt-5-6-terra-medium",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -4213,13 +4252,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 12
       },
-      "median_output_tokens_per_second": 91.198,
-      "median_time_to_first_token_seconds": 1.833,
-      "median_time_to_first_answer_token": 1.833
+      "median_output_tokens_per_second": 91.912,
+      "median_time_to_first_token_seconds": 1.924,
+      "median_time_to_first_answer_token": 1.924
     },
     {
       "id": "512d17ef-13d2-4f65-bf9b-154b0dec7e8d",
-      "name": "Kimi K3 (low)",
+      "name": "Kimi K3 (Low)",
       "slug": "kimi-k3-low",
       "release_date": "2026-07-16",
       "model_creator": {
@@ -4252,9 +4291,9 @@
         "price_1m_input_tokens": 3,
         "price_1m_output_tokens": 15
       },
-      "median_output_tokens_per_second": 37.61,
-      "median_time_to_first_token_seconds": 3.437,
-      "median_time_to_first_answer_token": 56.615
+      "median_output_tokens_per_second": 37.961,
+      "median_time_to_first_token_seconds": 3.578,
+      "median_time_to_first_answer_token": 56.263
     },
     {
       "id": "df8d14e0-3997-4e4d-b4ad-9c047acc9c69",
@@ -4296,6 +4335,45 @@
       "median_time_to_first_answer_token": 0
     },
     {
+      "id": "36667da0-9222-4967-adbb-f7efa15ad213",
+      "name": "GPT-6 Luna (Medium)",
+      "slug": "gpt-6-luna-medium",
+      "release_date": "2026-09-22",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "slug": "openai"
+      },
+      "evaluations": {
+        "artificial_analysis_intelligence_index": 29.9,
+        "artificial_analysis_coding_index": null,
+        "artificial_analysis_math_index": null,
+        "mmlu_pro": null,
+        "gpqa": null,
+        "hle": 0.283,
+        "livecodebench": null,
+        "scicode": 0.509,
+        "math_500": null,
+        "aime": null,
+        "aime_25": null,
+        "ifbench": null,
+        "lcr": 0.783333333333333,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "terminalbench_v4_0": 0.0252525252525253,
+        "tau2": null,
+        "tau_banking": null
+      },
+      "pricing": {
+        "price_1m_blended_3_to_1": 0.2,
+        "price_1m_input_tokens": 0.1,
+        "price_1m_output_tokens": 0.5
+      },
+      "median_output_tokens_per_second": 0,
+      "median_time_to_first_token_seconds": 0,
+      "median_time_to_first_answer_token": 0
+    },
+    {
       "id": "bbd93ebe-80da-4594-bb19-61e69d0331df",
       "name": "Gemini 3.1 Pro Preview",
       "slug": "gemini-3-1-pro-preview",
@@ -4330,48 +4408,9 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 12
       },
-      "median_output_tokens_per_second": 124.293,
-      "median_time_to_first_token_seconds": 24.435,
-      "median_time_to_first_answer_token": 24.435
-    },
-    {
-      "id": "36667da0-9222-4967-adbb-f7efa15ad213",
-      "name": "GPT-6 Luna (medium)",
-      "slug": "gpt-6-luna-medium",
-      "release_date": "2026-09-22",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "slug": "openai"
-      },
-      "evaluations": {
-        "artificial_analysis_intelligence_index": 29.5,
-        "artificial_analysis_coding_index": null,
-        "artificial_analysis_math_index": null,
-        "mmlu_pro": null,
-        "gpqa": null,
-        "hle": 0.283,
-        "livecodebench": null,
-        "scicode": 0.509,
-        "math_500": null,
-        "aime": null,
-        "aime_25": null,
-        "ifbench": null,
-        "lcr": 0.783333333333333,
-        "terminalbench_hard": null,
-        "terminalbench_v2_1": null,
-        "terminalbench_v4_0": 0.0252525252525253,
-        "tau2": null,
-        "tau_banking": null
-      },
-      "pricing": {
-        "price_1m_blended_3_to_1": 0.2,
-        "price_1m_input_tokens": 0.1,
-        "price_1m_output_tokens": 0.5
-      },
-      "median_output_tokens_per_second": 0,
-      "median_time_to_first_token_seconds": 0,
-      "median_time_to_first_answer_token": 0
+      "median_output_tokens_per_second": 127.145,
+      "median_time_to_first_token_seconds": 25.822,
+      "median_time_to_first_answer_token": 25.822
     },
     {
       "id": "69534bed-2ffd-4235-832b-e20a810333ab",
@@ -4447,9 +4486,9 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 1.2
       },
-      "median_output_tokens_per_second": 121.319,
-      "median_time_to_first_token_seconds": 0.768,
-      "median_time_to_first_answer_token": 17.254
+      "median_output_tokens_per_second": 94.698,
+      "median_time_to_first_token_seconds": 0.764,
+      "median_time_to_first_answer_token": 21.884
     },
     {
       "id": "2660d74f-ce79-48a8-8b53-6e668e2071a2",
@@ -4530,8 +4569,47 @@
       "median_time_to_first_answer_token": 0
     },
     {
+      "id": "d3e20e76-9e1a-45b6-b809-ad6aa37430cf",
+      "name": "GPT-6 Sol (Non-reasoning)",
+      "slug": "gpt-6-sol-non-reasoning",
+      "release_date": "2026-09-22",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "slug": "openai"
+      },
+      "evaluations": {
+        "artificial_analysis_intelligence_index": 28.5,
+        "artificial_analysis_coding_index": null,
+        "artificial_analysis_math_index": null,
+        "mmlu_pro": null,
+        "gpqa": null,
+        "hle": 0.184,
+        "livecodebench": null,
+        "scicode": 0.473,
+        "math_500": null,
+        "aime": null,
+        "aime_25": null,
+        "ifbench": null,
+        "lcr": 0.64,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "terminalbench_v4_0": 0.131313131313131,
+        "tau2": null,
+        "tau_banking": null
+      },
+      "pricing": {
+        "price_1m_blended_3_to_1": 4,
+        "price_1m_input_tokens": 2,
+        "price_1m_output_tokens": 10
+      },
+      "median_output_tokens_per_second": 72.364,
+      "median_time_to_first_token_seconds": 1.172,
+      "median_time_to_first_answer_token": 1.172
+    },
+    {
       "id": "019e86f6-e66b-42d8-8a50-235a06b53003",
-      "name": "GPT-5.2 Codex (xhigh)",
+      "name": "GPT-5.2 Codex (Xhigh)",
       "slug": "gpt-5-2-codex",
       "release_date": "2025-12-11",
       "model_creator": {
@@ -4648,7 +4726,7 @@
     },
     {
       "id": "3b5ba264-ad25-429b-a460-4d8698205f0d",
-      "name": "Nex-N2-Pro (based on Qwen3.5-397B-A17B)",
+      "name": "Nex-N2-Pro (Based on Qwen3.5-397B-A17B)",
       "slug": "nex-n2-pro",
       "release_date": "2026-06-02",
       "model_creator": {
@@ -4720,48 +4798,9 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 1.2
       },
-      "median_output_tokens_per_second": 95.966,
-      "median_time_to_first_token_seconds": 1.118,
-      "median_time_to_first_answer_token": 21.958
-    },
-    {
-      "id": "d3e20e76-9e1a-45b6-b809-ad6aa37430cf",
-      "name": "GPT-6 Sol (Non-reasoning)",
-      "slug": "gpt-6-sol-non-reasoning",
-      "release_date": "2026-09-22",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "slug": "openai"
-      },
-      "evaluations": {
-        "artificial_analysis_intelligence_index": 28.1,
-        "artificial_analysis_coding_index": null,
-        "artificial_analysis_math_index": null,
-        "mmlu_pro": null,
-        "gpqa": null,
-        "hle": 0.184,
-        "livecodebench": null,
-        "scicode": 0.473,
-        "math_500": null,
-        "aime": null,
-        "aime_25": null,
-        "ifbench": null,
-        "lcr": 0.64,
-        "terminalbench_hard": null,
-        "terminalbench_v2_1": null,
-        "terminalbench_v4_0": 0.131313131313131,
-        "tau2": null,
-        "tau_banking": null
-      },
-      "pricing": {
-        "price_1m_blended_3_to_1": 4,
-        "price_1m_input_tokens": 2,
-        "price_1m_output_tokens": 10
-      },
-      "median_output_tokens_per_second": 73.24,
-      "median_time_to_first_token_seconds": 1.03,
-      "median_time_to_first_answer_token": 1.03
+      "median_output_tokens_per_second": 83.93,
+      "median_time_to_first_token_seconds": 1.175,
+      "median_time_to_first_answer_token": 25.004
     },
     {
       "id": "effcd151-7c31-4437-af3d-e88daeae9385",
@@ -4798,13 +4837,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 58.388,
-      "median_time_to_first_token_seconds": 1.314,
-      "median_time_to_first_answer_token": 1.314
+      "median_output_tokens_per_second": 56.64,
+      "median_time_to_first_token_seconds": 1.724,
+      "median_time_to_first_answer_token": 1.724
     },
     {
       "id": "d1122eff-ee85-4fdc-8a9f-23bee6590667",
-      "name": "Gemini 3 Pro Preview (high)",
+      "name": "Gemini 3 Pro Preview (High)",
       "slug": "gemini-3-pro",
       "release_date": "2025-11-18",
       "model_creator": {
@@ -4882,7 +4921,7 @@
     },
     {
       "id": "538e945c-6c27-4fd3-995d-ded80a36cd10",
-      "name": "GPT-5.4 (low)",
+      "name": "GPT-5.4 (Low)",
       "slug": "gpt-5-4-low",
       "release_date": "2026-03-05",
       "model_creator": {
@@ -4921,7 +4960,7 @@
     },
     {
       "id": "6657d7de-a2a9-40bc-a32f-86e80ad63698",
-      "name": "Qwen3.8 27B (medium)",
+      "name": "Qwen3.8 27B (Medium)",
       "slug": "qwen3-8-27b-medium",
       "release_date": "2026-08-14",
       "model_creator": {
@@ -4954,13 +4993,13 @@
         "price_1m_input_tokens": 0.5,
         "price_1m_output_tokens": 3
       },
-      "median_output_tokens_per_second": 46.271,
-      "median_time_to_first_token_seconds": 1.209,
-      "median_time_to_first_answer_token": 44.433
+      "median_output_tokens_per_second": 49.268,
+      "median_time_to_first_token_seconds": 1.205,
+      "median_time_to_first_answer_token": 41.799
     },
     {
       "id": "cc4a20cd-09fe-4962-a430-119c815e85fa",
-      "name": "GPT-5.6 Terra (low)",
+      "name": "GPT-5.6 Terra (Low)",
       "slug": "gpt-5-6-terra-low",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -4993,13 +5032,13 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 12
       },
-      "median_output_tokens_per_second": 87.082,
-      "median_time_to_first_token_seconds": 1.623,
-      "median_time_to_first_answer_token": 1.623
+      "median_output_tokens_per_second": 86.9,
+      "median_time_to_first_token_seconds": 1.549,
+      "median_time_to_first_answer_token": 1.549
     },
     {
       "id": "901ec71b-51ec-4f53-b807-06ee17b890b4",
-      "name": "JT-4.1 Flash 236B A21B (non-reasoning)",
+      "name": "JT-4.1 Flash 236B A21B (Non-reasoning)",
       "slug": "jt-4-1-flash-236b-a21b",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -5116,7 +5155,7 @@
     },
     {
       "id": "0de67206-4d36-4d10-b8f6-cf37fa747a03",
-      "name": "Kimi K2.6",
+      "name": "Kimi K2.6 (Reasoning)",
       "slug": "kimi-k2-6",
       "release_date": "2026-04-20",
       "model_creator": {
@@ -5155,7 +5194,7 @@
     },
     {
       "id": "f9739750-6d42-450f-ba1e-2f76c869b4fe",
-      "name": "Quasar 438B (max, based on GLM-5.2)",
+      "name": "Quasar 438B (Max, Based on GLM-5.2)",
       "slug": "quasar-438b",
       "release_date": "2026-08-10",
       "model_creator": {
@@ -5188,9 +5227,9 @@
         "price_1m_input_tokens": 0.6,
         "price_1m_output_tokens": 1.8
       },
-      "median_output_tokens_per_second": 150.56,
-      "median_time_to_first_token_seconds": 0.449,
-      "median_time_to_first_answer_token": 13.733
+      "median_output_tokens_per_second": 152.496,
+      "median_time_to_first_token_seconds": 0.466,
+      "median_time_to_first_answer_token": 13.582
     },
     {
       "id": "149096f3-57b7-4413-80c2-a2c010a2995a",
@@ -5233,7 +5272,7 @@
     },
     {
       "id": "84e3f11e-d659-4941-8988-1dbfabbaf538",
-      "name": "GPT-5.2 (medium)",
+      "name": "GPT-5.2 (Medium)",
       "slug": "gpt-5-2-medium",
       "release_date": "2025-12-11",
       "model_creator": {
@@ -5389,7 +5428,7 @@
     },
     {
       "id": "7e30585f-fad7-40df-a8cb-03c1d96df38a",
-      "name": "Qwen3.8 27B (low)",
+      "name": "Qwen3.8 27B (Low)",
       "slug": "qwen3-8-27b-low",
       "release_date": "2026-08-14",
       "model_creator": {
@@ -5422,9 +5461,9 @@
         "price_1m_input_tokens": 0.5,
         "price_1m_output_tokens": 3
       },
-      "median_output_tokens_per_second": 48.419,
-      "median_time_to_first_token_seconds": 1.221,
-      "median_time_to_first_answer_token": 42.527
+      "median_output_tokens_per_second": 48.358,
+      "median_time_to_first_token_seconds": 1.211,
+      "median_time_to_first_answer_token": 42.569
     },
     {
       "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
@@ -5500,13 +5539,13 @@
         "price_1m_input_tokens": 5,
         "price_1m_output_tokens": 30
       },
-      "median_output_tokens_per_second": 125.27,
-      "median_time_to_first_token_seconds": 0.842,
-      "median_time_to_first_answer_token": 16.808
+      "median_output_tokens_per_second": 138.141,
+      "median_time_to_first_token_seconds": 0.866,
+      "median_time_to_first_answer_token": 15.344
     },
     {
       "id": "00f1248e-78e3-4230-8dc8-5e13ba8645e2",
-      "name": "MiMo-V2.5-Pro",
+      "name": "MiMo-V2.5-Pro (Reasoning)",
       "slug": "mimo-v2-5-pro",
       "release_date": "2026-04-22",
       "model_creator": {
@@ -5539,9 +5578,9 @@
         "price_1m_input_tokens": 0.435,
         "price_1m_output_tokens": 0.87
       },
-      "median_output_tokens_per_second": 23.783,
-      "median_time_to_first_token_seconds": 1.572,
-      "median_time_to_first_answer_token": 85.667
+      "median_output_tokens_per_second": 26.313,
+      "median_time_to_first_token_seconds": 1.36,
+      "median_time_to_first_answer_token": 77.368
     },
     {
       "id": "8d0cb231-7303-452c-9923-a9620b948475",
@@ -5578,9 +5617,9 @@
         "price_1m_input_tokens": 0.95,
         "price_1m_output_tokens": 4
       },
-      "median_output_tokens_per_second": 51.079,
-      "median_time_to_first_token_seconds": 1.013,
-      "median_time_to_first_answer_token": 44.652
+      "median_output_tokens_per_second": 71.362,
+      "median_time_to_first_token_seconds": 1.159,
+      "median_time_to_first_answer_token": 32.394
     },
     {
       "id": "7261504e-503c-4a66-a9d3-a3272cdf9ad6",
@@ -5617,9 +5656,9 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 1.2
       },
-      "median_output_tokens_per_second": 212.921,
-      "median_time_to_first_token_seconds": 1.754,
-      "median_time_to_first_answer_token": 11.147
+      "median_output_tokens_per_second": 176.903,
+      "median_time_to_first_token_seconds": 1.976,
+      "median_time_to_first_answer_token": 13.281
     },
     {
       "id": "c72cb85a-18a4-4235-b455-77dff2f16c50",
@@ -5734,9 +5773,9 @@
         "price_1m_input_tokens": 0.136,
         "price_1m_output_tokens": 0.555
       },
-      "median_output_tokens_per_second": 90.6,
-      "median_time_to_first_token_seconds": 2.031,
-      "median_time_to_first_answer_token": 24.106
+      "median_output_tokens_per_second": 87.744,
+      "median_time_to_first_token_seconds": 2.078,
+      "median_time_to_first_answer_token": 24.871
     },
     {
       "id": "04787c2b-0751-4269-8029-075b727d7aed",
@@ -5812,9 +5851,9 @@
         "price_1m_input_tokens": 0.14,
         "price_1m_output_tokens": 0.28
       },
-      "median_output_tokens_per_second": 44.372,
-      "median_time_to_first_token_seconds": 2.145,
-      "median_time_to_first_answer_token": 47.219
+      "median_output_tokens_per_second": 46.375,
+      "median_time_to_first_token_seconds": 1.827,
+      "median_time_to_first_answer_token": 44.954
     },
     {
       "id": "a87fce42-eea3-4e45-a96d-fe057814f371",
@@ -5851,9 +5890,9 @@
         "price_1m_input_tokens": 0.4,
         "price_1m_output_tokens": 1.6
       },
-      "median_output_tokens_per_second": 56.376,
-      "median_time_to_first_token_seconds": 1.666,
-      "median_time_to_first_answer_token": 37.142
+      "median_output_tokens_per_second": 55.863,
+      "median_time_to_first_token_seconds": 1.672,
+      "median_time_to_first_answer_token": 37.474
     },
     {
       "id": "296ace9b-0815-43b2-bafa-fd6cec5cce36",
@@ -5896,7 +5935,7 @@
     },
     {
       "id": "58b812bf-8498-46db-b834-f43ccc614b61",
-      "name": "GPT-5.6 Luna (medium)",
+      "name": "GPT-5.6 Luna (Medium)",
       "slug": "gpt-5-6-luna-medium",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -5935,7 +5974,7 @@
     },
     {
       "id": "0de09623-2b1a-4c8d-86ef-7f5245d4e24b",
-      "name": "Inkling (xhigh)",
+      "name": "Inkling (Xhigh)",
       "slug": "inkling",
       "release_date": "2026-07-15",
       "model_creator": {
@@ -5968,13 +6007,13 @@
         "price_1m_input_tokens": 1,
         "price_1m_output_tokens": 4.05
       },
-      "median_output_tokens_per_second": 157.833,
-      "median_time_to_first_token_seconds": 2.315,
-      "median_time_to_first_answer_token": 14.986
+      "median_output_tokens_per_second": 185.692,
+      "median_time_to_first_token_seconds": 2.282,
+      "median_time_to_first_answer_token": 13.053
     },
     {
       "id": "5d11e7a1-4f70-4e5a-9364-e193761d6757",
-      "name": "GPT-5 Codex (high)",
+      "name": "GPT-5 Codex (High)",
       "slug": "gpt-5-codex",
       "release_date": "2025-09-23",
       "model_creator": {
@@ -6013,7 +6052,7 @@
     },
     {
       "id": "948892b5-db03-4118-a4a8-ccd51ed871ea",
-      "name": "Grok 4.3 (high)",
+      "name": "Grok 4.3 (High)",
       "slug": "grok-4-3",
       "release_date": "2026-04-30",
       "model_creator": {
@@ -6052,7 +6091,7 @@
     },
     {
       "id": "5e8b0d98-a3b4-42b5-93d8-ecb748788754",
-      "name": "Grok 4.3 (medium)",
+      "name": "Grok 4.3 (Medium)",
       "slug": "grok-4-3-medium",
       "release_date": "2026-04-30",
       "model_creator": {
@@ -6130,7 +6169,7 @@
     },
     {
       "id": "4dc12a38-b18f-4c43-8e1b-678f8434b5b1",
-      "name": "GPT-5.1 (high)",
+      "name": "GPT-5.1 (High)",
       "slug": "gpt-5-1",
       "release_date": "2025-11-13",
       "model_creator": {
@@ -6208,7 +6247,7 @@
     },
     {
       "id": "73c96f99-0de3-4668-a4bd-b106a0fe18f2",
-      "name": "DeepSeek V4.1 Flash (Non-Reasoning)",
+      "name": "DeepSeek V4.1 Flash (Non-reasoning)",
       "slug": "deepseek-v4-1-flash-non-reasoning",
       "release_date": "2026-09-10",
       "model_creator": {
@@ -6241,9 +6280,9 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 1.2
       },
-      "median_output_tokens_per_second": 212.082,
-      "median_time_to_first_token_seconds": 0.854,
-      "median_time_to_first_answer_token": 0.854
+      "median_output_tokens_per_second": 257.455,
+      "median_time_to_first_token_seconds": 0.795,
+      "median_time_to_first_answer_token": 0.795
     },
     {
       "id": "433d5c5d-3092-4026-9727-1587ca07915d",
@@ -6280,13 +6319,13 @@
         "price_1m_input_tokens": 0.075,
         "price_1m_output_tokens": 0.22
       },
-      "median_output_tokens_per_second": 150.621,
-      "median_time_to_first_token_seconds": 1.478,
-      "median_time_to_first_answer_token": 14.756
+      "median_output_tokens_per_second": 150.441,
+      "median_time_to_first_token_seconds": 2.092,
+      "median_time_to_first_answer_token": 15.386
     },
     {
       "id": "89a2c945-1fab-4ee4-9f45-83a9f46cb221",
-      "name": "DeepSeek V4 Flash 0420 (Reasoning, High Effort)",
+      "name": "DeepSeek V4 Flash 0420 (High)",
       "slug": "deepseek-v4-flash-0420-high",
       "release_date": "2026-04-24",
       "model_creator": {
@@ -6325,7 +6364,7 @@
     },
     {
       "id": "fe2c2289-d261-4433-8681-46448372c1f6",
-      "name": "Grok 4.3 (low)",
+      "name": "Grok 4.3 (Low)",
       "slug": "grok-4-3-low",
       "release_date": "2026-04-30",
       "model_creator": {
@@ -6398,8 +6437,8 @@
         "price_1m_output_tokens": 10
       },
       "median_output_tokens_per_second": 59.035,
-      "median_time_to_first_token_seconds": 1.12,
-      "median_time_to_first_answer_token": 1.12
+      "median_time_to_first_token_seconds": 1.286,
+      "median_time_to_first_answer_token": 1.286
     },
     {
       "id": "92f245a7-43b4-4ffd-8bfb-866746bf824d",
@@ -6442,7 +6481,7 @@
     },
     {
       "id": "d8ddb241-b3e4-4c25-a6a3-72eb1b30c541",
-      "name": "DeepSeek V4 Flash 0420 (Reasoning, Max Effort)",
+      "name": "DeepSeek V4 Flash 0420 (Max)",
       "slug": "deepseek-v4-flash-0420",
       "release_date": "2026-04-24",
       "model_creator": {
@@ -6481,7 +6520,7 @@
     },
     {
       "id": "ba242e40-83b7-4cd3-a0e0-b56237984914",
-      "name": "GPT-5.4 mini (xhigh)",
+      "name": "GPT-5.4 mini (Xhigh)",
       "slug": "gpt-5-4-mini",
       "release_date": "2026-03-17",
       "model_creator": {
@@ -6517,6 +6556,45 @@
       "median_output_tokens_per_second": 0,
       "median_time_to_first_token_seconds": 0,
       "median_time_to_first_answer_token": 0
+    },
+    {
+      "id": "62ea3198-9866-4d9f-8406-a79ee78c7164",
+      "name": "Solar Mini 4",
+      "slug": "solar-mini4",
+      "release_date": "2026-09-22",
+      "model_creator": {
+        "id": "64ff7f06-c6fb-42ea-ba24-9cd103ab2d61",
+        "name": "Upstage",
+        "slug": "upstage"
+      },
+      "evaluations": {
+        "artificial_analysis_intelligence_index": 24.1,
+        "artificial_analysis_coding_index": null,
+        "artificial_analysis_math_index": null,
+        "mmlu_pro": null,
+        "gpqa": null,
+        "hle": 0.258,
+        "livecodebench": null,
+        "scicode": 0.476,
+        "math_500": null,
+        "aime": null,
+        "aime_25": null,
+        "ifbench": null,
+        "lcr": 0.833333333333333,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "terminalbench_v4_0": 0.0101010101010101,
+        "tau2": null,
+        "tau_banking": null
+      },
+      "pricing": {
+        "price_1m_blended_3_to_1": 0.175,
+        "price_1m_input_tokens": 0.1,
+        "price_1m_output_tokens": 0.4
+      },
+      "median_output_tokens_per_second": 199.238,
+      "median_time_to_first_token_seconds": 1.075,
+      "median_time_to_first_answer_token": 11.113
     },
     {
       "id": "94d09368-9035-47cf-963a-b4310b433a16",
@@ -6559,7 +6637,7 @@
     },
     {
       "id": "033ade17-d9ec-44e0-b792-b5f1fcd5ab4c",
-      "name": "Gemini 3.5 Flash (minimal)",
+      "name": "Gemini 3.5 Flash (Minimal)",
       "slug": "gemini-3-5-flash-minimal",
       "release_date": "2026-05-19",
       "model_creator": {
@@ -6598,7 +6676,7 @@
     },
     {
       "id": "04d023f3-025c-4d78-9571-53edda3eaf2a",
-      "name": "GPT-5.1 Codex (high)",
+      "name": "GPT-5.1 Codex (High)",
       "slug": "gpt-5-1-codex",
       "release_date": "2025-11-13",
       "model_creator": {
@@ -6865,9 +6943,9 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 57.607,
-      "median_time_to_first_token_seconds": 0.934,
-      "median_time_to_first_answer_token": 0.934
+      "median_output_tokens_per_second": 57.499,
+      "median_time_to_first_token_seconds": 0.952,
+      "median_time_to_first_answer_token": 0.952
     },
     {
       "id": "6f1a7562-6e96-46ac-af4f-6ba5a7a3da96",
@@ -6910,7 +6988,7 @@
     },
     {
       "id": "48e50f00-1fd1-4acc-b337-61078aa341e6",
-      "name": "GPT-5 (high)",
+      "name": "GPT-5 (High)",
       "slug": "gpt-5",
       "release_date": "2025-08-07",
       "model_creator": {
@@ -6982,9 +7060,9 @@
         "price_1m_input_tokens": 0.6,
         "price_1m_output_tokens": 2.5
       },
-      "median_output_tokens_per_second": 189.075,
-      "median_time_to_first_token_seconds": 0.828,
-      "median_time_to_first_answer_token": 12.861
+      "median_output_tokens_per_second": 172.663,
+      "median_time_to_first_token_seconds": 0.794,
+      "median_time_to_first_answer_token": 13.97
     },
     {
       "id": "169e47f5-3d4d-4ad4-8f8b-ab46f0c73f67",
@@ -7027,7 +7105,7 @@
     },
     {
       "id": "5e965af0-ca5c-4f47-9ba9-06000508b84a",
-      "name": "GPT-5 (medium)",
+      "name": "GPT-5 (Medium)",
       "slug": "gpt-5-medium",
       "release_date": "2025-08-07",
       "model_creator": {
@@ -7333,9 +7411,9 @@
         "price_1m_input_tokens": 0.075,
         "price_1m_output_tokens": 0.22
       },
-      "median_output_tokens_per_second": 260.83,
-      "median_time_to_first_token_seconds": 1.271,
-      "median_time_to_first_answer_token": 8.939
+      "median_output_tokens_per_second": 316.216,
+      "median_time_to_first_token_seconds": 1.286,
+      "median_time_to_first_answer_token": 7.611
     },
     {
       "id": "5ea94a4a-55ac-4ea1-8898-2b3971e94af6",
@@ -7456,7 +7534,7 @@
     },
     {
       "id": "b2f3191f-77d6-4155-8be6-330f0baa1ae5",
-      "name": "Gemini 3 Pro Preview (low)",
+      "name": "Gemini 3 Pro Preview (Low)",
       "slug": "gemini-3-pro-low",
       "release_date": "2025-11-18",
       "model_creator": {
@@ -7567,9 +7645,9 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 2.5
       },
-      "median_output_tokens_per_second": 320.037,
-      "median_time_to_first_token_seconds": 8.387,
-      "median_time_to_first_answer_token": 8.387
+      "median_output_tokens_per_second": 334.567,
+      "median_time_to_first_token_seconds": 6.972,
+      "median_time_to_first_answer_token": 6.972
     },
     {
       "id": "bddebfd3-0a8d-47f5-b722-bc4c2ca5a5dc",
@@ -7767,6 +7845,45 @@
       "median_time_to_first_answer_token": 0
     },
     {
+      "id": "bf9708d8-933d-44f6-affa-b696a7a650c9",
+      "name": "GPT-6 Luna (Low)",
+      "slug": "gpt-6-luna-low",
+      "release_date": "2026-09-22",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "slug": "openai"
+      },
+      "evaluations": {
+        "artificial_analysis_intelligence_index": 21.5,
+        "artificial_analysis_coding_index": null,
+        "artificial_analysis_math_index": null,
+        "mmlu_pro": null,
+        "gpqa": null,
+        "hle": 0.203,
+        "livecodebench": null,
+        "scicode": 0.469,
+        "math_500": null,
+        "aime": null,
+        "aime_25": null,
+        "ifbench": null,
+        "lcr": 0.74,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "terminalbench_v4_0": 0,
+        "tau2": null,
+        "tau_banking": null
+      },
+      "pricing": {
+        "price_1m_blended_3_to_1": 0.2,
+        "price_1m_input_tokens": 0.1,
+        "price_1m_output_tokens": 0.5
+      },
+      "median_output_tokens_per_second": 125.946,
+      "median_time_to_first_token_seconds": 2.142,
+      "median_time_to_first_answer_token": 2.142
+    },
+    {
       "id": "d621247c-d47e-458c-82cb-a166bc3b37e5",
       "name": "DeepSeek V3.2 (Reasoning)",
       "slug": "deepseek-v3-2-reasoning",
@@ -7840,9 +7957,9 @@
         "price_1m_input_tokens": 0.6,
         "price_1m_output_tokens": 3.6
       },
-      "median_output_tokens_per_second": 85.789,
-      "median_time_to_first_token_seconds": 1.665,
-      "median_time_to_first_answer_token": 1.665
+      "median_output_tokens_per_second": 85.428,
+      "median_time_to_first_token_seconds": 1.593,
+      "median_time_to_first_answer_token": 1.593
     },
     {
       "id": "8c29d66d-bf98-4ea3-8572-5409353ecc66",
@@ -7924,7 +8041,7 @@
     },
     {
       "id": "050c61cd-cddc-463a-a30a-a82aaa37be59",
-      "name": "GPT-5.6 Luna (low)",
+      "name": "GPT-5.6 Luna (Low)",
       "slug": "gpt-5-6-luna-low",
       "release_date": "2026-07-09",
       "model_creator": {
@@ -7999,45 +8116,6 @@
       "median_output_tokens_per_second": 0,
       "median_time_to_first_token_seconds": 0,
       "median_time_to_first_answer_token": 0
-    },
-    {
-      "id": "bf9708d8-933d-44f6-affa-b696a7a650c9",
-      "name": "GPT-6 Luna (low)",
-      "slug": "gpt-6-luna-low",
-      "release_date": "2026-09-22",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "slug": "openai"
-      },
-      "evaluations": {
-        "artificial_analysis_intelligence_index": 20.9,
-        "artificial_analysis_coding_index": null,
-        "artificial_analysis_math_index": null,
-        "mmlu_pro": null,
-        "gpqa": null,
-        "hle": 0.203,
-        "livecodebench": null,
-        "scicode": 0.469,
-        "math_500": null,
-        "aime": null,
-        "aime_25": null,
-        "ifbench": null,
-        "lcr": 0.74,
-        "terminalbench_hard": null,
-        "terminalbench_v2_1": null,
-        "terminalbench_v4_0": 0,
-        "tau2": null,
-        "tau_banking": null
-      },
-      "pricing": {
-        "price_1m_blended_3_to_1": 0.2,
-        "price_1m_input_tokens": 0.1,
-        "price_1m_output_tokens": 0.5
-      },
-      "median_output_tokens_per_second": 132.16,
-      "median_time_to_first_token_seconds": 2.341,
-      "median_time_to_first_answer_token": 2.341
     },
     {
       "id": "6e2a2572-ed8d-4616-8d7d-68d125fc8ee7",
@@ -8119,7 +8197,7 @@
     },
     {
       "id": "7f3c9423-3ee3-4369-a6d9-3f2a40aff00e",
-      "name": "GPT-5 (low)",
+      "name": "GPT-5 (Low)",
       "slug": "gpt-5-low",
       "release_date": "2025-08-07",
       "model_creator": {
@@ -8192,12 +8270,12 @@
         "price_1m_output_tokens": 12
       },
       "median_output_tokens_per_second": 81.676,
-      "median_time_to_first_token_seconds": 0.752,
-      "median_time_to_first_answer_token": 0.752
+      "median_time_to_first_token_seconds": 0.809,
+      "median_time_to_first_answer_token": 0.809
     },
     {
       "id": "d4fc3f33-f2b0-4da1-88ee-f1f82bd4de31",
-      "name": "GPT-5.4 nano (xhigh)",
+      "name": "GPT-5.4 nano (Xhigh)",
       "slug": "gpt-5-4-nano",
       "release_date": "2026-03-17",
       "model_creator": {
@@ -8314,7 +8392,7 @@
     },
     {
       "id": "c3274a19-6d3c-4d01-ab9b-5055a0a40429",
-      "name": "GPT-5 mini (medium)",
+      "name": "GPT-5 mini (Medium)",
       "slug": "gpt-5-mini-medium",
       "release_date": "2025-08-07",
       "model_creator": {
@@ -8425,13 +8503,13 @@
         "price_1m_input_tokens": 0.4,
         "price_1m_output_tokens": 4.8
       },
-      "median_output_tokens_per_second": 70.098,
-      "median_time_to_first_token_seconds": 1.217,
-      "median_time_to_first_answer_token": 1.217
+      "median_output_tokens_per_second": 87.232,
+      "median_time_to_first_token_seconds": 1.246,
+      "median_time_to_first_answer_token": 1.246
     },
     {
       "id": "fd4454ff-e703-46c0-a7f5-fa69af09486d",
-      "name": "GPT-5.1 Codex mini (high)",
+      "name": "GPT-5.1 Codex mini (High)",
       "slug": "gpt-5-1-codex-mini",
       "release_date": "2025-11-13",
       "model_creator": {
@@ -8542,9 +8620,9 @@
         "price_1m_input_tokens": 1.32,
         "price_1m_output_tokens": 3.96
       },
-      "median_output_tokens_per_second": 181.926,
-      "median_time_to_first_token_seconds": 1.035,
-      "median_time_to_first_answer_token": 1.035
+      "median_output_tokens_per_second": 168.305,
+      "median_time_to_first_token_seconds": 0.97,
+      "median_time_to_first_answer_token": 0.97
     },
     {
       "id": "16c5b637-8bce-4252-81f2-1b87a36a4e4c",
@@ -8581,9 +8659,9 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 8
       },
-      "median_output_tokens_per_second": 146.321,
-      "median_time_to_first_token_seconds": 5.313,
-      "median_time_to_first_answer_token": 5.313
+      "median_output_tokens_per_second": 117.213,
+      "median_time_to_first_token_seconds": 8.356,
+      "median_time_to_first_answer_token": 8.356
     },
     {
       "id": "353c92f3-2148-4c2d-9231-aa7e1322a1fd",
@@ -8620,7 +8698,7 @@
         "price_1m_input_tokens": 0.5,
         "price_1m_output_tokens": 3
       },
-      "median_output_tokens_per_second": 50.708,
+      "median_output_tokens_per_second": 50.999,
       "median_time_to_first_token_seconds": 1.2,
       "median_time_to_first_answer_token": 1.2
     },
@@ -8659,13 +8737,13 @@
         "price_1m_input_tokens": 0.075,
         "price_1m_output_tokens": 0.22
       },
-      "median_output_tokens_per_second": 330.306,
-      "median_time_to_first_token_seconds": 1.771,
-      "median_time_to_first_answer_token": 7.826
+      "median_output_tokens_per_second": 319.377,
+      "median_time_to_first_token_seconds": 1.791,
+      "median_time_to_first_answer_token": 8.053
     },
     {
       "id": "8869f28a-a6ff-487f-8d32-93fe335fdda5",
-      "name": "GPT-5.4 nano (medium)",
+      "name": "GPT-5.4 nano (Medium)",
       "slug": "gpt-5-4-nano-medium",
       "release_date": "2026-03-17",
       "model_creator": {
@@ -8743,7 +8821,7 @@
     },
     {
       "id": "392063ba-c3b5-47e8-ba67-a7b0b34f6824",
-      "name": "GPT-5.4 mini (medium)",
+      "name": "GPT-5.4 mini (Medium)",
       "slug": "gpt-5-4-mini-medium",
       "release_date": "2026-03-17",
       "model_creator": {
@@ -8854,9 +8932,9 @@
         "price_1m_input_tokens": 0.2,
         "price_1m_output_tokens": 1.15
       },
-      "median_output_tokens_per_second": 196.102,
-      "median_time_to_first_token_seconds": 1.383,
-      "median_time_to_first_answer_token": 11.582
+      "median_output_tokens_per_second": 195.362,
+      "median_time_to_first_token_seconds": 1.352,
+      "median_time_to_first_answer_token": 11.589
     },
     {
       "id": "ba04694d-326a-4a6a-8f1b-46316f872a7f",
@@ -9327,6 +9405,45 @@
       "median_time_to_first_answer_token": 0
     },
     {
+      "id": "63cb48ea-0b0c-4e07-8ded-6d28dec4fa28",
+      "name": "GPT-6 Luna (Non-reasoning)",
+      "slug": "gpt-6-luna-non-reasoning",
+      "release_date": "2026-09-22",
+      "model_creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "slug": "openai"
+      },
+      "evaluations": {
+        "artificial_analysis_intelligence_index": 18.5,
+        "artificial_analysis_coding_index": null,
+        "artificial_analysis_math_index": null,
+        "mmlu_pro": null,
+        "gpqa": null,
+        "hle": 0.086,
+        "livecodebench": null,
+        "scicode": 0.431,
+        "math_500": null,
+        "aime": null,
+        "aime_25": null,
+        "ifbench": null,
+        "lcr": 0.396666666666667,
+        "terminalbench_hard": null,
+        "terminalbench_v2_1": null,
+        "terminalbench_v4_0": 0.0151515151515152,
+        "tau2": null,
+        "tau_banking": null
+      },
+      "pricing": {
+        "price_1m_blended_3_to_1": 0.2,
+        "price_1m_input_tokens": 0.1,
+        "price_1m_output_tokens": 0.5
+      },
+      "median_output_tokens_per_second": 131.975,
+      "median_time_to_first_token_seconds": 0.851,
+      "median_time_to_first_answer_token": 0.851
+    },
+    {
       "id": "0e66bae9-41f1-42fc-9276-ce8cb6f72919",
       "name": "Qwen3.5 397B A17B (Reasoning)",
       "slug": "qwen3-5-397b-a17b",
@@ -9361,9 +9478,9 @@
         "price_1m_input_tokens": 0.6,
         "price_1m_output_tokens": 3.6
       },
-      "median_output_tokens_per_second": 88.317,
-      "median_time_to_first_token_seconds": 1.689,
-      "median_time_to_first_answer_token": 37.764
+      "median_output_tokens_per_second": 88.258,
+      "median_time_to_first_token_seconds": 1.723,
+      "median_time_to_first_answer_token": 37.822
     },
     {
       "id": "4764d31d-f4af-4297-8bd1-e993f26bcb64",
@@ -9401,47 +9518,8 @@
         "price_1m_output_tokens": 0.87
       },
       "median_output_tokens_per_second": 24.317,
-      "median_time_to_first_token_seconds": 1.331,
-      "median_time_to_first_answer_token": 1.331
-    },
-    {
-      "id": "63cb48ea-0b0c-4e07-8ded-6d28dec4fa28",
-      "name": "GPT-6 Luna (Non-reasoning)",
-      "slug": "gpt-6-luna-non-reasoning",
-      "release_date": "2026-09-22",
-      "model_creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "slug": "openai"
-      },
-      "evaluations": {
-        "artificial_analysis_intelligence_index": 18.3,
-        "artificial_analysis_coding_index": null,
-        "artificial_analysis_math_index": null,
-        "mmlu_pro": null,
-        "gpqa": null,
-        "hle": 0.086,
-        "livecodebench": null,
-        "scicode": 0.431,
-        "math_500": null,
-        "aime": null,
-        "aime_25": null,
-        "ifbench": null,
-        "lcr": 0.396666666666667,
-        "terminalbench_hard": null,
-        "terminalbench_v2_1": null,
-        "terminalbench_v4_0": 0.0151515151515152,
-        "tau2": null,
-        "tau_banking": null
-      },
-      "pricing": {
-        "price_1m_blended_3_to_1": 0.2,
-        "price_1m_input_tokens": 0.1,
-        "price_1m_output_tokens": 0.5
-      },
-      "median_output_tokens_per_second": 128.366,
-      "median_time_to_first_token_seconds": 0.785,
-      "median_time_to_first_answer_token": 0.785
+      "median_time_to_first_token_seconds": 1.254,
+      "median_time_to_first_answer_token": 1.254
     },
     {
       "id": "8665ca00-c687-44c7-875c-22618cb31c4f",
@@ -9478,9 +9556,9 @@
         "price_1m_input_tokens": 0.375,
         "price_1m_output_tokens": 2.25
       },
-      "median_output_tokens_per_second": 134.059,
-      "median_time_to_first_token_seconds": 1.144,
-      "median_time_to_first_answer_token": 41.388
+      "median_output_tokens_per_second": 138.811,
+      "median_time_to_first_token_seconds": 1.175,
+      "median_time_to_first_answer_token": 40.04
     },
     {
       "id": "493f6a1e-7717-4e98-9d6f-548b92c4702d",
@@ -9634,9 +9712,9 @@
         "price_1m_input_tokens": 0.4,
         "price_1m_output_tokens": 3.2
       },
-      "median_output_tokens_per_second": 144.441,
-      "median_time_to_first_token_seconds": 1.008,
-      "median_time_to_first_answer_token": 1.008
+      "median_output_tokens_per_second": 142.822,
+      "median_time_to_first_token_seconds": 1.032,
+      "median_time_to_first_answer_token": 1.032
     },
     {
       "id": "13358187-4584-479c-ab43-5bcdf8f297a4",
@@ -9679,7 +9757,7 @@
     },
     {
       "id": "583f98fb-c4b8-4df3-8d40-60ac0ed69882",
-      "name": "Muse Glimmer (high)",
+      "name": "Muse Glimmer (High)",
       "slug": "muse-glimmer",
       "release_date": "2026-08-10",
       "model_creator": {
@@ -9713,8 +9791,8 @@
         "price_1m_output_tokens": 1.35
       },
       "median_output_tokens_per_second": 164.426,
-      "median_time_to_first_token_seconds": 0.458,
-      "median_time_to_first_answer_token": 12.622
+      "median_time_to_first_token_seconds": 0.54,
+      "median_time_to_first_answer_token": 12.703
     },
     {
       "id": "81b6ddfc-111e-4422-bd44-42ee6165b699",
@@ -9985,13 +10063,13 @@
         "price_1m_input_tokens": 1,
         "price_1m_output_tokens": 5
       },
-      "median_output_tokens_per_second": 116.98,
-      "median_time_to_first_token_seconds": 12.197,
-      "median_time_to_first_answer_token": 12.197
+      "median_output_tokens_per_second": 125.146,
+      "median_time_to_first_token_seconds": 13.08,
+      "median_time_to_first_answer_token": 13.08
     },
     {
       "id": "29855680-7469-43eb-8b88-cd3fb1d99da3",
-      "name": "GPT-5 mini (high)",
+      "name": "GPT-5 mini (High)",
       "slug": "gpt-5-mini",
       "release_date": "2025-08-07",
       "model_creator": {
@@ -10069,7 +10147,7 @@
     },
     {
       "id": "84b49308-6b93-47aa-a4f6-776ee1a1e8cd",
-      "name": "o4-mini (high)",
+      "name": "o4-mini (High)",
       "slug": "o4-mini",
       "release_date": "2025-04-16",
       "model_creator": {
@@ -10141,9 +10219,9 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 2.5
       },
-      "median_output_tokens_per_second": 114.403,
-      "median_time_to_first_token_seconds": 2.389,
-      "median_time_to_first_answer_token": 19.871
+      "median_output_tokens_per_second": 116.677,
+      "median_time_to_first_token_seconds": 1.944,
+      "median_time_to_first_answer_token": 19.085
     },
     {
       "id": "c8158c23-6fff-4c31-911d-954c32d80c28",
@@ -10571,8 +10649,8 @@
         "price_1m_output_tokens": 3.2
       },
       "median_output_tokens_per_second": 131.356,
-      "median_time_to_first_token_seconds": 1.039,
-      "median_time_to_first_answer_token": 16.265
+      "median_time_to_first_token_seconds": 1.048,
+      "median_time_to_first_answer_token": 16.274
     },
     {
       "id": "598190f8-dc9c-4fea-a7ea-4b81c402ab18",
@@ -10726,9 +10804,9 @@
         "price_1m_input_tokens": 1,
         "price_1m_output_tokens": 5
       },
-      "median_output_tokens_per_second": 91.305,
-      "median_time_to_first_token_seconds": 0.494,
-      "median_time_to_first_answer_token": 0.494
+      "median_output_tokens_per_second": 102.644,
+      "median_time_to_first_token_seconds": 0.493,
+      "median_time_to_first_answer_token": 0.493
     },
     {
       "id": "66445f84-b2e3-4202-afdc-92ba0f0e5f36",
@@ -10843,7 +10921,7 @@
         "price_1m_input_tokens": 0.375,
         "price_1m_output_tokens": 2.25
       },
-      "median_output_tokens_per_second": 140.161,
+      "median_output_tokens_per_second": 142.024,
       "median_time_to_first_token_seconds": 1.116,
       "median_time_to_first_answer_token": 1.116
     },
@@ -11077,9 +11155,9 @@
         "price_1m_input_tokens": 0.16,
         "price_1m_output_tokens": 0.65
       },
-      "median_output_tokens_per_second": 77.669,
-      "median_time_to_first_token_seconds": 0.294,
-      "median_time_to_first_answer_token": 26.045
+      "median_output_tokens_per_second": 77.497,
+      "median_time_to_first_token_seconds": 0.302,
+      "median_time_to_first_answer_token": 26.11
     },
     {
       "id": "0a7dda4d-cc9c-4a90-abc1-abb5772c901b",
@@ -11155,13 +11233,13 @@
         "price_1m_input_tokens": 0,
         "price_1m_output_tokens": 0
       },
-      "median_output_tokens_per_second": 35.045,
-      "median_time_to_first_token_seconds": 0.977,
-      "median_time_to_first_answer_token": 50.513
+      "median_output_tokens_per_second": 34.905,
+      "median_time_to_first_token_seconds": 0.974,
+      "median_time_to_first_answer_token": 50.71
     },
     {
       "id": "ff9bc5e5-a02f-4270-983e-4b3f834f3363",
-      "name": "Grok 3 mini Reasoning (high)",
+      "name": "Grok 3 mini Reasoning (High)",
       "slug": "grok-3-mini-reasoning",
       "release_date": "2025-02-19",
       "model_creator": {
@@ -11467,9 +11545,9 @@
         "price_1m_input_tokens": 1.5,
         "price_1m_output_tokens": 7.5
       },
-      "median_output_tokens_per_second": 167.671,
-      "median_time_to_first_token_seconds": 0.621,
-      "median_time_to_first_answer_token": 12.549
+      "median_output_tokens_per_second": 164.384,
+      "median_time_to_first_token_seconds": 0.645,
+      "median_time_to_first_answer_token": 12.812
     },
     {
       "id": "feb02d3b-ff8d-4ed4-b165-13f8d4a7192c",
@@ -11506,13 +11584,13 @@
         "price_1m_input_tokens": 0.1,
         "price_1m_output_tokens": 0.3
       },
-      "median_output_tokens_per_second": 148.302,
-      "median_time_to_first_token_seconds": 1.383,
-      "median_time_to_first_answer_token": 14.869
+      "median_output_tokens_per_second": 147.832,
+      "median_time_to_first_token_seconds": 1.425,
+      "median_time_to_first_answer_token": 14.954
     },
     {
       "id": "0d94dc87-12c8-4d4a-8d99-804ce3f17bc2",
-      "name": "Nova 2.0 Pro Preview (medium)",
+      "name": "Nova 2.0 Pro Preview (Medium)",
       "slug": "nova-2-0-pro-reasoning-medium",
       "release_date": "2025-11-27",
       "model_creator": {
@@ -11545,9 +11623,9 @@
         "price_1m_input_tokens": 1.25,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 123.524,
-      "median_time_to_first_token_seconds": 20.505,
-      "median_time_to_first_answer_token": 36.696
+      "median_output_tokens_per_second": 123.377,
+      "median_time_to_first_token_seconds": 20.419,
+      "median_time_to_first_answer_token": 36.629
     },
     {
       "id": "a06bd3fc-86db-4a8e-ae6d-7459444d08c9",
@@ -11701,9 +11779,9 @@
         "price_1m_input_tokens": 0.14,
         "price_1m_output_tokens": 0.4
       },
-      "median_output_tokens_per_second": 38.602,
-      "median_time_to_first_token_seconds": 1.082,
-      "median_time_to_first_answer_token": 1.082
+      "median_output_tokens_per_second": 37.748,
+      "median_time_to_first_token_seconds": 0.912,
+      "median_time_to_first_answer_token": 0.912
     },
     {
       "id": "07c35e00-2b12-44c8-91cc-408629cd569e",
@@ -11863,7 +11941,7 @@
     },
     {
       "id": "018c60e8-e908-431a-ba57-c840b1df3987",
-      "name": "Nova 2.0 Omni (medium)",
+      "name": "Nova 2.0 Omni (Medium)",
       "slug": "nova-2-0-omni-reasoning-medium",
       "release_date": "2025-11-26",
       "model_creator": {
@@ -12019,7 +12097,7 @@
     },
     {
       "id": "61bd9367-e520-4ec8-989e-5fbf50e61610",
-      "name": "Nova 2.0 Lite (high)",
+      "name": "Nova 2.0 Lite (High)",
       "slug": "nova-2-0-lite-reasoning",
       "release_date": "2025-10-29",
       "model_creator": {
@@ -12052,9 +12130,9 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 2.5
       },
-      "median_output_tokens_per_second": 208.543,
-      "median_time_to_first_token_seconds": 12.554,
-      "median_time_to_first_answer_token": 22.144
+      "median_output_tokens_per_second": 197.528,
+      "median_time_to_first_token_seconds": 11.995,
+      "median_time_to_first_answer_token": 22.12
     },
     {
       "id": "d0b3d47e-aec6-425e-9de7-168dcc6d1e28",
@@ -12130,13 +12208,13 @@
         "price_1m_input_tokens": 0.17,
         "price_1m_output_tokens": 0.25
       },
-      "median_output_tokens_per_second": 0,
-      "median_time_to_first_token_seconds": 0,
-      "median_time_to_first_answer_token": 0
+      "median_output_tokens_per_second": 69.135,
+      "median_time_to_first_token_seconds": 1.277,
+      "median_time_to_first_answer_token": 1.277
     },
     {
       "id": "508943e4-e9e1-4d10-9c0e-a7650e9d7315",
-      "name": "EXAONE 4.5 33B",
+      "name": "EXAONE 4.5 33B (Reasoning)",
       "slug": "exaone-4-5-33b",
       "release_date": "2026-04-09",
       "model_creator": {
@@ -12208,9 +12286,9 @@
         "price_1m_input_tokens": 0,
         "price_1m_output_tokens": 0
       },
-      "median_output_tokens_per_second": 227.433,
+      "median_output_tokens_per_second": 213.594,
       "median_time_to_first_token_seconds": 0.197,
-      "median_time_to_first_answer_token": 8.99
+      "median_time_to_first_answer_token": 9.561
     },
     {
       "id": "70882ec6-914c-41f0-9754-5e8f75005f77",
@@ -12247,9 +12325,9 @@
         "price_1m_input_tokens": 0.13,
         "price_1m_output_tokens": 0.4
       },
-      "median_output_tokens_per_second": 111.375,
-      "median_time_to_first_token_seconds": 0.646,
-      "median_time_to_first_answer_token": 0.646
+      "median_output_tokens_per_second": 120.471,
+      "median_time_to_first_token_seconds": 0.691,
+      "median_time_to_first_answer_token": 0.691
     },
     {
       "id": "651ef7ae-9a8f-477e-9c8e-460aa156ba02",
@@ -12286,9 +12364,9 @@
         "price_1m_input_tokens": 0.03,
         "price_1m_output_tokens": 0.15
       },
-      "median_output_tokens_per_second": 28.784,
-      "median_time_to_first_token_seconds": 0.468,
-      "median_time_to_first_answer_token": 69.951
+      "median_output_tokens_per_second": 21.834,
+      "median_time_to_first_token_seconds": 0.538,
+      "median_time_to_first_answer_token": 92.14
     },
     {
       "id": "a83f84b3-473a-4276-9ae1-8909da723159",
@@ -12370,7 +12448,7 @@
     },
     {
       "id": "e18e5e6a-5a31-4c0b-b80b-ac401392f446",
-      "name": "GPT-5 nano (high)",
+      "name": "GPT-5 nano (High)",
       "slug": "gpt-5-nano",
       "release_date": "2025-08-07",
       "model_creator": {
@@ -12438,13 +12516,13 @@
         "tau_banking": 0.088659793814433
       },
       "pricing": {
-        "price_1m_blended_3_to_1": 0.108,
-        "price_1m_input_tokens": 0.07,
-        "price_1m_output_tokens": 0.22
+        "price_1m_blended_3_to_1": 0.095,
+        "price_1m_input_tokens": 0.06,
+        "price_1m_output_tokens": 0.2
       },
-      "median_output_tokens_per_second": 285.301,
-      "median_time_to_first_token_seconds": 0.462,
-      "median_time_to_first_answer_token": 7.473
+      "median_output_tokens_per_second": 290.707,
+      "median_time_to_first_token_seconds": 0.413,
+      "median_time_to_first_answer_token": 7.292
     },
     {
       "id": "63872e9c-3377-4a6b-b477-7bba244c38e9",
@@ -12481,13 +12559,13 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 0.9
       },
-      "median_output_tokens_per_second": 163.302,
-      "median_time_to_first_token_seconds": 0.846,
-      "median_time_to_first_answer_token": 13.093
+      "median_output_tokens_per_second": 158.676,
+      "median_time_to_first_token_seconds": 0.853,
+      "median_time_to_first_answer_token": 13.457
     },
     {
       "id": "f4274721-ef28-4121-aa88-8e97267a5a82",
-      "name": "Nova 2.0 Pro Preview (low)",
+      "name": "Nova 2.0 Pro Preview (Low)",
       "slug": "nova-2-0-pro-reasoning-low",
       "release_date": "2025-11-27",
       "model_creator": {
@@ -12520,9 +12598,9 @@
         "price_1m_input_tokens": 1.25,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 130.558,
-      "median_time_to_first_token_seconds": 7.289,
-      "median_time_to_first_answer_token": 22.608
+      "median_output_tokens_per_second": 128.864,
+      "median_time_to_first_token_seconds": 4.21,
+      "median_time_to_first_answer_token": 19.73
     },
     {
       "id": "1cf439b8-0cfd-47b2-9de2-9a2157e6762b",
@@ -12721,7 +12799,7 @@
     },
     {
       "id": "fbdf8da1-b341-448c-b3cb-8aff1d8f70b9",
-      "name": "Nova 2.0 Lite (medium)",
+      "name": "Nova 2.0 Lite (Medium)",
       "slug": "nova-2-0-lite-reasoning-medium",
       "release_date": "2025-10-29",
       "model_creator": {
@@ -12754,13 +12832,13 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 2.5
       },
-      "median_output_tokens_per_second": 195.508,
+      "median_output_tokens_per_second": 195.274,
       "median_time_to_first_token_seconds": 13.496,
-      "median_time_to_first_answer_token": 23.726
+      "median_time_to_first_answer_token": 23.738
     },
     {
       "id": "8eb02396-f231-4189-ae15-05f7facebd9b",
-      "name": "GPT-5 nano (medium)",
+      "name": "GPT-5 nano (Medium)",
       "slug": "gpt-5-nano-medium",
       "release_date": "2025-08-07",
       "model_creator": {
@@ -12833,8 +12911,8 @@
         "price_1m_output_tokens": 0.8
       },
       "median_output_tokens_per_second": 225.787,
-      "median_time_to_first_token_seconds": 0.956,
-      "median_time_to_first_answer_token": 0.956
+      "median_time_to_first_token_seconds": 0.939,
+      "median_time_to_first_answer_token": 0.939
     },
     {
       "id": "2dad8957-4c16-4e74-bf2d-8b21514e0ae9",
@@ -13027,9 +13105,9 @@
         "price_1m_input_tokens": 0.25,
         "price_1m_output_tokens": 0.75
       },
-      "median_output_tokens_per_second": 674.802,
-      "median_time_to_first_token_seconds": 2.812,
-      "median_time_to_first_answer_token": 2.812
+      "median_output_tokens_per_second": 661.05,
+      "median_time_to_first_token_seconds": 2.736,
+      "median_time_to_first_answer_token": 2.736
     },
     {
       "id": "3d4e7366-928c-4eff-a8b0-2919c7d334c9",
@@ -13345,7 +13423,7 @@
     },
     {
       "id": "6fd796d3-f346-4f66-97df-5da81714fc73",
-      "name": "Nova 2.0 Lite (low)",
+      "name": "Nova 2.0 Lite (Low)",
       "slug": "nova-2-0-lite-reasoning-low",
       "release_date": "2025-10-29",
       "model_creator": {
@@ -13378,13 +13456,13 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 2.5
       },
-      "median_output_tokens_per_second": 210.553,
-      "median_time_to_first_token_seconds": 5.022,
-      "median_time_to_first_answer_token": 14.521
+      "median_output_tokens_per_second": 208.623,
+      "median_time_to_first_token_seconds": 4.697,
+      "median_time_to_first_answer_token": 14.283
     },
     {
       "id": "340fb211-4fad-41d3-87d5-ed0d0cd34088",
-      "name": "HyperNova 60B 2605 (high, based on gpt-oss-120b)",
+      "name": "HyperNova 60B 2605 (High, Based on gpt-oss-120b)",
       "slug": "hypernova-60b",
       "release_date": "2026-05-26",
       "model_creator": {
@@ -13462,7 +13540,7 @@
     },
     {
       "id": "c298d1a8-606c-4971-8613-ccdaaf941043",
-      "name": "GPT-5.4 nano (Non-Reasoning)",
+      "name": "GPT-5.4 nano (Non-reasoning)",
       "slug": "gpt-5-4-nano-non-reasoning",
       "release_date": "2026-03-17",
       "model_creator": {
@@ -13579,7 +13657,7 @@
     },
     {
       "id": "f0083258-8646-45b8-8082-7aaf6c2ea82a",
-      "name": "gpt-oss-120b (high)",
+      "name": "gpt-oss-120b (High)",
       "slug": "gpt-oss-120b",
       "release_date": "2025-08-05",
       "model_creator": {
@@ -13612,9 +13690,9 @@
         "price_1m_input_tokens": 0.15,
         "price_1m_output_tokens": 0.595
       },
-      "median_output_tokens_per_second": 178.341,
-      "median_time_to_first_token_seconds": 0.566,
-      "median_time_to_first_answer_token": 11.78
+      "median_output_tokens_per_second": 161.414,
+      "median_time_to_first_token_seconds": 0.553,
+      "median_time_to_first_answer_token": 12.943
     },
     {
       "id": "5a49ef80-3af5-404b-8ac0-e1b230ae95de",
@@ -13696,7 +13774,7 @@
     },
     {
       "id": "c3738fb0-3408-4430-a699-760ae4b70c93",
-      "name": "GPT-5 (minimal)",
+      "name": "GPT-5 (Minimal)",
       "slug": "gpt-5-minimal",
       "release_date": "2025-08-07",
       "model_creator": {
@@ -13924,9 +14002,9 @@
         "price_1m_input_tokens": 0.15,
         "price_1m_output_tokens": 0.6
       },
-      "median_output_tokens_per_second": 170.992,
-      "median_time_to_first_token_seconds": 0.568,
-      "median_time_to_first_answer_token": 12.265
+      "median_output_tokens_per_second": 173.192,
+      "median_time_to_first_token_seconds": 0.582,
+      "median_time_to_first_answer_token": 12.13
     },
     {
       "id": "d2d7dd95-770f-4cb0-9bbc-d275ac19c265",
@@ -14041,9 +14119,9 @@
         "price_1m_input_tokens": 0.15,
         "price_1m_output_tokens": 1.2
       },
-      "median_output_tokens_per_second": 169.739,
-      "median_time_to_first_token_seconds": 1.239,
-      "median_time_to_first_answer_token": 13.022
+      "median_output_tokens_per_second": 170.636,
+      "median_time_to_first_token_seconds": 1.174,
+      "median_time_to_first_answer_token": 12.895
     },
     {
       "id": "2d28a13a-096e-475a-beb8-26bbd1c7d51c",
@@ -14080,13 +14158,13 @@
         "price_1m_input_tokens": 0.135,
         "price_1m_output_tokens": 0.2
       },
-      "median_output_tokens_per_second": 31.456,
-      "median_time_to_first_token_seconds": 1.134,
-      "median_time_to_first_answer_token": 64.716
+      "median_output_tokens_per_second": 30.818,
+      "median_time_to_first_token_seconds": 1.117,
+      "median_time_to_first_answer_token": 66.013
     },
     {
       "id": "ae447455-940d-4d30-9139-a664fa896eaf",
-      "name": "GPT-5.4 mini (Non-Reasoning)",
+      "name": "GPT-5.4 mini (Non-reasoning)",
       "slug": "gpt-5-4-mini-non-reasoning",
       "release_date": "2026-03-17",
       "model_creator": {
@@ -14125,7 +14203,7 @@
     },
     {
       "id": "b36ff8f3-0323-49d1-a063-ab09704fdb0c",
-      "name": "Nova 2.0 Omni (low)",
+      "name": "Nova 2.0 Omni (Low)",
       "slug": "nova-2-0-omni-reasoning-low",
       "release_date": "2025-11-26",
       "model_creator": {
@@ -14236,9 +14314,9 @@
         "price_1m_input_tokens": 0.06,
         "price_1m_output_tokens": 0.25
       },
-      "median_output_tokens_per_second": 66.645,
-      "median_time_to_first_token_seconds": 0.329,
-      "median_time_to_first_answer_token": 30.339
+      "median_output_tokens_per_second": 66.839,
+      "median_time_to_first_token_seconds": 0.305,
+      "median_time_to_first_answer_token": 30.228
     },
     {
       "id": "2dbb6dc7-8c40-4b6d-af9c-cf805f83b79a",
@@ -14314,9 +14392,9 @@
         "price_1m_input_tokens": 0,
         "price_1m_output_tokens": 0
       },
-      "median_output_tokens_per_second": 53.682,
-      "median_time_to_first_token_seconds": 1.811,
-      "median_time_to_first_answer_token": 39.068
+      "median_output_tokens_per_second": 56.98,
+      "median_time_to_first_token_seconds": 1.63,
+      "median_time_to_first_answer_token": 36.73
     },
     {
       "id": "df4c5a29-4b5c-4fef-9f7f-5e24e118ab65",
@@ -14359,7 +14437,7 @@
     },
     {
       "id": "076f2674-bc4b-4925-be59-50832eb8c090",
-      "name": "o3-mini (high)",
+      "name": "o3-mini (High)",
       "slug": "o3-mini-high",
       "release_date": "2025-01-31",
       "model_creator": {
@@ -14509,9 +14587,9 @@
         "price_1m_input_tokens": 0.25,
         "price_1m_output_tokens": 0.8
       },
-      "median_output_tokens_per_second": 339.504,
-      "median_time_to_first_token_seconds": 1.124,
-      "median_time_to_first_answer_token": 7.015
+      "median_output_tokens_per_second": 352.819,
+      "median_time_to_first_token_seconds": 0.991,
+      "median_time_to_first_answer_token": 6.66
     },
     {
       "id": "30c9ba61-d0a1-4794-938e-35865f379d15",
@@ -14548,13 +14626,13 @@
         "price_1m_input_tokens": 0.03,
         "price_1m_output_tokens": 0.15
       },
-      "median_output_tokens_per_second": 25.929,
-      "median_time_to_first_token_seconds": 0.546,
-      "median_time_to_first_answer_token": 0.546
+      "median_output_tokens_per_second": 20.576,
+      "median_time_to_first_token_seconds": 0.708,
+      "median_time_to_first_answer_token": 0.708
     },
     {
       "id": "369329e4-629f-425d-975a-e8980aec2965",
-      "name": "INTELLECT-3 (based on GLM-4.5-Air)",
+      "name": "INTELLECT-3 (Based on GLM-4.5-Air)",
       "slug": "intellect-3",
       "release_date": "2025-11-27",
       "model_creator": {
@@ -14821,13 +14899,13 @@
         "price_1m_input_tokens": 0.195,
         "price_1m_output_tokens": 1.095
       },
-      "median_output_tokens_per_second": 266.326,
-      "median_time_to_first_token_seconds": 0.247,
-      "median_time_to_first_answer_token": 7.757
+      "median_output_tokens_per_second": 265.316,
+      "median_time_to_first_token_seconds": 0.246,
+      "median_time_to_first_answer_token": 7.785
     },
     {
       "id": "c99f3bde-7c08-4de8-bd5c-8ee9123ebffa",
-      "name": "gpt-oss-120b (low)",
+      "name": "gpt-oss-120b (Low)",
       "slug": "gpt-oss-120b-low",
       "release_date": "2025-08-05",
       "model_creator": {
@@ -14860,9 +14938,9 @@
         "price_1m_input_tokens": 0.15,
         "price_1m_output_tokens": 0.545
       },
-      "median_output_tokens_per_second": 192.828,
-      "median_time_to_first_token_seconds": 0.541,
-      "median_time_to_first_answer_token": 10.913
+      "median_output_tokens_per_second": 166.334,
+      "median_time_to_first_token_seconds": 0.55,
+      "median_time_to_first_answer_token": 12.574
     },
     {
       "id": "9f7c7566-a704-49a2-a383-cb3181da33a4",
@@ -14938,9 +15016,9 @@
         "price_1m_input_tokens": 0.26,
         "price_1m_output_tokens": 0.91
       },
-      "median_output_tokens_per_second": 91.68,
-      "median_time_to_first_token_seconds": 0.587,
-      "median_time_to_first_answer_token": 0.587
+      "median_output_tokens_per_second": 84.964,
+      "median_time_to_first_token_seconds": 0.594,
+      "median_time_to_first_answer_token": 0.594
     },
     {
       "id": "385376b1-9815-47dd-83cc-85aac34f247d",
@@ -15016,13 +15094,13 @@
         "price_1m_input_tokens": 1.25,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 128.424,
-      "median_time_to_first_token_seconds": 0.681,
-      "median_time_to_first_answer_token": 0.681
+      "median_output_tokens_per_second": 120.708,
+      "median_time_to_first_token_seconds": 0.69,
+      "median_time_to_first_answer_token": 0.69
     },
     {
       "id": "16149b9c-a1e9-4669-a5cb-ff3c00d78f89",
-      "name": "gpt-oss-20b (low)",
+      "name": "gpt-oss-20b (Low)",
       "slug": "gpt-oss-20b-low",
       "release_date": "2025-08-05",
       "model_creator": {
@@ -15055,9 +15133,9 @@
         "price_1m_input_tokens": 0.07,
         "price_1m_output_tokens": 0.215
       },
-      "median_output_tokens_per_second": 216.464,
-      "median_time_to_first_token_seconds": 0.528,
-      "median_time_to_first_answer_token": 9.768
+      "median_output_tokens_per_second": 211.135,
+      "median_time_to_first_token_seconds": 0.493,
+      "median_time_to_first_answer_token": 9.966
     },
     {
       "id": "d58cf573-1bd3-4d1f-9182-5482a460f570",
@@ -15133,13 +15211,13 @@
         "price_1m_input_tokens": 0,
         "price_1m_output_tokens": 0
       },
-      "median_output_tokens_per_second": 77.976,
-      "median_time_to_first_token_seconds": 0.243,
-      "median_time_to_first_answer_token": 25.892
+      "median_output_tokens_per_second": 68.498,
+      "median_time_to_first_token_seconds": 0.321,
+      "median_time_to_first_answer_token": 29.519
     },
     {
       "id": "bc26bfdb-4923-4442-a6ca-e77392923581",
-      "name": "GPT-5 mini (minimal)",
+      "name": "GPT-5 mini (Minimal)",
       "slug": "gpt-5-mini-minimal",
       "release_date": "2025-08-07",
       "model_creator": {
@@ -15178,7 +15256,7 @@
     },
     {
       "id": "a38d719a-709c-4983-b3e7-7090389ae9a6",
-      "name": "K2-V2 (high)",
+      "name": "K2-V2 (High)",
       "slug": "k2-v2",
       "release_date": "2025-12-05",
       "model_creator": {
@@ -15445,9 +15523,9 @@
         "price_1m_input_tokens": 0.15,
         "price_1m_output_tokens": 1.2
       },
-      "median_output_tokens_per_second": 176.914,
-      "median_time_to_first_token_seconds": 1.056,
-      "median_time_to_first_answer_token": 1.056
+      "median_output_tokens_per_second": 171.439,
+      "median_time_to_first_token_seconds": 1.022,
+      "median_time_to_first_answer_token": 1.022
     },
     {
       "id": "60cff809-05fb-4439-afe7-8b1476439f49",
@@ -15797,8 +15875,8 @@
         "price_1m_output_tokens": 0.3
       },
       "median_output_tokens_per_second": 145.214,
-      "median_time_to_first_token_seconds": 1.454,
-      "median_time_to_first_answer_token": 1.454
+      "median_time_to_first_token_seconds": 1.377,
+      "median_time_to_first_answer_token": 1.377
     },
     {
       "id": "71f51ea9-94fe-4635-a80d-4cfffbb685f4",
@@ -15874,9 +15952,9 @@
         "price_1m_input_tokens": 0.5,
         "price_1m_output_tokens": 1.5
       },
-      "median_output_tokens_per_second": 77.233,
-      "median_time_to_first_token_seconds": 0.705,
-      "median_time_to_first_answer_token": 0.705
+      "median_output_tokens_per_second": 75.237,
+      "median_time_to_first_token_seconds": 0.721,
+      "median_time_to_first_answer_token": 0.721
     },
     {
       "id": "fc92f822-04b7-420d-9c07-a21af5e9aac7",
@@ -15913,9 +15991,9 @@
         "price_1m_input_tokens": 0.35,
         "price_1m_output_tokens": 1.2
       },
-      "median_output_tokens_per_second": 113.109,
-      "median_time_to_first_token_seconds": 0.926,
-      "median_time_to_first_answer_token": 0.926
+      "median_output_tokens_per_second": 111.165,
+      "median_time_to_first_token_seconds": 0.863,
+      "median_time_to_first_answer_token": 0.863
     },
     {
       "id": "666eb13f-0d22-4438-8eb0-01876e1a8604",
@@ -16147,9 +16225,9 @@
         "price_1m_input_tokens": 0.03,
         "price_1m_output_tokens": 0.12
       },
-      "median_output_tokens_per_second": 232.022,
-      "median_time_to_first_token_seconds": 0.244,
-      "median_time_to_first_answer_token": 8.863
+      "median_output_tokens_per_second": 231.694,
+      "median_time_to_first_token_seconds": 0.237,
+      "median_time_to_first_answer_token": 8.869
     },
     {
       "id": "660965b2-66d2-49ee-a6b9-79a6ac47d3c0",
@@ -16231,7 +16309,7 @@
     },
     {
       "id": "dd738be7-2b69-4775-91a5-8851d3341c2d",
-      "name": "K2-V2 (medium)",
+      "name": "K2-V2 (Medium)",
       "slug": "k2-v2-medium",
       "release_date": "2025-12-05",
       "model_creator": {
@@ -16381,9 +16459,9 @@
         "price_1m_input_tokens": 0.15,
         "price_1m_output_tokens": 0.6
       },
-      "median_output_tokens_per_second": 152.498,
-      "median_time_to_first_token_seconds": 0.559,
-      "median_time_to_first_answer_token": 0.559
+      "median_output_tokens_per_second": 149.959,
+      "median_time_to_first_token_seconds": 0.543,
+      "median_time_to_first_answer_token": 0.543
     },
     {
       "id": "5d891609-fe1c-4e8d-b9f0-5b0ff6d9f439",
@@ -16426,7 +16504,7 @@
     },
     {
       "id": "36f73aaf-d38a-4b56-a2b3-d04d17186910",
-      "name": "gpt-oss-20b (high)",
+      "name": "gpt-oss-20b (High)",
       "slug": "gpt-oss-20b",
       "release_date": "2025-08-05",
       "model_creator": {
@@ -16460,8 +16538,8 @@
         "price_1m_output_tokens": 0.18
       },
       "median_output_tokens_per_second": 180.275,
-      "median_time_to_first_token_seconds": 0.425,
-      "median_time_to_first_answer_token": 11.519
+      "median_time_to_first_token_seconds": 0.421,
+      "median_time_to_first_answer_token": 11.515
     },
     {
       "id": "575498d6-60ec-466b-9372-fea19911fd07",
@@ -16645,7 +16723,7 @@
         "lcr": 0.32,
         "terminalbench_hard": 0.0833333333333333,
         "terminalbench_v2_1": 0.0187265917602996,
-        "terminalbench_v4_0": null,
+        "terminalbench_v4_0": 0,
         "tau2": 0.207602339181287,
         "tau_banking": null
       },
@@ -16654,9 +16732,9 @@
         "price_1m_input_tokens": 0.02,
         "price_1m_output_tokens": 0.1
       },
-      "median_output_tokens_per_second": 78.847,
-      "median_time_to_first_token_seconds": 0.327,
-      "median_time_to_first_answer_token": 25.692
+      "median_output_tokens_per_second": 82.286,
+      "median_time_to_first_token_seconds": 0.328,
+      "median_time_to_first_answer_token": 24.634
     },
     {
       "id": "76dcf6ef-39ea-4be0-b693-b88da25b4caf",
@@ -16693,9 +16771,9 @@
         "price_1m_input_tokens": 0.05,
         "price_1m_output_tokens": 0.2
       },
-      "median_output_tokens_per_second": 151.534,
-      "median_time_to_first_token_seconds": 0.589,
-      "median_time_to_first_answer_token": 13.788
+      "median_output_tokens_per_second": 151.276,
+      "median_time_to_first_token_seconds": 0.592,
+      "median_time_to_first_answer_token": 13.813
     },
     {
       "id": "2aacdc07-5f4e-4ab9-8ea5-5f7ab93f9eeb",
@@ -16777,7 +16855,7 @@
     },
     {
       "id": "45790612-02e3-4c42-b5bd-cd7ed2ea1f2f",
-      "name": "Sarvam 105B (high)",
+      "name": "Sarvam 105B (High)",
       "slug": "sarvam-105b",
       "release_date": "2026-03-06",
       "model_creator": {
@@ -16888,9 +16966,9 @@
         "price_1m_input_tokens": 0.3,
         "price_1m_output_tokens": 2.5
       },
-      "median_output_tokens_per_second": 224.195,
-      "median_time_to_first_token_seconds": 0.827,
-      "median_time_to_first_answer_token": 0.827
+      "median_output_tokens_per_second": 215.132,
+      "median_time_to_first_token_seconds": 0.884,
+      "median_time_to_first_answer_token": 0.884
     },
     {
       "id": "cc1fa238-1a76-486d-a997-22309275eadd",
@@ -17902,9 +17980,9 @@
         "price_1m_input_tokens": 0.19,
         "price_1m_output_tokens": 0.68
       },
-      "median_output_tokens_per_second": 134.422,
-      "median_time_to_first_token_seconds": 0.669,
-      "median_time_to_first_answer_token": 0.669
+      "median_output_tokens_per_second": 120.748,
+      "median_time_to_first_token_seconds": 0.663,
+      "median_time_to_first_answer_token": 0.663
     },
     {
       "id": "b9dc72c6-7bea-4936-a55a-4b0c835fc755",
@@ -18448,9 +18526,9 @@
         "price_1m_input_tokens": 0.25,
         "price_1m_output_tokens": 0.97
       },
-      "median_output_tokens_per_second": 111.037,
-      "median_time_to_first_token_seconds": 0.952,
-      "median_time_to_first_answer_token": 18.964
+      "median_output_tokens_per_second": 109.925,
+      "median_time_to_first_token_seconds": 0.944,
+      "median_time_to_first_answer_token": 19.138
     },
     {
       "id": "8c1be908-67b6-4cf4-ba08-83ddbe44fde3",
@@ -18643,9 +18721,9 @@
         "price_1m_input_tokens": 0.71,
         "price_1m_output_tokens": 0.72
       },
-      "median_output_tokens_per_second": 88.986,
-      "median_time_to_first_token_seconds": 0.626,
-      "median_time_to_first_answer_token": 0.626
+      "median_output_tokens_per_second": 81.585,
+      "median_time_to_first_token_seconds": 0.649,
+      "median_time_to_first_answer_token": 0.649
     },
     {
       "id": "3e6cf518-a1f4-42d3-8fcf-827c9bd8e6d5",
@@ -19072,9 +19150,9 @@
         "price_1m_input_tokens": 1,
         "price_1m_output_tokens": 3
       },
-      "median_output_tokens_per_second": 42.81,
-      "median_time_to_first_token_seconds": 0.744,
-      "median_time_to_first_answer_token": 47.462
+      "median_output_tokens_per_second": 40.73,
+      "median_time_to_first_token_seconds": 0.774,
+      "median_time_to_first_answer_token": 49.877
     },
     {
       "id": "eb689f7a-f210-4a87-b407-f249897f2764",
@@ -19189,9 +19267,9 @@
         "price_1m_input_tokens": 0.02,
         "price_1m_output_tokens": 0.1
       },
-      "median_output_tokens_per_second": 75.307,
-      "median_time_to_first_token_seconds": 0.288,
-      "median_time_to_first_answer_token": 0.288
+      "median_output_tokens_per_second": 79.759,
+      "median_time_to_first_token_seconds": 0.292,
+      "median_time_to_first_answer_token": 0.292
     },
     {
       "id": "d4be6393-8915-436c-a3a8-4e59bd5c89a9",
@@ -19267,9 +19345,9 @@
         "price_1m_input_tokens": 0.04,
         "price_1m_output_tokens": 0.16
       },
-      "median_output_tokens_per_second": 98.01,
-      "median_time_to_first_token_seconds": 7.324,
-      "median_time_to_first_answer_token": 27.73
+      "median_output_tokens_per_second": 101.143,
+      "median_time_to_first_token_seconds": 5.74,
+      "median_time_to_first_answer_token": 25.514
     },
     {
       "id": "d3968fd3-97d8-4693-8d26-19cefc6f5d5f",
@@ -19306,7 +19384,7 @@
         "price_1m_input_tokens": 1,
         "price_1m_output_tokens": 3
       },
-      "median_output_tokens_per_second": 42.306,
+      "median_output_tokens_per_second": 38.642,
       "median_time_to_first_token_seconds": 0.713,
       "median_time_to_first_answer_token": 0.713
     },
@@ -19375,7 +19453,7 @@
         "lcr": 0.216666666666667,
         "terminalbench_hard": 0.0681818181818182,
         "terminalbench_v2_1": 0.0374531835205993,
-        "terminalbench_v4_0": null,
+        "terminalbench_v4_0": 0,
         "tau2": 0.280701754385965,
         "tau_banking": null
       },
@@ -19546,7 +19624,7 @@
     },
     {
       "id": "dae31abc-0587-44d0-ba53-f78e96b6e486",
-      "name": "K2-V2 (low)",
+      "name": "K2-V2 (Low)",
       "slug": "k2-v2-low",
       "release_date": "2025-12-05",
       "model_creator": {
@@ -20209,7 +20287,7 @@
     },
     {
       "id": "05e45a36-b5c6-47a1-8adb-9ddc19add5b3",
-      "name": "GPT-5 nano (minimal)",
+      "name": "GPT-5 nano (Minimal)",
       "slug": "gpt-5-nano-minimal",
       "release_date": "2025-08-07",
       "model_creator": {
@@ -20476,9 +20554,9 @@
         "price_1m_input_tokens": 2.5,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 62.343,
-      "median_time_to_first_token_seconds": 0.37,
-      "median_time_to_first_answer_token": 0.37
+      "median_output_tokens_per_second": 64.777,
+      "median_time_to_first_token_seconds": 0.383,
+      "median_time_to_first_answer_token": 0.383
     },
     {
       "id": "5d4acc80-7a88-4e84-bfe7-99071b84e6a4",
@@ -20710,9 +20788,9 @@
         "price_1m_input_tokens": 0.05,
         "price_1m_output_tokens": 0.2
       },
-      "median_output_tokens_per_second": 218.658,
-      "median_time_to_first_token_seconds": 0.378,
-      "median_time_to_first_answer_token": 0.378
+      "median_output_tokens_per_second": 219.143,
+      "median_time_to_first_token_seconds": 0.363,
+      "median_time_to_first_answer_token": 0.363
     },
     {
       "id": "2e8694f9-7782-47a6-a6ba-fdce89d939c8",
@@ -20749,9 +20827,9 @@
         "price_1m_input_tokens": 0.05,
         "price_1m_output_tokens": 0.195
       },
-      "median_output_tokens_per_second": 155.151,
-      "median_time_to_first_token_seconds": 1.188,
-      "median_time_to_first_answer_token": 1.188
+      "median_output_tokens_per_second": 156.52,
+      "median_time_to_first_token_seconds": 1.324,
+      "median_time_to_first_answer_token": 1.324
     },
     {
       "id": "1b05e346-e86a-4a20-8feb-7da8c65a99aa",
@@ -21379,7 +21457,7 @@
     },
     {
       "id": "764dd095-6ebd-4760-8eb3-cbc40964db2e",
-      "name": "Sarvam 30B (high)",
+      "name": "Sarvam 30B (High)",
       "slug": "sarvam-30b",
       "release_date": "2026-03-06",
       "model_creator": {
@@ -21958,9 +22036,9 @@
         "price_1m_input_tokens": 0.2,
         "price_1m_output_tokens": 0.7
       },
-      "median_output_tokens_per_second": 2093.754,
-      "median_time_to_first_token_seconds": 0.466,
-      "median_time_to_first_answer_token": 0.466
+      "median_output_tokens_per_second": 2157.61,
+      "median_time_to_first_token_seconds": 0.489,
+      "median_time_to_first_answer_token": 0.489
     },
     {
       "id": "4c111fbc-d13a-42b4-858c-1dc17fe3c1d1",
@@ -22075,9 +22153,9 @@
         "price_1m_input_tokens": 0,
         "price_1m_output_tokens": 0
       },
-      "median_output_tokens_per_second": 45.428,
-      "median_time_to_first_token_seconds": 0.331,
-      "median_time_to_first_answer_token": 0.331
+      "median_output_tokens_per_second": 44.919,
+      "median_time_to_first_token_seconds": 0.334,
+      "median_time_to_first_answer_token": 0.334
     },
     {
       "id": "2f60d80d-c3d3-4a43-bded-0557898c4618",
@@ -22387,9 +22465,9 @@
         "price_1m_input_tokens": 0.2,
         "price_1m_output_tokens": 0.2
       },
-      "median_output_tokens_per_second": 82.683,
-      "median_time_to_first_token_seconds": 0.554,
-      "median_time_to_first_answer_token": 0.554
+      "median_output_tokens_per_second": 73.353,
+      "median_time_to_first_token_seconds": 0.66,
+      "median_time_to_first_answer_token": 0.66
     },
     {
       "id": "b4ddb4c8-1400-44ab-8c2b-e2472088e7ff",
@@ -22465,9 +22543,9 @@
         "price_1m_input_tokens": 0.25,
         "price_1m_output_tokens": 0.97
       },
-      "median_output_tokens_per_second": 108.525,
-      "median_time_to_first_token_seconds": 0.887,
-      "median_time_to_first_answer_token": 0.887
+      "median_output_tokens_per_second": 107.294,
+      "median_time_to_first_token_seconds": 0.881,
+      "median_time_to_first_answer_token": 0.881
     },
     {
       "id": "1dcea4f7-7e8b-49f8-abe2-5860ff9f349e",
@@ -22777,9 +22855,9 @@
         "price_1m_input_tokens": 0.125,
         "price_1m_output_tokens": 0.5
       },
-      "median_output_tokens_per_second": 43.181,
-      "median_time_to_first_token_seconds": 1.022,
-      "median_time_to_first_answer_token": 1.022
+      "median_output_tokens_per_second": 41.458,
+      "median_time_to_first_token_seconds": 0.983,
+      "median_time_to_first_answer_token": 0.983
     },
     {
       "id": "b2e68f0a-8f66-4e4c-9821-2b786cea601b",
@@ -22855,9 +22933,9 @@
         "price_1m_input_tokens": 0.035,
         "price_1m_output_tokens": 0.14
       },
-      "median_output_tokens_per_second": 231.722,
-      "median_time_to_first_token_seconds": 0.571,
-      "median_time_to_first_answer_token": 0.571
+      "median_output_tokens_per_second": 223.487,
+      "median_time_to_first_token_seconds": 0.591,
+      "median_time_to_first_answer_token": 0.591
     },
     {
       "id": "91e3b45f-3f52-4511-8c15-8948854bebc5",
@@ -23050,7 +23128,7 @@
         "price_1m_input_tokens": 0.2,
         "price_1m_output_tokens": 0.6
       },
-      "median_output_tokens_per_second": 204.401,
+      "median_output_tokens_per_second": 199.892,
       "median_time_to_first_token_seconds": 0.781,
       "median_time_to_first_answer_token": 0.781
     },
@@ -23128,9 +23206,9 @@
         "price_1m_input_tokens": 0,
         "price_1m_output_tokens": 0
       },
-      "median_output_tokens_per_second": 17.193,
-      "median_time_to_first_token_seconds": 0.363,
-      "median_time_to_first_answer_token": 0.363
+      "median_output_tokens_per_second": 17.221,
+      "median_time_to_first_token_seconds": 0.353,
+      "median_time_to_first_answer_token": 0.353
     },
     {
       "id": "e410e854-104d-4b35-a171-899ff9d974bb",
@@ -23518,9 +23596,9 @@
         "price_1m_input_tokens": 0.2,
         "price_1m_output_tokens": 0.8
       },
-      "median_output_tokens_per_second": 96.334,
-      "median_time_to_first_token_seconds": 0.805,
-      "median_time_to_first_answer_token": 21.566
+      "median_output_tokens_per_second": 94.545,
+      "median_time_to_first_token_seconds": 0.834,
+      "median_time_to_first_answer_token": 21.988
     },
     {
       "id": "338216fb-62c2-48f1-898a-9166d12fb35e",
@@ -24025,7 +24103,7 @@
         "price_1m_input_tokens": 0.15,
         "price_1m_output_tokens": 0.15
       },
-      "median_output_tokens_per_second": 99.384,
+      "median_output_tokens_per_second": 99.189,
       "median_time_to_first_token_seconds": 0.487,
       "median_time_to_first_answer_token": 0.487
     },
@@ -24220,9 +24298,9 @@
         "price_1m_input_tokens": 0.345,
         "price_1m_output_tokens": 0.345
       },
-      "median_output_tokens_per_second": 15.145,
-      "median_time_to_first_token_seconds": 1.538,
-      "median_time_to_first_answer_token": 1.538
+      "median_output_tokens_per_second": 14.837,
+      "median_time_to_first_token_seconds": 1.339,
+      "median_time_to_first_answer_token": 1.339
     },
     {
       "id": "405e2235-0925-4634-a3c7-fbd5f6394bc0",
@@ -24382,7 +24460,7 @@
     },
     {
       "id": "34ef2b5c-3df3-437e-b9c5-81346f8c14a8",
-      "name": "Sarvam M (Reasoning, based on Mistral Small 3.1)",
+      "name": "Sarvam M (Reasoning, Based on Mistral Small 3.1)",
       "slug": "sarvam-m-reasoning",
       "release_date": "2025-05-23",
       "model_creator": {
@@ -25741,9 +25819,9 @@
         "price_1m_input_tokens": 0.1,
         "price_1m_output_tokens": 0.1
       },
-      "median_output_tokens_per_second": 242.827,
-      "median_time_to_first_token_seconds": 0.58,
-      "median_time_to_first_answer_token": 0.58
+      "median_output_tokens_per_second": 230.321,
+      "median_time_to_first_token_seconds": 0.559,
+      "median_time_to_first_answer_token": 0.559
     },
     {
       "id": "891bcdf2-8dd2-4dc3-829b-d963fde25876",
@@ -26287,9 +26365,9 @@
         "price_1m_input_tokens": 0,
         "price_1m_output_tokens": 0
       },
-      "median_output_tokens_per_second": 132.216,
-      "median_time_to_first_token_seconds": 0.218,
-      "median_time_to_first_answer_token": 0.218
+      "median_output_tokens_per_second": 131.627,
+      "median_time_to_first_token_seconds": 0.216,
+      "median_time_to_first_answer_token": 0.216
     },
     {
       "id": "2e6400f5-85ca-4ebc-ba8f-c2811a631138",
@@ -26404,9 +26482,9 @@
         "price_1m_input_tokens": 2,
         "price_1m_output_tokens": 10
       },
-      "median_output_tokens_per_second": 91.206,
-      "median_time_to_first_token_seconds": 0.876,
-      "median_time_to_first_answer_token": 0.876
+      "median_output_tokens_per_second": 104.341,
+      "median_time_to_first_token_seconds": 1.03,
+      "median_time_to_first_answer_token": 1.03
     },
     {
       "id": "ea5d2c10-1051-437d-95c2-18d5e4d14ff3",
@@ -26644,7 +26722,7 @@
     },
     {
       "id": "5bb1f426-2d64-4d03-99fb-8041ee85c33b",
-      "name": "GPT-5.4 Pro (xhigh)",
+      "name": "GPT-5.4 Pro (Xhigh)",
       "slug": "gpt-5-4-pro",
       "release_date": "2026-03-05",
       "model_creator": {
@@ -26683,7 +26761,7 @@
     },
     {
       "id": "e3396f8f-7994-4df5-bdab-43745681ef0a",
-      "name": "GPT-5.5 Pro (xhigh)",
+      "name": "GPT-5.5 Pro (Xhigh)",
       "slug": "gpt-5-5-pro",
       "release_date": "2026-04-23",
       "model_creator": {
@@ -26760,5 +26838,5 @@
       "median_time_to_first_answer_token": 0
     }
   ],
-  "_fetched_at": "2026-09-30T14:33:48.040256+00:00"
+  "_fetched_at": "2026-10-01T15:02:49.869819+00:00"
 }
