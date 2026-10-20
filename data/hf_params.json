@@ -1,5 +1,5 @@
 {
-  "_fetched_at": "2026-10-19T15:14:55.597205+00:00",
+  "_fetched_at": "2026-10-20T13:17:00.565473+00:00",
   "params": {
     "Arctic Instruct": {
       "total_b": 478.585,
@@ -37,7 +37,7 @@
       "hf_id": "deepseek-ai/DeepSeek-R1-0528"
     },
     "DeepSeek V3 (Dec '24)": {
-      "total_b": 684.531,
+      "total_b": 684.49,
       "active_b": 37.0,
       "hf_id": "deepseek-ai/DeepSeek-V3"
     },
